@@ -3,24 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Article Clone</title>
+    <title>Forcast Clone</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body class="bg-white text-gray-800">
-     <!-- Header/Navbar -->
+
+  <body class="bg-white-100 text-gray-900">
+    <!-- Header/Navbar -->
     <header class="bg-white shadow-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center py-4">
           <!-- Logo  -->
           <div class="flex items-center space-x-2">
-            <img
-              src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/07/logo-m-d.svg"
-              alt="Forcast Logo"
-            />
+            <h1 class="text-gray-900 text-3xl font-serif">DAILYNEWS</h1>
           </div>
 
           <!-- Nav + Hamburger -->
@@ -28,11 +26,12 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-6 font-medium">
               <a href="#" class="hover:text-blue-600">Home</a>
-              <a href="#" class="hover:text-blue-600">Post Features</a>
-              <a href="#" class="hover:text-blue-600">Food & Diet</a>
-              <a href="#" class="hover:text-blue-600">Nutrition</a>
-              <a href="#" class="hover:text-blue-600">Pages</a>
-              <a href="#" class="hover:text-blue-600">Bookmark</a>
+              <a href="#" class="hover:text-blue-600">NEWS</a>
+              <a href="#" class="hover:text-blue-600">FINANCE</a>
+              <a href="#" class="hover:text-blue-600">SCIENCE</a>
+              <a href="#" class="hover:text-blue-600">SPORT</a>
+              <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+              <a href="#" class="hover:text-blue-600">LIFE STYLE</a>
             </nav>
 
             <!-- Hamburger -->
@@ -57,286 +56,353 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+      <div id="menu" class="hidden md:hidden bg-white">
         <nav class="flex flex-col space-y-4 px-6 py-4">
           <a href="#" class="hover:text-blue-600">Home</a>
-          <a href="#" class="hover:text-blue-600">Post Features</a>
-          <a href="#" class="hover:text-blue-600">Food & Diet</a>
-          <a href="#" class="hover:text-blue-600">Nutrition</a>
-          <a href="#" class="hover:text-blue-600">Pages</a>
-          <a href="#" class="hover:text-blue-600">Bookmark</a>
+          <a href="#" class="hover:text-blue-600">ABOUT US</a>
+          <a href="#" class="hover:text-blue-600">CONTACT</a>
+          <a href="#" class="hover:text-blue-600">PRIVACY POLICY</a>
+          <a href="#" class="hover:text-blue-600">NEWSLETTER</a>
         </nav>
       </div>
     </header>
-    <main class="max-w-7xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-8 mt-6">
-      
-      <!-- Left Content -->
-      <section class="lg:col-span-2">
-        <!-- Category -->
-        <span class="bg-blue-500 text-white text-sm px-3 py-1 rounded">
-          Nutrition
-        </span>
 
-        <!-- Title -->
-        <h1 class="text-3xl md:text-4xl font-bold mt-4 leading-snug">
-          Skin Type Before Choosing Skin Care Products
-        </h1>
+    <main class="max-w-7xl mx-auto p-6 space-y-6">
+      <!-- First Grid (Main + Aside) -->
+      <div class="grid grid-cols-3 gap-6">
+        <!-- Left container (2x bigger) -->
+        <div class="col-span-2 bg-white p-6">
+          <section
+            class="max-w-3xl mx-auto bg-white p-6 border-b border-gray-300"
+          >
+            <!-- Title -->
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              Arsenal complete first January transfer deal as Mikel Arteta plans
+              come together
+            </h1>
 
-        <!-- Meta info -->
-        <div class="flex flex-wrap items-center gap-4 text-gray-500 text-sm mt-3">
-          <div class="flex items-center gap-2">
-            <img
-              src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
-              alt="Author"
-              class="w-8 h-8 rounded-full"
-            />
-            <span class="font-medium text-gray-700">Empath</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i class="fa-regular fa-calendar"></i>
-            <span>March 26, 2024</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i class="fa-regular fa-comment"></i>
-            <span>3 Comments</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-eye"></i>
-            <span>563 Views</span>
-          </div>
-          
-        </div>
+            <!-- Meta info -->
+            <div class="flex flex-wrap items-center text-sm text-gray-500 mb-4">
+              <span
+                >written by <span class="font-medium">Penci Design</span></span
+              >
+              <span class="mx-2">|</span>
+              <span>December 21, 2021</span>
+              <span class="mx-2">|</span>
+              <span>0 comments</span>
+            </div>
 
-        <!-- Description -->
-        <p class="mt-5 text-lg text-gray-600 leading-relaxed">
-          Embracing a balanced lifestyle is key to achieving overall well-being
-          and happiness. Start by practicing mindfulness through meditation or
-          journaling, which helps reduce stress and improve mental clarity.
-        </p>
+            <!-- Featured Image -->
+            <div class="w-full mb-6">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p2-585x390.jpg"
+                alt="Football match"
+                class="w-full h-auto object-cover"
+              />
+            </div>
 
-        <!-- Image -->
-        <div class="mt-6">
-          <img
-            src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
-            alt="Article"
-            class="w-full object-cover"
-          />
-        </div>
-         <!-- Top Paragraph -->
-  <p class="mt-4">
-    Lorem ipsum dolor sit amet. Ut distinctio galisum ea laborum esse sed debitis galisum ea dolore any delectus dolore reprehenderit? 
-    <strong class="font-semibold">Qui architecto explicabo est soluta consequatur</strong> 
-    in eius that nemo architecto quo galisum tempore.
-  </p>
+            <!-- Article Content -->
+            <article class="text-gray-700 leading-relaxed text-sm md:text-base">
+              <p>
+                A wonderful world with my whole heart. I am alone, and feel the
+                charm of existence in this spot, which was created for the bliss
+                of souls like mine. I am so happy, my dear friend, so absorbed
+                in the exquisite sense of mere
+                <span class="italic text-red-500">tranquil existence</span>,
+                that I neglect my talents. I should be incapable of drawing a
+                single stroke at the present moment; and yet I feel that I never
+                was a greater artist than now.
+              </p>
+              <!-- Top Paragraph -->
+              <p class="text-gray-700 leading-relaxed mb-6">
+                A wonderful world with my whole heart. I am alone, and feel the
+                charm of existence in this spot, which was created for the bliss
+                of souls like mine. I am so happy, my dear friend, so absorbed
+                in the exquisite sense of mere
+                <span class="italic text-red-600">tranquil existence</span>,
+                that I neglect my talents. I should be incapable of drawing a
+                single stroke at the present moment; and yet I feel that I never
+                was a greater artist than now.
+              </p>
 
-  <!-- Heading -->
-  <h2 class="text-2xl font-bold mb-4">Where can I get some?</h2>
+              <!-- Featured Image -->
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p2-585x390.jpg"
+                alt="World Politics"
+                class="w-full  mb-6 object-cover"
+              />
 
-  <!-- Paragraphs -->
-  <p class="mb-6">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-    the totam rem aperiam, the eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-    Nemo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia any at consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-  </p>
+              <!-- Suggested Section -->
+              <section
+                class="border border-gray-200 bg-gray-50  p-4 mb-6"
+              >
+                <h2 class="font-semibold text-gray-800 mb-3">
+                  You Might Be Interested In
+                </h2>
+                <ul class="space-y-2 text-sm">
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-600">▸</span>
+                    <a href="#" class="text-gray-800 hover:text-red-600">
+                      Novak Djokovic in Australian Open draw but Aussies still
+                      to decide
+                    </a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-600">▸</span>
+                    <a href="#" class="text-gray-800 hover:text-red-600">
+                      F1: Mercedes push for Michael Masi sack amid Lewis
+                      Hamilton retirement hint
+                    </a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-600">▸</span>
+                    <a href="#" class="text-gray-800 hover:text-red-600">
+                      Jake Paul and Dana White embroiled in another row after
+                      UFC chief’s video
+                    </a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-600">▸</span>
+                    <a href="#" class="text-gray-800 hover:text-red-600">
+                      Bryson DeChambeau fired big-hitting jibe by two-time major
+                      champion
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <p class="text-gray-700 leading-relaxed">
+                When, while the lovely valley teems with vapour around me, and
+                the meridian sun strikes the upper surface of the impenetrable
+                foliage of my trees, and but a few stray gleams steal into the
+                inner sanctuary, I throw myself down among the tall grass by the
+                trickling stream; and, as I lie close to the earth,
+                <span class="italic text-red-600"
+                  >a thousand unknown plants are noticed by me</span
+                >.
+              </p>
 
-  <p class="mb-8">
-    Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, 
-    totam rem aperiam, the eaque ipsa quaet quasi architecto beatae vitae dicta sunt explicabo.
-  </p>
+              <h2 class="text-2xl font-bold mt-2 mb-2">DEVELOP THE ECONOMY</h2>
 
-  <!-- Contents Section -->
-  <div class="mb-6">
-    <h3 class="font-bold mb-4">Contents</h3>
-    <div class="grid grid-cols-2 gap-y-3 gap-x-8">
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Website should be easy to navigate</span>
-      </div>
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Creating visual rhythms in your layouts</span>
-      </div>
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Help website visual composition</span>
-      </div>
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Diving into UX and UI design</span>
-      </div>
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Interactive elements are easy to identify</span>
-      </div>
-      <div class="flex items-start space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
-        </svg>
-        <span class="font-semibold">Breaking down the barriers</span>
-      </div>
-    </div>
-  </div>
+              <!-- Subtitle -->
+              <p class="text-gray-600 mb-6">
+                When I hear the buzz of the little world among the stalks, and
+                grow familiar with the countless indescribable forms of the
+                insects and flies, then I feel.
+              </p>
 
-  <!-- Bottom Text -->
-  <p>
-    Tomfoolery tosser zonked arse over tit brown bread twit it’s all gone to pot spiffing good time only a quid golly gosh, 
-    such a <strong class="font-semibold">fibber victoria sponge bleeding vagabond</strong> 
-    he lost his bottle as bog dummy codswallop. Baking cakes said william daft wind up chap brilliant.
-  </p>
-   <!-- Article Content -->
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-lg font-semibold mb-2">Where can I get some?</h2>
-    <p class="mb-4">
-      Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium,
-      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto beatae vitae explicabo.
-      Nemo ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-      dolores eos qui ratione voluptatem sequi nesciunt.
-    </p>
-    <p class="mb-6">
-      Sed ut perspiciatis unde omnis iste natus error accusantium doloremque laudantium,
-      totam rem aperiam, the eaque ipsa quae quasi architecto beatae vitae dicta sunt explicabo.
-    </p>
+              <!-- Image -->
+              <img
+                src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+                alt="Develop Economy"
+                class="w-full  mb-6 object-cover"
+              />
 
-    <!-- Suggested Articles -->
-    <h3 class="text-lg font-semibold mb-3">You Might Also Like</h3>
-    <ul class="list-none space-y-2 mb-8">
-      <li >+ Potential HIV Vaccine Falls Short in Mid-stage Study</li>
-      <li >+ Medicaid Expansion Improves Hypertension and Diabetes Control</li>
-      <li >+ Long-Term Care Needs Among Retirees Varies Widely, New Research Shows</li>
-      <li >+ Benefits of Yoga: 10 Ways Your Practice Can Improve Your Life</li>
-      <li >+ What Are Some Ways to Prevent the Spread of COVID-19?</li>
-    </ul>
+              <!-- Quote + Paragraph side by side -->
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- Quote -->
+                <blockquote
+                  class="border-l-4 border-red-500 pl-4 italic text-gray-600 text-sm"
+                >
+                  To take a trivial example, which of us ever undertakes
+                  laborious physical exercise, except to obtain some advantage
+                  from it?
+                  <span
+                    class="block mt-2 font-semibold text-red-600 uppercase text-xs"
+                    >Penci Design</span
+                  >
+                </blockquote>
 
-    <!-- Rating Section -->
-    <div class="text-center mb-10">
-      <p class="text-gray-600 mb-2">How useful was this post?</p>
-      <p class="text-gray-500 mb-4">Click on a star to rate it!</p>
-      <div class="flex justify-center space-x-2 text-2xl text-gray-400 mb-2">
-        <i class="fa-regular fa-star hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-regular fa-star hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-regular fa-star hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-regular fa-star hover:text-yellow-400 cursor-pointer"></i>
-        <i class="fa-regular fa-star hover:text-yellow-400 cursor-pointer"></i>
-      </div>
-      <p class="text-gray-500 text-sm">No votes so far! Be the first to rate this post.</p>
-    </div>
+                <!-- Side paragraph -->
+                <p class="text-gray-700">
+                  When I hear the buzz of the little world among the stalks, and
+                  grow familiar with the countless indescribable forms of the
+                  insects and flies, then I feel.
+                </p>
+              </div>
 
-    <!-- Tags and Social Icons -->
-    <div class="border p-4 rounded-md flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
-      <p class="mb-3 md:mb-0"><span class="font-semibold">Tagged:</span> Health, Wellness, Workout</p>
-      <div class="flex space-x-4 text-xl text-blue-600">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-whatsapp text-green-600"></i></a>
-        <a href="#"><i class="fab fa-telegram text-sky-500"></i></a>
-      </div>
-    </div>
+              <!-- Bottom paragraph -->
+              <p class="text-gray-700">
+                Everyone realizes why a new common language would be desirable:
+                one could refuse to pay expensive translators. To achieve this,
+                it would be necessary to have
+                <span class="underline">uniform grammar</span>, pronunciation
+                and more common words. If several languages coalesce, the
+                grammar of the resulting language is more simple and regular
+                than that of the individual languages. The new common language
+                will be more simple and regular than the existing European
+                languages. It will be as simple as Occidental; in fact, it will
+                be Occidental.
+              </p>
+              <h2 class="text-2xl font-bold mb-4 mt-4">
+                How To Achieve Zero Carbon Emission
+              </h2>
 
-  </div>
+              <!-- Paragraph -->
+              <p class="text-gray-700 leading-relaxed">
+                When, while the lovely valley teems with vapour around me, and
+                the meridian sun strikes the upper surface of the impenetrable
+                foliage of my trees, and but a few stray gleams steal into the
+                inner sanctuary, I throw myself down among the tall grass by the
+                trickling stream; and, as I lie close to the earth.
+              </p>
+            </article>
+            <!-- Bottom Section -->
+<section class="py-12 bg-white">
+  <!-- Section Title -->
+  <h2 class="text-center text-xl font-bold mb-8">YOU MAY ALSO LIKE</h2>
 
-      </section>
-
-      <!-- Right Sidebar -->
-      <aside
-        class="bg-white-600 text-white p-6  flex flex-col items-center justify-center  sticky top-6 h-fit"
-      >
-         <!-- Recent Post Section -->
-  <div>
-    <h2 class="text-xl font-bold mb-2">Recent Post</h2>
-    <hr class="mb-4">
-
-    <!-- Post Item -->
-    <div class="flex items-start space-x-4 mb-6">
-      <img src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp" alt="Post Thumbnail" class="w-20 h-20 object-cover rounded-md">
-      <div>
-        <h3 class="font-semibold text-gray-900 leading-snug">
-          Tips for Improving Your Quality of Life Today
-        </h3>
-        <div class="flex items-center text-gray-600 text-sm mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-          </svg>
-          September 3, 2025
-        </div>
-      </div>
+  <!-- Grid Layout -->
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    
+    <!-- Item 1 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 1" class="w-full h-48 object-cover  mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        Novak Djokovic in Australian Open draw but Aussies still to decide
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
     </div>
 
-    <!-- Post Item -->
-    <div class="flex items-start space-x-4 mb-6">
-      <img src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp" alt="Post Thumbnail" class="w-20 h-20 object-cover rounded-md">
-      <div>
-        <h3 class="font-semibold text-gray-900 leading-snug">
-          Workout Equipment and Modern Fight
-        </h3>
-        <div class="flex items-center text-gray-600 text-sm mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-          </svg>
-          September 3, 2025
-        </div>
-      </div>
+    <!-- Item 2 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 2" class="w-full h-48 object-cover  mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        F1: Mercedes push for Michael Masi sack amid Lewis Hamilton retirement hint
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
     </div>
 
-    <!-- Post Item -->
-    <div class="flex items-start space-x-4 mb-6">
-      <img src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp" alt="Post Thumbnail" class="w-20 h-20 object-cover rounded-md">
-      <div>
-        <h3 class="font-semibold text-gray-900 leading-snug">
-          Most Common Gyme & Machines at the Gym
-        </h3>
-        <div class="flex items-center text-gray-600 text-sm mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-          </svg>
-          September 3, 2025
-        </div>
-      </div>
+    <!-- Item 3 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 3" class="w-full h-48 object-cover  mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        Jake Paul and Dana White embroiled in another row after UFC chief’s video
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
     </div>
 
-    <!-- Post Item -->
-    <div class="flex items-start space-x-4">
-      <img src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp" alt="Post Thumbnail" class="w-20 h-20 object-cover rounded-md">
-      <div>
-        <h3 class="font-semibold text-gray-900 leading-snug">
-          Daily Common Gyme & Machines at the Gym
-        </h3>
-        <div class="flex items-center text-gray-600 text-sm mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-          </svg>
-          September 3, 2025
-        </div>
-      </div>
+    <!-- Item 4 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 4" class="w-full h-48 object-cover  mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        Bryson DeChambeau fired big-hitting jibe by two-time major champion
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
+    </div>
+
+    <!-- Item 5 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 5" class="w-full h-48 object-cover mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        Joe Root needs special protection to drag England back vs Australia
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
+    </div>
+
+    <!-- Item 6 -->
+    <div>
+      <img src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p29-585x390.jpg" alt="News 6" class="w-full h-48 object-cover  mb-4">
+      <h3 class="font-semibold text-gray-800 mb-2">
+        England vs South Africa free live stream: Watch Autumn Nations Series online
+      </h3>
+      <p class="text-gray-500 text-sm">December 21, 2021</p>
     </div>
 
   </div>
-        
-      
-      </aside>
-     
+</section>
+
+          </section>
+        </div>
+
+        <!-- Right container (aside) -->
+        <aside
+          class="sticky top-6 self-start col-span-1 bg-white p-6 border border-gray-200"
+        >
+          <section class="max-w-md mx-auto bg-white divide-y divide-gray-200">
+            <!-- Article Item -->
+            <div class="flex gap-4 p-4 bg-white">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p1-585x390.jpg"
+                alt="Building industry"
+                class="w-24 h-20 object-cover "
+              />
+              <h3 class="text-sm font-medium text-gray-800">
+                Building industry hit with punishing taxes unless dangerous
+                cladding is replaced
+              </h3>
+            </div>
+
+            <!-- Article Item -->
+            <div class="flex gap-4 p-4 bg-white">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p4-585x390.jpg"
+                alt="Online retailers"
+                class="w-24 h-20 object-cover "
+              />
+              <h3 class="text-sm font-medium text-gray-800">
+                Fear for many online retailers as shoppers hit by trio of rising
+                living costs
+              </h3>
+            </div>
+
+            <!-- Article Item -->
+            <div class="flex gap-4 p-4 bg-white">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p6-585x390.jpg"
+                alt="Horoscope"
+                class="w-24 h-20 object-cover "
+              />
+              <h3 class="text-sm font-medium text-gray-800">
+                Daily horoscope: Your star sign reading, astrology and zodiac
+                forecast
+              </h3>
+            </div>
+
+            <!-- Article Item -->
+            <div class="flex gap-4 p-4 bg-white">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p7-585x390.jpg"
+                alt="Spider-Man theory"
+                class="w-24 h-20 object-cover "
+              />
+              <h3 class="text-sm font-medium text-gray-800">
+                Theory: Tom Holland’s Peter Parker replaced by Miles Morales in
+                next trilogy
+              </h3>
+            </div>
+
+            <!-- Article Item -->
+            <div class="flex gap-4 p-4 bg-white">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-daily-news/wp-content/uploads/sites/17/2021/12/p8-585x390.jpg"
+                alt="Joe Biden"
+                class="w-24 h-20 object-cover "
+              />
+              <h3 class="text-sm font-medium text-gray-800">
+                Joe Biden comes to EU’s rescue as booster gas supply eases
+                Russian pressure
+              </h3>
+            </div>
+          </section>
+        </aside>
+      </div>
     </main>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-6 mt-10">
       <div class="max-w-7xl mx-auto text-center">
         <p>&copy; 2025 Forcast Clone. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
