@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZoX News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-gray-900 text-3xl font-serif">
+              <a href="./page.html">
+              <strong>envato</strong>market
+              </a>
+            </h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">FEATURES</a>
+              <a href="#" class="hover:text-blue-600">BUY THEME</a>
+              <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+              <a href="#" class="hover:text-blue-600">POLITICS</a>
+              <a href="#" class="hover:text-blue-600">FASHION</a>
+              <a href="#" class="hover:text-blue-600">SPORTS</a>
+              <a href="#" class="hover:text-blue-600">TECH</a>
+              <a href="#" class="hover:text-blue-600">BUSINESS</a>
+              <a href="#" class="hover:text-blue-600">SHOP</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">FEATURES</a>
+          <a href="#" class="hover:text-blue-600">BUY THEME</a>
+          <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+          <a href="#" class="hover:text-blue-600">POLITICS</a>
+          <a href="#" class="hover:text-blue-600">FASHION</a>
+          <a href="#" class="hover:text-blue-600">SPORTS</a>
+          <a href="#" class="hover:text-blue-600">TECH</a>
+          <a href="#" class="hover:text-blue-600">BUSINESS</a>
+          <a href="#" class="hover:text-blue-600">SHOP</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--main Container-->
+    <main class="max-w-7xl mx-auto m-8">
+        <div class="flex items-center gap-3 mb-6">
+      <span class="flex-1 border-t"></span>
+      <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">TRENDING</span>
+      <span class="flex-1 border-t"></span>
+    </div>
+      <div class="max-w-[1200px] mx-auto px-4 py-6">
+        <!-- Mobile: Single column, Tablet: 2 columns, Desktop: 3 specific-width columns -->
+        <div class="flex flex-col lg:flex-row gap-6">
+            
+            <!-- LEFT COLUMN (320px on desktop, full width on mobile/tablet) -->
+            <div class="w-full lg:w-80 space-y-6">
+                <!-- Small Cards -->
+                <div class="bg-white overflow-hidden">
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-400x240.jpg" class="w-full h-40 object-cover" alt="">
+                    <div class="p-3">
+                        <p class="text-pink-600 text-xs font-bold uppercase">Entertainment</p>
+                        <h3 class="text-sm font-semibold">The final 'Game of Thrones' episodes might feel like a full season</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white overflow-hidden">
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-400x240.jpg" class="w-full h-40 object-cover" alt="">
+                    <div class="p-3">
+                        <p class="text-pink-600 text-xs font-bold uppercase">Entertainment</p>
+                        <h3 class="text-sm font-semibold">'Girls Trip' already surpasses 'Rough Night'</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white overflow-hidden">
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-400x240.jpg" class="w-full h-40 object-cover" alt="">
+                    <div class="p-3">
+                        <p class="text-pink-600 text-xs font-bold uppercase">Tech</p>
+                        <h3 class="text-sm font-semibold">Mobile Google CEO Promises 11 Daydream-compatible phones</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white overflow-hidden">
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-400x240.jpg" class="w-full h-40 object-cover" alt="">
+                    <div class="p-3">
+                        <p class="text-pink-600 text-xs font-bold uppercase">Politics</p>
+                        <h3 class="text-sm font-semibold">Mayors agree, Congress should invest in affordable housing</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MIDDLE COLUMN (520px on desktop, flexible on smaller screens) -->
+            <div class="w-full lg:w-[520px] space-y-6">
+                <!-- Big Main Post -->
+                <div class="relative overflow-hidden">
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/politics-560x600.jpg" class="w-full h-64 md:h-80 lg:h-[32rem] object-cover" alt="">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4 md:p-6">
+                        <p class="text-green-400 text-xs font-bold uppercase">Politics</p>
+                        <h2 class="text-xl md:text-2xl font-bold text-white mb-2">Illinois' Financial Crisis Fallout</h2>
+                        <p class="text-gray-200 text-sm hidden md:block">At vero eos et accusamus et iusto odio dignissimos ducimus...</p>
+                    </div>
+                </div>
+                
+                <!-- Half-width Posts (Stack on mobile, side by side on larger screens) -->
+                <div class="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-6">
+                    <div class="relative overflow-hidden ">
+                        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/woman-smile7-590x354.jpg" class="w-full h-48 object-cover" alt="">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <p class="text-green-400 text-xs font-bold uppercase">Fashion</p>
+                            <h2 class="text-base md:text-lg font-bold text-white">These '90s fashion trends are making a comeback</h2>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden">
+                        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/woman-smile7-590x354.jpg" class="w-full h-48 object-cover" alt="">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                            <p class="text-green-400 text-xs font-bold uppercase">Entertainment</p>
+                            <h2 class="text-base md:text-lg font-bold text-white">'Better Call Saul' has been renewed for a fourth season</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="w-full lg:w-80 lg:sticky lg:top-4 self-start">
+                <div class="bg-white">
+                    <div class="border-b flex text-sm font-bold">
+                        <button class="flex-1 py-3 bg-pink-600 text-white transition-colors hover:bg-pink-700">Latest</button>
+                        <button class="flex-1 py-3 hover:bg-gray-100 transition-colors">Trending</button>
+                        <button class="flex-1 py-3 hover:bg-gray-100 transition-colors">Videos</button>
+                    </div>
+                    
+                    <div class="divide-y divide-gray-200">
+                        <div class="flex items-center p-4 gap-3 hover:bg-gray-50 transition-colors">
+                            <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" class="w-16 h-16 object-cover" alt="">
+                            <p class="text-sm font-medium leading-tight">Mobile Google CEO Promises 11 Daydream-compatible phones</p>
+                        </div>
+                        
+                        <div class="flex items-center p-4 gap-3 hover:bg-gray-50 transition-colors">
+                            <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" class="w-16 h-16 object-cover" alt="">
+                            <p class="text-sm font-medium leading-tight">Mayors agree, Congress should invest in affordable housing</p>
+                        </div>
+                        
+                        <div class="flex items-center p-4 gap-3 hover:bg-gray-50 transition-colors">
+                            <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" class="w-16 h-16 object-cover" alt="">
+                            <p class="text-sm font-medium leading-tight">Ford's 2018 Mustang GT can do 0-to-60 mph in under 4 seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+      <!--Entertainment-->       
+    <div class="max-w-7xl mx-auto px-4 py-6">         
+        <!-- SECTION LABEL -->     
+        <div class="flex items-center gap-3 mb-6">       
+            <span class="flex-1 border-t"></span>       
+            <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">Entertainment</span>       
+            <span class="flex-1 border-t"></span>     
+        </div>          
+
+        <!-- FLEX LAYOUT WITH EXACT PROPORTIONS -->     
+        <div class="flex flex-col lg:flex-row gap-6">              
+            <!-- LEFT COLUMN: FEATURED STORY (520px equivalent) -->       
+            <div class="relative flex-none lg:w-[520px] w-full">         
+                <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Game of Thrones" class="w-full h-full object-cover min-h-[400px] lg:min-h-[600px]">         
+                <!-- overlay -->         
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>         
+                <!-- text -->         
+                <div class="absolute bottom-0 left-0 p-4 text-white">           
+                    <p class="text-green-400 text-xs font-bold uppercase">Entertainment • 6 years ago</p>           
+                    <h2 class="text-2xl md:text-3xl font-bold">Final 'Game of Thrones' Episodes</h2>           
+                    <p class="text-sm text-gray-200 mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>         
+                </div>       
+            </div>        
+
+            <!-- MIDDLE COLUMN (320px equivalent) -->       
+            <div class="flex-none lg:w-[320px] w-full space-y-4">         
+                <!-- Story 1 -->         
+                <div class="bg-white overflow-hidden flex flex-col">           
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Girls Trip" class="w-full h-48 object-cover">           
+                    <div class="p-4">             
+                        <p class="text-green-400 text-xs font-bold uppercase">Entertainment • 6 years ago</p>             
+                        <h3 class="text-lg font-semibold">'Girls Trip' already surpasses 'Rough Night' in opening weekend</h3>           
+                    </div>         
+                </div>         
+                <!-- Story 2 -->         
+                <div class="bg-white overflow-hidden flex flex-col">           
+                    <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Walking Dead" class="w-full h-48 object-cover">           
+                    <div class="p-4">             
+                        <p class="text-green-400 text-xs font-bold uppercase">Entertainment • 6 years ago</p>             
+                        <h3 class="text-lg font-semibold">New Season 8 Walking Dead trailer flashes forward in time</h3>           
+                    </div>         
+                </div>       
+            </div>        
+
+            <!-- RIGHT COLUMN (320px equivalent) -->       
+            <div class="flex-none lg:w-[320px] w-full space-y-4 lg:sticky lg:top-4 self-start">          
+                <!-- SMALL NEWS LIST -->         
+                <div class="space-y-4">           
+                    <div class="flex gap-3">             
+                        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Counter Strike Mod" class="w-20 h-20 object-cover flex-shrink-0">             
+                        <div>               
+                            <p class="text-xs uppercase text-gray-500">Entertainment • 6 years ago</p>               
+                            <h4 class="text-sm font-semibold">Mod turns 'Counter-Strike' into a 'Tekken' clone with fighting chickens</h4>             
+                        </div>           
+                    </div>            
+
+                    <div class="flex gap-3">             
+                        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Krypton" class="w-20 h-20 object-cover flex-shrink-0">             
+                        <div>               
+                            <p class="text-xs uppercase text-gray-500">Entertainment • 6 years ago</p>               
+                            <h4 class="text-sm font-semibold">Meet Superman's grandfather in new trailer for Krypton</h4>             
+                        </div>           
+                    </div>            
+
+                    <div class="flex gap-3">             
+                        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/game-thrones-560x600.jpg" alt="Aladdin" class="w-20 h-20 object-cover flex-shrink-0">             
+                        <div>               
+                            <p class="text-xs uppercase text-gray-500">Entertainment • 6 years ago</p>               
+                            <h4 class="text-sm font-semibold">Disney's live-action Aladdin finally finds its stars</h4>             
+                        </div>           
+                    </div>       
+                </div>     
+            </div>     
+        </div>   
+    </div>
+    <!--video-->
+    <section class="bg-black text-white px-6 py-8">
+  <!-- Heading -->
+   <div class="flex items-center gap-3 mb-6">       
+            <span class="flex-1 border-t"></span>       
+            <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">Video</span>       
+            <span class="flex-1 border-t"></span>     
+        </div>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left Big Featured Post -->
+    <div class="relative col-span-2">
+      <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/gamer.jpg" alt="Featured" class="w-full h-full object-cover">
+      <div class="absolute top-4 left-4 w-10 h-10 bg-green-400 flex items-center justify-center">
+        ▶
+      </div>
+      <div class="absolute bottom-4 left-4">
+        <p class="text-green-400 uppercase text-sm">Entertainment <span class="text-gray-400">/ 6 years ago</span></p>
+        <h3 class="font-extrabold text-2xl leading-tight max-w-lg">
+          Mod turns ‘Counter-Strike’ into a ‘Tekken’ clone with fighting chickens
+        </h3>
+      </div>
+    </div>
+
+    <!-- Right Side Small Posts -->
+    <div class="flex flex-col space-y-4">
+      <!-- Card 1 -->
+      <div class="flex items-center space-x-4">
+        <div class="relative w-28 h-20">
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/gamer.jpg" alt="Post 1" class="w-full h-full object-cover">
+          <div class="absolute top-2 left-2 w-8 h-8 bg-green-400 flex items-center justify-center text-black text-xs">
+            ▶
+          </div>
+        </div>
+        <div>
+          <p class="text-green-400 uppercase text-xs">Entertainment <span class="text-gray-400">/ 6 years ago</span></p>
+          <h4 class="font-bold text-sm leading-snug">Meet Superman’s grandfather in new trailer for Krypton</h4>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex items-center space-x-4">
+        <div class="relative w-28 h-20">
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/gamer.jpg" alt="Post 2" class="w-full h-full object-cover">
+          <div class="absolute top-2 left-2 w-8 h-8 bg-green-400 flex items-center justify-center text-black text-xs">
+            ▶
+          </div>
+        </div>
+        <div>
+          <p class="text-green-400 uppercase text-xs">Entertainment <span class="text-gray-400">/ 6 years ago</span></p>
+          <h4 class="font-bold text-sm leading-snug">Disney’s live-action Aladdin finally finds its stars</h4>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex items-center space-x-4">
+        <div class="relative w-28 h-20">
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/gamer.jpg" alt="Post 3" class="w-full h-full object-cover">
+          <div class="absolute top-2 left-2 w-8 h-8 bg-green-400 flex items-center justify-center text-black text-xs">
+            ▶
+          </div>
+        </div>
+        <div>
+          <p class="text-green-400 uppercase text-xs">Sports <span class="text-gray-400">/ 6 years ago</span></p>
+          <h4 class="font-bold text-sm leading-snug">Who are the early favorites to win the NFL rushing title?</h4>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex items-center space-x-4">
+        <div class="relative w-28 h-20">
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/gamer.jpg" alt="Post 4" class="w-full h-full object-cover">
+          <div class="absolute top-2 left-2 w-8 h-8 bg-green-400 flex items-center justify-center text-black text-xs">
+            ▶
+          </div>
+        </div>
+        <div>
+          <p class="text-green-400 uppercase text-xs">Entertainment <span class="text-gray-400">/ 6 years ago</span></p>
+          <h4 class="font-bold text-sm leading-snug">The old and New Edition cast comes together to perform</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--Business-->
+
+    <div class="max-w-7xl mx-auto px-4 py-8 ">
+
+    <!-- SECTION LABEL -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="flex-1 border-t"></span>
+      <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">Business</span>
+      <span class="flex-1 border-t"></span>
+    </div>
+
+    <!-- GRID -->
+    <section class="isolate grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- LEFT COLUMN -->
+      <div class="grid grid-cols-1 gap-8">
+        <!-- Card A -->
+        <article class="relative overflow-hidden">
+          <div class="relative aspect-[16/9]">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop"
+                 alt="Co-working spaces" class="absolute inset-0 w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <p class="text-xs uppercase"><span class="text-green-400 font-bold">Business</span> • 6 years ago</p>
+              <h3 class="text-lg font-semibold leading-snug">6 Stunning new co-working spaces around the globe</h3>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card B -->
+        <article class="relative overflow-hidden">
+          <div class="relative aspect-[16/9]">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                 alt="Presentation" class="absolute inset-0 w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <p class="text-xs uppercase"><span class="text-green-400 font-bold">Business</span> • 6 years ago</p>
+              <h3 class="text-lg font-semibold leading-snug">3 Ways to make your business presentation more relatable</h3>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- MIDDLE COLUMN (FEATURED) -->
+      <article class="relative overflow-hidden">
+        <div class="relative aspect-[3/4]">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop"
+               alt="MSNBC primetime" class="absolute inset-0 w-full h-[40rem] object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <p class="text-xs uppercase"><span class="text-green-400 font-bold">Business</span> • 6 years ago</p>
+            <h2 class="text-3xl font-extrabold leading-tight">MSNBC Now First In Primetime</h2>
+            <p class="text-sm text-gray-200 mt-3">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- RIGHT COLUMN -->
+      <div class="flex flex-col gap-8">
+
+        <!-- Small list -->
+        <div class="flex flex-col gap-5">
+          <div class="flex gap-3">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=300&auto=format&fit=crop"
+                 class="w-20 h-20 object-cover" alt="Job interview">
+            <div>
+              <p class="text-xs uppercase text-gray-500">Business • 6 years ago</p>
+              <h4 class="text-sm font-semibold leading-snug">This is how you dress for a job interview, and land an offer</h4>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=300&auto=format&fit=crop"
+                 class="w-20 h-20 object-cover" alt="Uber Lyft">
+            <div>
+              <p class="text-xs uppercase text-gray-500">Business • 6 years ago</p>
+              <h4 class="text-sm font-semibold leading-snug">Uber and Lyft are finally available in all of New York State</h4>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=300&auto=format&fit=crop"
+                 class="w-20 h-20 object-cover" alt="Mistakes at work">
+            <div>
+              <p class="text-xs uppercase text-gray-500">Business • 6 years ago</p>
+              <h4 class="text-sm font-semibold leading-snug">The 9 worst mistakes you can ever make at work</h4>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=300&auto=format&fit=crop"
+                 class="w-20 h-20 object-cover" alt="Mistakes at work">
+            <div>
+              <p class="text-xs uppercase text-gray-500">Business • 6 years ago</p>
+              <h4 class="text-sm font-semibold leading-snug">The 9 worst mistakes you can ever make at work</h4>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=300&auto=format&fit=crop"
+                 class="w-20 h-20 object-cover" alt="Mistakes at work">
+            <div>
+              <p class="text-xs uppercase text-gray-500">Business • 6 years ago</p>
+              <h4 class="text-sm font-semibold leading-snug">The 9 worst mistakes you can ever make at work</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--Tech-->
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- SECTION HEADER -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="flex-1 border-t"></span>
+      <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">Tech</span>
+      <span class="flex-1 border-t"></span>
+    </div>
+
+    <!-- GRID: 2 FEATURE CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <!-- Card 1 -->
+      <article class="relative overflow-hidden">
+        <div class="relative aspect-[16/9]">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop"
+               alt="Google VR" class="absolute inset-0 w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <p class="text-xs uppercase"><span class="text-green-400 font-bold">Tech</span> • 6 years ago</p>
+            <h2 class="text-2xl font-extrabold leading-snug">Mobile Google CEO Promises 11 Daydream-compatible phones</h2>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="relative overflow-hidden">
+        <div class="relative aspect-[16/9]">
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/blue-car-590x354.jpg"
+               alt="Ford Mustang GT" class="absolute inset-0 w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <p class="text-xs uppercase"><span class="text-green-400 font-bold">Tech</span> • 6 years ago</p>
+            <h2 class="text-2xl font-extrabold leading-snug">Ford’s 2018 Mustang GT can do 0-to-60 mph in under 4 seconds</h2>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- GRID: 4 SMALLER CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Card 3 -->
+      <article class="flex flex-col">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop"
+             alt="Google CMO" class="w-full h-40 object-cover"/>
+        <div class="mt-3">
+          <p class="text-xs uppercase text-gray-500">Tech • 6 years ago</p>
+          <h4 class="text-sm font-semibold leading-snug">Hulu hires Google marketing veteran Kelly Campbell as CMO</h4>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="flex flex-col">
+        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=800&auto=format&fit=crop"
+             alt="Supersonic plane" class="w-full h-40 object-cover"/>
+        <div class="mt-3">
+          <p class="text-xs uppercase text-gray-500">Tech • 6 years ago</p>
+          <h4 class="text-sm font-semibold leading-snug">NASA seeks to build a quieter supersonic plane for passenger flight</h4>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="flex flex-col">
+        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/blue-car-590x354.jpg"
+             alt="Microsoft Paint" class="w-full h-40 object-cover"/>
+        <div class="mt-3">
+          <p class="text-xs uppercase text-gray-500">Tech • 6 years ago</p>
+          <h4 class="text-sm font-semibold leading-snug">Microsoft Paint is finally dead, and the world is a better place</h4>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="flex flex-col">
+        <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/blue-car-590x354.jpg"
+             alt="Netflix revenue" class="w-full h-40 object-cover"/>
+        <div class="mt-3">
+          <p class="text-xs uppercase text-gray-500">Tech • 6 years ago</p>
+          <h4 class="text-sm font-semibold leading-snug">Netflix was the top grossing app in Q2, with mobile revenue up 233%</h4>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!--More News-->
+
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    
+    <!-- MAIN CONTENT -->
+    <main class="lg:col-span-2 space-y-8">
+      
+      <!-- More News Banner -->
+      <div class="flex items-center gap-3 mb-6">
+      <span class="flex-1 border-t"></span>
+      <span class="bg-pink-600 text-white px-4 py-1 text-xs font-bold uppercase">More News</span>
+      <span class="flex-1 border-t"></span>
+    </div>
+
+      <!-- News Article -->
+      <article class="flex gap-4 border-t items-center">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&auto=format&fit=crop"
+             alt="Housing" class="w-40 h-28 object-cover"/>
+        <div>
+          <p class="text-xs uppercase text-gray-500">Politics • 6 years ago</p>
+          <h2 class="font-bold text-lg">Mayors agree, Congress should invest in affordable housing</h2>
+          <p class="text-sm text-gray-600">Tempora autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates…</p>
+        </div>
+      </article>
+
+      <article class="flex gap-4 border-t items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=600&auto=format&fit=crop"
+               alt="Celebrities" class="w-40 h-28 object-cover"/>
+          <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1">▶</span>
+        </div>
+        <div>
+          <p class="text-xs uppercase text-gray-500">Fashion • 6 years ago</p>
+          <h2 class="font-bold text-lg">9 Celebrities who have spoken out about being photoshopped</h2>
+          <p class="text-sm text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+        </div>
+      </article>
+
+      <article class="flex gap-4 border-t items-center">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop"
+             alt="Congress" class="w-40 h-28 object-cover"/>
+        <div>
+          <p class="text-xs uppercase text-gray-500">Politics • 6 years ago</p>
+          <h2 class="font-bold text-lg">Congress rolls out ‘Better Deal,’ new economic agenda</h2>
+          <p class="text-sm text-gray-600">Dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…</p>
+        </div>
+      </article>
+
+      <article class="flex gap-4 border-t items-center">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&auto=format&fit=crop"
+             alt="Emily" class="w-40 h-28 object-cover"/>
+        <div>
+          <p class="text-xs uppercase text-gray-500">Fashion • 6 years ago</p>
+          <h2 class="font-bold text-lg">Emily Ratajkowski channels back-to-school style</h2>
+          <p class="text-sm text-gray-600">Nulla pariatur excepteur sint occaecat cupidatat non proident…</p>
+        </div>
+      </article>
+
+      <article class="flex flex-col border-t items-center">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&auto=format&fit=crop"
+             alt="Ruth Bader" class="w-full h-64 object-cover"/>
+        <div class="mt-3">
+          <p class="text-xs uppercase text-gray-500">Politics • 6 years ago</p>
+          <h2 class="font-bold text-xl">Ruth Bader Ginsburg optimistic ‘over the long haul’ for US</h2>
+          <p class="text-sm text-gray-600">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur…</p>
+        </div>
+      </article>
+
+      <article class="flex gap-4 border-t items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?w=600&auto=format&fit=crop"
+               alt="Superman" class="w-40 h-28 object-cover"/>
+          <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1">▶</span>
+        </div>
+        <div>
+          <p class="text-xs uppercase text-gray-500">Entertainment • 6 years ago</p>
+          <h2 class="font-bold text-lg">Meet Superman’s grandfather in new trailer for Krypton</h2>
+          <p class="text-sm text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem…</p>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="lg:col-span-1 lg:sticky lg:top-4 self-start space-y-6">
+                    
+      
+      
+
+      <!-- Tabs -->
+      <div>
+        <div class="flex border-b text-sm font-bold">
+          <button class="flex-1 text-center py-2 bg-pink-600 text-white">Latest</button>
+          <button class="flex-1 text-center py-2">Trending</button>
+          <button class="flex-1 text-center py-2">Videos</button>
+        </div>
+        <ul class="divide-y">
+          <li class="p-3 text-sm">Google CEO promises 11 Daydream phones</li>
+          <li class="p-3 text-sm">Ford’s Mustang GT can do 0-to-60 in under 4 seconds</li>
+          <li class="p-3 text-sm">Mayors agree, Congress should invest in housing</li>
+        </ul>
+      </div>
+        <!-- Newsletter -->
+         <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mayors agree, Congress should invest in affordable housing
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Ford’s 2018 Mustang GT can do 0-to-60 mph in under 4 seconds
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                8 Celebrities who have spoken out about being photoshopped
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex items-center p-3 space-x-3">
+              <img
+                src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg"
+                class="w-16 h-16 object-cover"
+                alt=""
+              />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+    </aside>
+
+  </div>
+
+</main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

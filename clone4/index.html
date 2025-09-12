@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Graph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-gray-900 text-3xl font-serif">The Graph</h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">NEWS</a>
+              <a href="#" class="hover:text-blue-600">WORLD</a>
+              <a href="#" class="hover:text-blue-600">OPINION</a>
+              <a href="#" class="hover:text-blue-600">SPORT</a>
+              <a href="#" class="hover:text-blue-600">CULTURE</a>
+              <a href="#" class="hover:text-blue-600">LIFE STYLE</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">NEWS</a>
+          <a href="#" class="hover:text-blue-600">WORLD</a>
+          <a href="#" class="hover:text-blue-600">OPINION</a>
+          <a href="#" class="hover:text-blue-600">SPORT</a>
+          <a href="#" class="hover:text-blue-600">CULTURE</a>
+          <a href="#" class="hover:text-blue-600">LIFE STYLE</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 1st Content -->
+    <div class="flex mt-[2rem] ml-[6rem] mr-[6rem]">
+      <div
+        class="grid grid-cols-[2fr] grid-rows-[repeat(2,1fr)] gap-y-4 gap-x-4 auto-rows-[0fr] auto-cols-[0fr] grid-flow-row w-[70rem] h-[35rem] border-b border-gray-800"
+      >
+        <div class="flex flex-row border-r border-gray-200 pr-6 gap-6">
+          <img
+            src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+            alt="Reading"
+            class="w-[30rem] h-[20rem] object-cover"
+          />
+
+          <div class="flex flex-col justify-start">
+            <span
+              class="bg-gray-800 w-[5rem] rounded text-white text-xs px-2 py-1"
+              >LIFESTYLE</span
+            >
+            <h2 class="text-2xl font-bold mt-3 mb-2">
+              Better than a warm cup of milk, read for six minutes before bed
+              for good sleep
+            </h2>
+            <p class="text-xs text-gray-500 mb-3">
+              BY PENCI DESIGN • JANUARY 19, 2022
+            </p>
+            <p class="text-sm text-gray-700">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their eldest daughter, Imogen, they quickly realised that the
+              traditional approach to early education wasn’t for them. “We
+              didn’t ...
+            </p>
+          </div>
+        </div>
+        <div class="flex border-r border-gray-200 h-[12rem] pr-6">
+          <div class="border-t pt-6 pr-2 border-r border-gray-100">
+            <h3 class="font-bold text-xl mb-2">
+              ‘I read all 27,000 Marvel comics and had a great time. Here’s what
+              I learnt’
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-700">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their eldest daughter, Imogen, they quickly realised that ...
+            </p>
+          </div>
+          <div class="border-t pt-6 pl-2 border-l border-gray-100">
+            <h3 class="font-bold text-xl mb-2">
+              Is Microsoft’s acquisition of Activision Blizzard good for gaming
+              in future?
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-700">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their eldest daughter, Imogen, they quickly realised that ...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 w-[30rem] h-[35rem] pl-4 border-b border-gray-800"
+      >
+        <div
+          class="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)] gap-y-[10px] gap-x-[10px] auto-rows-[0fr] auto-cols-[0fr] grid-flow-row"
+        >
+          <div class="row-1 row-2 col-1 col-2">
+            <div class="flex flex-col border-b pb-3">
+              <p class="font-medium">
+                Now that science has defanged Covid, it’s time to get on with
+                our lives
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+          </div>
+          <div class="row-1 row-2 col-2 col-3">
+            <div class="border-b pb-3">
+              <p class="font-medium">
+                Facebook’s second life: the unstoppable rise of the tech company
+                in Africa
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+          </div>
+          <div class="row-2 row-3 col-1 col-2">
+            <div class="border-b pb-3">
+              <p class="font-medium">
+                Cargo without carbon: the rise and rise of e-bike deliveries in
+                EU big city
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+          </div>
+          <div class="row-2 row-3 col-2 col-3">
+            <div class="border-b pb-3">
+              <p class="font-medium">
+                ‘Don’t plan it, just go!’: how to be spontaneous – and grab some
+                unexpected fun
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex mb-3">
+            <div class="pb-3">
+              <p class="font-medium">
+                Sundance 2022: films and shows to look out for at this year’s
+                festival
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+
+            <img
+              src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+              alt="Camera"
+              class="w-[10rem] object-cover"
+            />
+          </div>
+
+          <div class="flex mb-3 border-t border-gray-200 pt-3">
+            <div class="pb-3">
+              <p class="font-medium">
+                Australian Open: Raducanu v Kovinic in final set, Murray out and
+                Kyrgios in action
+              </p>
+              <p class="text-xs text-gray-500 mt-1">JANUARY 19, 2022</p>
+            </div>
+
+            <img
+              src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+              alt="Camera"
+              class="w-[10rem] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--2nd Container-->
+
+    <div class="flex mt-[2rem] ml-[6rem] mr-[6rem] border-b border-gray-800">
+      <div
+        class="grid grid-cols-[1fr] grid-rows-[repeat(3,1fr)] gap-y-[10px] gap-x-[10px] flex flex-row w-[60vw] h-[45rem] border-b border-gray-800"
+      >
+        <div class="row-1 row-2 col-1 col-2">
+          <div class="flex border-b border-gray-800 pb-4">
+            <div class="flex border-r border-gray-200 pr-4 gap-2">
+              <img
+                src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+                alt="Lamp"
+                class="w-[9.375rem] h-[9.375rem] object-cover"
+              />
+              <div>
+                <h2 class="font-bold text-lg">
+                  The big six energy providers don’t need a bailout – nor do
+                  they deserve one
+                </h2>
+                <p class="text-sm text-gray-500">
+                  BY PENCI DESIGN • JANUARY 19, 2022
+                </p>
+                <p class="text-sm">
+                  When Jennifer Chilton and Graeme Thirde were looking at
+                  nurseries for their …
+                </p>
+              </div>
+            </div>
+            <div class="pr-4 pl-4 gap-2">
+              <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded"
+                >WORLD</span
+              >
+              <h2 class="font-bold text-lg">
+                All plan B Covid restrictions, including mask wearing, to end in
+                England
+              </h2>
+              <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-2 row-3 col-1 col-2">
+          <div class="flex pb-4 gap-4 border-b border-gray-800">
+            <img
+              src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+              alt="Shopping"
+              class="w-[28.125rem] h-[18.75rem] object-cover mb-4"
+            />
+            <div class="flex flex-col gap-2">
+              <span
+                class="bg-gray-800 text-white text-xs px-2 py-1 w-[3rem] rounded"
+                >NEWS</span
+              >
+              <h2 class="font-bold text-xl mt-2">
+                Blame Covid: UK inflation rises to highest level in almost 30
+                years at 5.4%
+              </h2>
+              <p class="text-sm text-gray-500">
+                BY PENCI DESIGN • JANUARY 19, 2022
+              </p>
+              <p class="text-sm">
+                When Jennifer Chilton and Graeme Thirde were looking at
+                nurseries for their eldest daughter...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row gap-4 h-fll">
+          <div class="mb-2 pr-2 border-r border-gray-200">
+            <span class="bg-gray-800 text-white rounded px-2 py-1"
+              >LIFESTYLE</span
+            >
+            <h3 class="font-bold text-md mt-2">
+              Fresh powder: the best French ski resorts you’ve never heard of
+              before
+            </h3>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+            <p class="text-sm">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+          <div class="mb-2 pr-2 border-r border-gray-200">
+            <span class="bg-gray-800 text-white px-2 py-1">CULTURE</span>
+            <h3 class="font-bold text-md mt-2">
+              LOTR: ‘Until now, audiences have only seen the story of the One
+              Ring’
+            </h3>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+            <p class="text-sm">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+          <div class="p-2">
+            <span class="bg-gray-800 text-white px-2 py-1">SPORT</span>
+            <h3 class="font-bold text-md mt-2">
+              ITV agree deal to show Premiership rugby, including live final
+              matches
+            </h3>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+            <p class="text-sm">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Right side-->
+      <div class="w-[25vw] border-l border-gray-200 ml-4 pl-4">
+        <div class="flex flex-col gap-2 border-b p-4">
+          <h2 class="font-bold text-lg">
+            The richest 10% produce half of greenhouse gas emissions. They
+            should pay to fix the climate
+          </h2>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+        </div>
+        <div class="flex flex-col gap-2 border-b p-4">
+          <h2 class="font-bold text-lg">
+            A car-free future is within our reach in near future if we care
+            enough
+          </h2>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their eldest daughter...
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 border-b p-4">
+          <h2 class="font-bold text-lg">
+            Faced with Covid, Europe’s citizens demanded an EU response — and
+            got it
+          </h2>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+        </div>
+        <div class="flex flex-col gap-2 border-b p-4">
+          <img
+            src="https://byteflows.net/wp/forcast-main/wp/helth/wp-content/uploads/sites/3/2024/03/main.webp"
+            alt="Decision"
+            class="w-full h-56 object-cover mb-4"
+          />
+          <h2 class="font-bold text-base">
+            Finding it impossible to make decisions? You’re not the only one
+            left standing
+          </h2>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their eldest daughter...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--World News-->
+
+    <section class="container mx-auto px-6 py-8 border-b border-gray-800">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <!-- Left Sidebar -->
+        <div class="lg:col-span-1 border-r pr-6">
+          <h2 class="text-2xl font-bold mb-4">World News</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            To take a trivial example, which of us ever undertakes laborious
+            physical exercise, except to obtain some advantage from it? But who
+            has any right to find fault with a man who chooses to enjoy a
+            pleasure that has no annoying consequences, or one who avoids a pain
+            that produces no resultant pleasure.
+          </p>
+        </div>
+
+        <!-- News Grid -->
+        <div
+          class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          <!-- Card 1 -->
+          <div>
+            <img
+              src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg"
+              alt="Africa"
+              class="w-full h-40 object-cover mb-3 rounded"
+            />
+            <h3 class="font-bold text-md mb-1">
+              Facebook’s second life: the unstoppable rise of the tech company
+              in Africa
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-600">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div>
+            <img
+              src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg"
+              alt="Street"
+              class="w-full h-40 object-cover mb-3 rounded"
+            />
+            <h3 class="font-bold text-md mb-1">
+              All plan B Covid restrictions, including mask wearing, to end in
+              England
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-600">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div>
+            <img
+              src="https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg"
+              alt="Plane"
+              class="w-full h-40 object-cover mb-3 rounded"
+            />
+            <h3 class="font-bold text-md mb-1">
+              Airlines cancel some US flights over 5G concerns in the US this
+              week
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-600">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div>
+            <img
+              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+              alt="Business Meeting"
+              class="w-full h-40 object-cover mb-3 rounded"
+            />
+            <h3 class="font-bold text-md mb-1">
+              Bankers at Goldman Sachs reap rewards as profits more than double
+              to $27bn
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+            <p class="text-sm text-gray-600">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their …
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Culture-->
+    <div
+      class="mt-[2rem] ml-[6rem] mr-[6rem] grid grid-cols-[1fr] grid-rows-[repeat(2,1fr)] gap-y-[10px] gap-x-[10px] border-b border-gray-800 pb-6"
+    >
+      <div class="row-1 row-2 col-1 col-2 flex gap-4 border-b border-gray-200">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl font-bold mb-2">Culture</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            To take a trivial example, which of us ever undertakes laborious
+            physical exercise, except to obtain some advantage from it.
+          </p>
+        </div>
+        <div class="lg:col-span-2 flex gap-4 items-start pb-2">
+          <div class="flex-1">
+            <h3 class="font-bold text-xl leading-snug mb-1">
+              Mapping fiction: the complicated relationship between authors and
+              maps
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+          </div>
+          <img
+            src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg"
+            alt="Author"
+            class="w-[8rem] h-[7rem] object-cover"
+          />
+        </div>
+      </div>
+      <div class="row-2 row-3 col-1 col-2 flex gap-4 mt-2">
+        <div class="flex gap-2">
+          <img
+            src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg"
+            alt="Concert"
+            class="w-full h-24 object-cover mb-2"
+          />
+          <div>
+            <h4 class="font-bold text-md mb-1">
+              Dun, Dun Duuun! Where did pop culture’s most dramatic sound…
+            </h4>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex gap-2">
+          <img
+            src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg"
+            alt="Concert"
+            class="w-full h-24 object-cover mb-2"
+          />
+          <div>
+            <h4 class="font-bold text-md mb-1">
+              ‘Who’s to say it’s not real?’ Street artist on creating…
+            </h4>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex gap-2">
+          <img
+            src="https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg"
+            alt="Street Artist"
+            class="w-full h-24 object-cover mb-2"
+          />
+          <div>
+            <h4 class="font-bold text-md mb-1">
+              The modernist marvel that Hamburg took to its heart: ‘Elphi’…
+            </h4>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex gap-2">
+          <img
+            src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+            alt="Hamburg"
+            class="w-full h-24 object-cover mb-2"
+          />
+          <div>
+            <h4 class="font-bold text-md mb-1">
+              Nightmare Alley review – Guillermo del Toro’s fairground of fear…
+            </h4>
+            <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Lifestyle-->
+    <section class="container mx-auto px-6 py-8 border-b">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 gap-6 bprder-b border-gray-200"
+      >
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl font-bold mb-4">Life Style</h2>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            To take a trivial example, which of us ever undertakes laborious
+            physical exercise, except to obtain some advantage from it.
+          </p>
+        </div>
+
+        <!-- Featured Article -->
+        <div class="lg:col-span-2 flex gap-4 pb-4">
+          <div class="flex-1">
+            <h3 class="font-bold text-xl leading-snug mb-1">
+              From bees to bins: how a London hotel aims to become truly
+              net-zero
+            </h3>
+            <p class="text-xs text-gray-500 mb-2">JANUARY 19, 2022</p>
+          </div>
+          <img
+            src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg"
+            alt="Hotel"
+            class="w-24 h-24 object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6 border-t border-gray-200 pt-4"
+      >
+        <!-- Card 1 -->
+        <div class="border-r pr-4">
+          <img
+            src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg"
+            alt="Solar Panels"
+            class="w-full h-32 object-cover mb-3"
+          />
+          <h4 class="font-bold text-md mb-1">
+            Google’s solar-powered roof growing demand for sustainable
+            workspaces
+          </h4>
+          <p class="text-xs text-gray-500">JANUARY 18, 2022</p>
+          <p class="text-sm text-gray-600">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their …
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border-r pr-4">
+          <img
+            src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+            alt="Family"
+            class="w-full h-32 object-cover mb-3"
+          />
+          <h4 class="font-bold text-md mb-1">
+            UK energy industry urges ministers to stick with net zero plan green
+            deal
+          </h4>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm text-gray-600">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their …
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border-r pr-4">
+          <img
+            src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg"
+            alt="Cyclists"
+            class="w-full h-32 object-cover mb-3"
+          />
+          <h4 class="font-bold text-md mb-1">
+            A car-free future is within our reach in near future if we care
+            enough
+          </h4>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm text-gray-600">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their …
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="border-r pr-4">
+          <img
+            src="https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg"
+            alt="Stadium"
+            class="w-full h-32 object-cover mb-3"
+          />
+          <h4 class="font-bold text-md mb-1">
+            NFL divisional round predictions: Bengals to join top seeds in last
+            four
+          </h4>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm text-gray-600">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their …
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="border-r pr-4">
+          <img
+            src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg"
+            alt="Books"
+            class="w-full h-32 object-cover mb-3"
+          />
+          <h4 class="font-bold text-md mb-1">
+            Mapping fiction: the complicated relationship between authors and
+            maps
+          </h4>
+          <p class="text-xs text-gray-500">JANUARY 19, 2022</p>
+          <p class="text-sm text-gray-600">
+            When Jennifer Chilton and Graeme Thirde were looking at nurseries
+            for their …
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

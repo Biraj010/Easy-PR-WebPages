@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZoX News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-gray-900 text-3xl font-serif">
+              <strong>envato</strong>market
+            </h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">FEATURES</a>
+              <a href="#" class="hover:text-blue-600">BUY THEME</a>
+              <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+              <a href="#" class="hover:text-blue-600">POLITICS</a>
+              <a href="#" class="hover:text-blue-600">FASHION</a>
+              <a href="#" class="hover:text-blue-600">SPORTS</a>
+              <a href="#" class="hover:text-blue-600">TECH</a>
+              <a href="#" class="hover:text-blue-600">BUSINESS</a>
+              <a href="#" class="hover:text-blue-600">SHOP</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">FEATURES</a>
+          <a href="#" class="hover:text-blue-600">BUY THEME</a>
+          <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+          <a href="#" class="hover:text-blue-600">POLITICS</a>
+          <a href="#" class="hover:text-blue-600">FASHION</a>
+          <a href="#" class="hover:text-blue-600">SPORTS</a>
+          <a href="#" class="hover:text-blue-600">TECH</a>
+          <a href="#" class="hover:text-blue-600">BUSINESS</a>
+          <a href="#" class="hover:text-blue-600">SHOP</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+     <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- MAIN ARTICLE (LEFT 2/3) -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- Title -->
+        <div>
+          <p class="text-pink-600 text-xs font-bold uppercase">Politics</p>
+          <h1 class="text-3xl font-bold leading-snug">
+            Illinois’ financial crisis could bring the state to a halt
+          </h1>
+          <p class="text-gray-600 text-sm">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.
+          </p>
+          <p class="text-xs text-gray-500 mt-2">
+            Published 5 years ago on October 29, 2019 · By <span class="font-semibold">Zox News Staff</span>
+          </p>
+        </div>
+
+        <!-- Featured Image -->
+        <div>
+          <img 
+            src="	https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/politics.jpg" 
+            alt="Article Featured" 
+            class="w-full h-[22rem] object-cover"
+          />
+          <p class="text-xs text-gray-500 mt-1">Photo: Shutterstock</p>
+        </div>
+
+        <!-- Article Text -->
+        <div class="space-y-4">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+            sunt explicabo.
+          </p>
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni 
+            dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold">Heading 1</h2>
+        <p>
+          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+          vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+        </p>
+        <p>
+          Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et 
+          voluptates repudiandae sint et molestiae non recusandae.
+        </p>
+
+        <!-- Quote -->
+        <blockquote class="border-l-4 border-pink-600 pl-4 italic text-xl font-semibold text-gray-800">
+          “Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat”
+        </blockquote>
+
+        <!-- More Paragraphs -->
+        <div class="space-y-4">
+          <p>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni 
+            dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+          <p>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+          </p>
+        </div>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="bg-gray-200 px-2 py-1 rounded">Politics</span>
+          <span class="bg-gray-200 px-2 py-1 rounded">Finance</span>
+          <span class="bg-gray-200 px-2 py-1 rounded">Illinois</span>
+          <span class="bg-gray-200 px-2 py-1 rounded">Situation</span>
+        </div>
+
+        <!--You May Also Like-->
+        <div class="max-w-6xl mx-auto px-4 py-10">
+      
+      <!-- Section Heading -->
+      <div class="relative mb-8 text-center">
+        <hr class="border-gray-300" />
+        <span class="absolute left-1/2 transform -translate-x-1/2 -top-3 bg-pink-600 text-white text-sm font-bold px-4 py-1 uppercase">
+          You May Like
+        </span>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- Card 1 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="Affordable Housing" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            Mayors agree, Congress should invest in affordable housing
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="Better Deal" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            Congress rolls out ‘Better Deal,’ new economic agenda
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="MSNBC" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            MSNBC finishes first in primetime basic cable for first time ever
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="Ruth Bader Ginsburg" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            Ruth Bader Ginsburg optimistic ‘over the long haul’ for US
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="Co-working Spaces" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            6 Stunning new co-working spaces around the globe
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div>
+          <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/apartments.jpg" 
+               alt="Virginia Governor Race" class="w-full h-48 object-cover" />
+          <p class="font-bold mt-2">
+            Poll: Virginia governor’s race in dead heat
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+      </div>
+
+      <!-- STICKY ASIDE (RIGHT 1/3) -->
+      <aside class="sticky top-4 self-start space-y-6">
+        
+
+        <!-- Latest News -->
+        <div>
+          <p class="text-pink-600 text-xs font-bold uppercase mb-3">Latest</p>
+          <div class="space-y-3">
+            <div class="flex gap-3">
+              <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" 
+                   class="w-16 h-16 object-cover" />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" 
+                   class="w-16 h-16 object-cover" />
+              <p class="text-sm font-medium">
+                Mayors agree, Congress should invest in affordable housing
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" 
+                   class="w-16 h-16 object-cover" />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" 
+                   class="w-16 h-16 object-cover" />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <img src="https://mvpthemes.com/zoxnews/wp-content/uploads/2017/07/vr-headset-150x150.jpg" 
+                   class="w-16 h-16 object-cover" />
+              <p class="text-sm font-medium">
+                Mobile Google CEO Promises 11 Daydream-compatible phones
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </body>
+
+     <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
