@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foxiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+     <!-- Extend Tailwind to include Aleo -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            aleo: ['Aleo', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo ">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2 bg-black pl-2 pr-2">
+            <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2022/01/logo-t.png" alt="logo"
+            />
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">Technology</a>
+              <a href="#" class="hover:text-blue-600">Gadget</a>
+              <a href="#" class="hover:text-blue-600">Posts</a>
+              <a href="#" class="hover:text-blue-600">Pages</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">Technology</a>
+              <a href="#" class="hover:text-blue-600">Gadget</a>
+              <a href="#" class="hover:text-blue-600">Posts</a>
+              <a href="#" class="hover:text-blue-600">Pages</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="max-w-7xl mx-auto p-6">
+
+    <!-- TOP GRID: uses 4 logical columns at lg -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- LEFT: Big Feature (spans 2 columns at lg) -->
+      <article class="relative  overflow-hidden lg:col-span-2 md:col-span-2 h-96">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t12-615x410.jpg" 
+             alt="feature" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+          <span class="inline-block bg-blue-600 text-xs font-semibold px-3 py-1 ">GADGET</span>
+          <h1 class="mt-3 text-3xl md:text-4xl font-extrabold leading-tight">Best Fujifilm Cameras for Every Photographer</h1>
+
+          <div class="mt-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <!-- rating bars -->
+              <div class="flex items-center gap-1">
+                <span class="w-8 h-2 bg-red-500 inline-block"></span>
+                <span class="w-8 h-2 bg-yellow-400 inline-block "></span>
+                <span class="w-8 h-2 bg-green-500 inline-block "></span>
+              </div>
+              <div class="text-sm opacity-90">8.8 out of 10 · Good Value</div>
+            </div>
+
+            <!-- bookmark icon -->
+            <button class="p-2 bg-white/10  hover:bg-white/20">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5v14l7-5 7 5V5z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- MIDDLE: Single card same height as feature -->
+      <article class="relative  overflow-hidden h-96">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t12-615x410.jpg" 
+             alt="middle" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <h3 class="text-xl font-semibold leading-snug">10 Reasons to Choose PlayStation 5 As Your Next Console</h3>
+          <div class="mt-2 text-sm opacity-90 flex items-center justify-between">
+            <span>6 Min Read</span>
+            <button class="p-1 bg-white/10 "><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5v14l7-5 7 5V5z"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- RIGHT: a column that is split into two stacked cards (total height matches the middle card) -->
+      <div class="flex flex-col gap-6 h-96">
+        <!-- top-right card -->
+        <article class="relative flex-1 overflow-hidden">
+          <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t12-615x410.jpg" 
+               alt="top-right" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="font-semibold">Seeking Suggestions Regarding Headsets for Conference Interpreters</h4>
+          </div>
+        </article>
+
+        <!-- bottom-right card -->
+        <article class="relative flex-1 overflow-hidden">
+          <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t12-615x410.jpg" 
+               alt="bottom-right" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/35"></div>
+          <div class="absolute bottom-3 left-3 right-3 text-white">
+            <h4 class="font-semibold">Top 10 Best Portable Bluetooth Speakers for Summer Fun</h4>
+            <div class="mt-2 text-xs opacity-90">6 Min Read</div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW: 4 equal cards (responsive) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+      <article class="relative overflow-hidden h-56">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t12-615x410.jpg" alt="card1" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-white">
+          <span class="inline-block bg-red-500 text-xs px-2 py-1 ">TECH NEWS</span>
+          <h5 class="mt-2 font-semibold">Top 10 Largest Hot High-Quality Earphone Handsfree</h5>
+          <div class="mt-2 text-xs opacity-90">6 Min Read</div>
+        </div>
+      </article>
+
+      <article class="relative overflow-hidden h-56">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" alt="card2" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-white">
+          <span class="inline-block bg-red-500 text-xs px-2 py-1 ">TECH NEWS</span>
+          <h5 class="mt-2 font-semibold">LinkedIn launches New Formats for Live Events</h5>
+          <div class="mt-2 text-xs opacity-90">Sponsored by TechBird</div>
+        </div>
+      </article>
+
+      <article class="relative overflow-hidden h-56">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" alt="card3" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-white">
+          <span class="inline-block bg-blue-500 text-xs px-2 py-1">GADGET</span>
+          <h5 class="mt-2 font-semibold">Portable Bluetooth Speakers That can Go Literally Anywhere</h5>
+          <div class="mt-2 text-xs opacity-90">6 Min Read</div>
+        </div>
+      </article>
+
+      <article class="relative overflow-hidden h-56">
+        <img src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?q=80&w=1200&auto=format&fit=crop" alt="card4" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute bottom-3 left-3 right-3 text-white">
+          <span class="inline-block bg-blue-500 text-xs px-2 py-1">GADGET</span>
+          <h5 class="mt-2 font-semibold">Should I Replace My Upright Vacuum with a Cleaning Robot?</h5>
+          <div class="mt-2 text-xs opacity-90">6 Min Read</div>
+        </div>
+      </article>
+    </div>
+</div>
+<!--Editor's Picks-->
+
+<section class="max-w-7xl mx-auto mt-10 p-4">
+  <!-- Section Heading -->
+  <h2 class="text-xl font-semibold border-b-2 border-purple-600 inline-block mb-6">
+    Editor's Pick
+  </h2>
+
+  <!-- Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left: Big Featured Post -->
+    <div class="lg:col-span-1">
+      <div class="relative">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/22-420x280.jpg" alt="Featured" class="w-full h-full object-cover">
+        <div class="bg-black bg-opacity-80 p-6 flex flex-col justify-end">
+          <span class="text-xs font-bold text-white uppercase">Tech News</span>
+          <h2 class="text-2xl font-bold text-white mt-2">Here’s Why Business Needs a Mobile-Friendly Website</h2>
+          <p class="text-gray-200 text-sm mt-2">Good web design has visual weight, is optimized for various devices, and...</p>
+          <div class="flex items-center text-xs text-gray-300 mt-3 space-x-4">
+            <span>Connor</span>
+            <span>•</span>
+            <span>6 Min Read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Column: Small Posts -->
+    <div class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/22-420x280.jpg" class="w-24 h-20 object-cover" alt="">
+        <div>
+          <h3 class="text-sm font-semibold">Corsair HS80 RGB Wireless Gaming Headset Review</h3>
+          <div class="flex text-yellow-400">★★★★★</div>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/22-420x280.jpg" class="w-24 h-20 object-cover" alt="">
+        <div>
+          <h3 class="text-sm font-semibold">The Samsung Galaxy S21 Ultra 5G Awarded Best Smartphone</h3>
+          <p class="text-xs text-gray-500">6 Min Read</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/22-420x280.jpg" class="w-24 h-20 object-cover" alt="">
+        <div>
+          <h3 class="text-sm font-semibold">Best Fujifilm Cameras for Every Photographer</h3>
+        </div>
+      </div>
+      <div class="flex items-center space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/22-420x280.jpg" class="w-24 h-20 object-cover" alt="">
+        <div>
+          <h3 class="text-sm font-semibold">Apple iPhone 13 Pro Battery: Highly Efficient Device</h3>
+          <p class="text-xs text-gray-500">6 Min Read</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Weather + Social -->
+    <div class="space-y-6">
+      <!-- Weather Card -->
+      <div class="bg-white p-6">
+        <span class="text-sm font-semibold text-purple-600">Weather</span>
+        <div class="text-4xl font-bold flex items-center mt-2">19°C</div>
+        <p class="text-gray-600">London</p>
+        <p class="text-xs text-gray-500">Overcast Clouds</p>
+        <div class="flex justify-between mt-4 text-sm text-gray-600">
+          <div>Mon<br><span class="font-semibold">23°</span></div>
+          <div>Tue<br><span class="font-semibold">26°</span></div>
+          <div>Wed<br><span class="font-semibold">24°</span></div>
+          <div>Thu<br><span class="font-semibold">21°</span></div>
+          <div>Fri<br><span class="font-semibold">24°</span></div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div>
+        <h3 class="text-sm font-semibold mb-3">Follow Us</h3>
+        <div class="flex space-x-4">
+          <div class="flex flex-col items-center">
+            <div class="bg-blue-600 text-white w-10 h-10 flex items-center justify-center">f</div>
+            <span class="text-xs mt-1">248.1k</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="bg-black text-white w-10 h-10 flex items-center justify-center">X</div>
+            <span class="text-xs mt-1">69.1k</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="bg-red-600 text-white w-10 h-10 flex items-center justify-center">P</div>
+            <span class="text-xs mt-1">134k</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="bg-purple-600 text-white w-10 h-10 flex items-center justify-center">I</div>
+            <span class="text-xs mt-1">54.3k</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Watch it-->
+
+<!-- Watch It Section -->
+<section class="max-w-7xl mx-auto px-4 mt-12">
+  <!-- Section Title -->
+  <h2 class="text-xl font-semibold border-b-2 border-purple-600 inline-block mb-6">
+    Watch It
+  </h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left: Main Video -->
+    <div class="lg:col-span-2">
+      <iframe 
+        class="w-full h-80 lg:h-[420px]" 
+        src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" 
+        title="YouTube video player"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Right: Playlist -->
+    <div class="bg-gray-900 p-4">
+      <h3 class="text-gray-300 text-sm font-semibold mb-3">Now Playing</h3>
+      <ul class="space-y-4">
+        <li class="flex gap-3">
+          <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="" class="w-24 h-16 object-cover" />
+          <div>
+            <p class="text-white text-sm font-medium">Windows 11 Review: Cool New Features</p>
+            <span class="text-gray-400 text-xs">CNET</span>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="" class="w-24 h-16 object-cover" />
+          <div>
+            <p class="text-white text-sm font-medium">Keanu Reeves and Carrie-Anne Moss...</p>
+            <span class="text-gray-400 text-xs">The Verge</span>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="" class="w-24 h-16 object-cover" />
+          <div>
+            <p class="text-white text-sm font-medium">MacBook Pro with M1 Pro and Max</p>
+            <span class="text-gray-400 text-xs">Apple Insider</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom: Related Videos -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+    <div class="bg-gray-900">
+      <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="headset" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <span class="text-blue-400 text-xs font-semibold">GADGET</span>
+        <h3 class="text-white font-semibold mt-2 text-sm">Seeking Suggestions Regarding Headsets...</h3>
+        <p class="text-gray-400 text-xs mt-1">6 Min Read</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-900">
+      <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="speaker" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <span class="text-purple-400 text-xs font-semibold">TECHNOLOGY</span>
+        <h3 class="text-white font-semibold mt-2 text-sm">Top 10 Best Portable Bluetooth Speakers</h3>
+        <p class="text-gray-400 text-xs mt-1">6 Min Read</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-900">
+      <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="ps5" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <span class="text-blue-400 text-xs font-semibold">GADGET</span>
+        <h3 class="text-white font-semibold mt-2 text-sm">10 Reasons to Choose PlayStation 5</h3>
+        <p class="text-gray-400 text-xs mt-1">6 Min Read</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-900">
+      <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/11/maxresdefault.jpg" alt="laptop" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <span class="text-blue-400 text-xs font-semibold">GADGET</span>
+        <h3 class="text-white font-semibold mt-2 text-sm">The 4 Best Laptops in 2021</h3>
+        <p class="text-gray-400 text-xs mt-1">6 Min Read</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Discover Categories-->
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold border-b-2 border-purple-600 inline-block mb-6">
+    Discover Categories
+  </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg group">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t9-1-420x280.jpg" alt="Tech News" class="w-full h-[21rem] object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-red-900 bg-opacity-60 group-hover:bg-opacity-70 transition duration-300"></div>
+        <div class="absolute inset-0 flex flex-col justify-start p-4 text-white">
+          <p class="text-sm">13 Articles</p>
+          <h3 class="text-xl font-semibold">Tech News</h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg group">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t15-1-420x280.jpg" alt="Mobile" class="w-full h-[21rem] object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-green-900 bg-opacity-50 group-hover:bg-opacity-60 transition duration-300"></div>
+        <div class="absolute inset-0 flex flex-col justify-start p-4 text-white">
+          <p class="text-sm">7 Articles</p>
+          <h3 class="text-xl font-semibold">Mobile</h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg group">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2022/01/cat-4-420x280.jpg" alt="Technology" class="w-full h-[21rem] object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-purple-800 bg-opacity-50 group-hover:bg-opacity-60 transition duration-300"></div>
+        <div class="absolute inset-0 flex flex-col justify-start p-4 text-white">
+          <p class="text-sm">7 Articles</p>
+          <h3 class="text-xl font-semibold">Technology</h3>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative rounded-lg overflow-hidden shadow-lg group">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t6-1-420x280.jpg" alt="Gadget" class="w-full h-[21rem] object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-blue-900 bg-opacity-60 group-hover:bg-opacity-70 transition duration-300"></div>
+        <div class="absolute inset-0 flex flex-col justify-start p-4 text-white">
+          <p class="text-sm">9 Articles</p>
+          <h3 class="text-xl font-semibold">Gadget</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--More Latest News-->
+   <section class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-[820px_375px] gap-8">
+
+  <!-- MAIN CONTENT -->
+  <main class="space-y-8">
+    
+    <!-- Heading -->
+    <h2 class="text-xl font-semibold border-b-2 border-purple-600 inline-block mb-6">
+    More Latest News
+  </h2>
+
+    <!-- Big Featured Article -->
+    <article class="relative w-full h-[400px] md:h-[450px] lg:h-[500px] text-white">
+      <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t600-860x573.jpg" alt="Featured" 
+           class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
+      <div class="relative z-10 flex flex-col justify-end h-full p-6 md:p-10">
+        <span class="bg-blue-600 text-white w-[5rem] text-xs uppercase px-3 py-1 inline-block mb-4 font-semibold">
+          Gadget
+        </span>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug mb-3">
+          Top Rated Products in Wireless & <br class="hidden md:block" />
+          Portable Bluetooth Speakers
+        </h2>
+        <p class="text-sm md:text-base text-gray-300 max-w-3xl mb-4">
+          Good web design has visual weight, is optimized for various devices, and has content that is prioritized for the medium. The most important elements of a web page should have...
+        </p>
+        <div class="flex items-center text-sm text-gray-400">
+          <img src="https://via.placeholder.com/30" class="w-6 h-6 rounded-full mr-2" alt="Author" />
+          <span class="text-white font-medium mr-4">Connor</span>
+          <span>🕒 6 Min Read</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Small Articles Grid -->
+    <div class="grid gap-6">
+
+      <!-- Article 1 -->
+      <article class="flex bg-white overflow-hidden w-full h-[10rem]">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t600-860x573.jpg" alt="Article" class="object-cover" />
+        <div class="p-4">
+          <span class="text-xs uppercase text-red-600 font-bold">Finance</span>
+          <h3 class="font-semibold text-lg">5 Ways to Manage Your Spending on Multiple Credit Cards</h3>
+          <div class="mt-2 text-sm text-gray-500 flex items-center space-x-4">
+            <span>🕒 5 Min Read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="flex bg-white overflow-hidden w-full h-[10rem]">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t600-860x573.jpg" alt="Article" class="object-cover" />
+        <div class="p-4">
+          <span class="text-xs uppercase text-blue-600 font-bold">Tech News</span>
+          <h3 class="font-semibold text-lg">Bluetooth Technology Work in Tandem for Indoor Positioning System</h3>
+          <div class="mt-2 text-sm text-gray-500 flex items-center space-x-4">
+            <span>🕒 6 Min Read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="flex bg-white overflow-hidden w-full h-[10rem]">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t600-860x573.jpg" alt="Article" class="object-cover" />
+        <div class="p-4">
+          <span class="text-xs uppercase text-orange-600 font-bold">Marketing</span>
+          <h3 class="font-semibold text-lg">Start a Digital Marketing Website for your Service</h3>
+          <div class="mt-2 text-sm text-gray-500 flex items-center space-x-4">
+            <span>🕒 6 Min Read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Large Bottom Article -->
+      <article class="relative w-full h-[400px] md:h-[450px] lg:h-[500px] text-white">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/36-860x573.jpg" 
+             alt="Tech Trends" 
+             class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
+        <div class="relative z-10 flex flex-col justify-end h-full p-6 md:p-10">
+          <span class="w-[7rem] bg-purple-600 text-white text-xs uppercase px-3 py-1 inline-block mb-4 font-semibold">
+            Technology
+          </span>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-snug mb-3">
+            Top Tech Trends: Great Gadgets to Help <br class="hidden md:block" />
+            You
+          </h2>
+          <p class="text-sm md:text-base text-gray-300 max-w-3xl mb-4">
+            Good web design has visual weight, is optimized for various devices, and has content that is prioritized for the medium. The most important elements of a web page should have...
+          </p>
+          <div class="flex items-center text-sm text-gray-400">
+            <img src="https://via.placeholder.com/30" class="w-6 h-6 rounded-full mr-2" alt="Author" />
+            <span class="text-white font-medium mr-4">Connor</span>
+            <span>🕒 6 Min Read</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="space-y-6 sticky top-4 self-start">
+
+    <!-- Promotion Card -->
+    <div class="bg-white rounded-lg p-6 shadow text-center">
+      <h3 class="text-lg font-semibold mb-2">Create an Amazing Newspaper</h3>
+      <p class="text-sm text-gray-500 mb-4">Discover new ideas, layouts, and more.</p>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Learn More</button>
+    </div>
+
+    <!-- Sponsored Content -->
+    <div class="space-y-6">
+      <h2 class="text-lg font-semibold text-gray-900 border-l-4 border-blue-500 pl-2">
+        / Sponsored Content
+      </h2>
+
+      <!-- Item 1 -->
+      <div class="flex items-start space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t44-200x135.jpg" alt="TechBird" class="w-20 h-20 object-cover" />
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-1">
+            LinkedIn launches New Formats for Live Events
+          </h3>
+          <p class="text-xs text-gray-500 flex items-center space-x-1">
+            <span>🔔 Sponsored by</span>
+            <span class="text-blue-600 font-bold ml-1">TechBird</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex items-start space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t44-200x135.jpg" alt="ororin" class="w-20 h-20 object-cover" />
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-1">
+            Apple Jul Announcement: What a Refresh for Macbook
+          </h3>
+          <p class="text-xs text-gray-500 flex items-center space-x-1">
+            <span>🔔 Sponsored by</span>
+            <span class="text-green-600 font-bold ml-1">ororin</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex items-start space-x-4">
+        <img src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t44-200x135.jpg" alt="Bstore" class="w-20 h-20 object-cover" />
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-1">
+            Best beaches in the UK for the Perfect Sandy Getaway
+          </h3>
+          <p class="text-xs text-gray-500 flex items-center space-x-1">
+            <span>🔔 Sponsored by</span>
+            <span class="text-purple-600 font-bold ml-1">Bstore</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 Forcast Clone. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
