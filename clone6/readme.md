@@ -1,0 +1,1 @@
+https://smartmag.theme-sphere.com/tribune-post/

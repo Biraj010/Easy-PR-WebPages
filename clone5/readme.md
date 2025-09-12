@@ -1,0 +1,1 @@
+https://preview.themeforest.net/item/zox-news-professional-wordpress-news-magazine-theme/full_screen_preview/20381541 
