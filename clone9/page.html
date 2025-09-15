@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The New York Times</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2 bg-white pl-2 pr-2">
+            <h1 class="text-black">The New York Times</h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">U.S</a>
+              <a href="#" class="hover:text-blue-600">World</a>
+              <a href="#" class="hover:text-blue-600">Business</a>
+              <a href="#" class="hover:text-blue-600">Art</a>
+              <a href="#" class="hover:text-blue-600">Lifestyle</a>
+              <a href="#" class="hover:text-blue-600">Opinion</a>
+              <a href="#" class="hover:text-blue-600">Audio</a>
+              <a href="#" class="hover:text-blue-600">Games</a>
+              <a href="#" class="hover:text-blue-600">Cooking</a>
+              <a href="#" class="hover:text-blue-600">Wirecutter</a>
+              <a href="#" class="hover:text-blue-600">The Athletic</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">U.S</a>
+          <a href="#" class="hover:text-blue-600">World</a>
+          <a href="#" class="hover:text-blue-600">Business</a>
+          <a href="#" class="hover:text-blue-600">Art</a>
+          <a href="#" class="hover:text-blue-600">Lifestyle</a>
+          <a href="#" class="hover:text-blue-600">Opinion</a>
+          <a href="#" class="hover:text-blue-600">Audio</a>
+          <a href="#" class="hover:text-blue-600">Games</a>
+          <a href="#" class="hover:text-blue-600">Cooking</a>
+          <a href="#" class="hover:text-blue-600">Wirecutter</a>
+          <a href="#" class="hover:text-blue-600">The Athletic</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--Divider-->
+    <div class="space-y-1 pt-5">
+      <hr class="border-t-2 border-black" />
+      <hr class="border-t border-black" />
+    </div>
+
+    <main class="max-w-7xl mx-auto p-6">
+      <div class="grid grid-cols-[3fr_1fr] gap-6 p-4 border-b border-gray-800">
+        <!-- Left Container -->
+        <div class="p-4 border-r">
+          <div class="border-b border-gray-800 pb-8">
+            <div class="grid grid-cols-[2fr_3fr] gap-6">
+              <!-- Left Column -->
+              <div class="space-y-6">
+                <!-- Article Block 1 -->
+                <div class="border-b pb-4">
+                  <p class="uppercase text-xs text-gray-500 font-semibold">
+                    Breaking News
+                  </p>
+                  <h2 class="text-xl font-bold leading-snug mt-1">
+                    Climate Summit Reaches Historic Agreement on Renewable Energy
+                  </h2>
+                  <p class="text-sm text-gray-700 mt-2">
+                    World leaders commit to tripling renewable energy capacity by 2030, marking a significant shift in global climate policy.
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">8 MIN READ</p>
+                </div>
+
+                <!-- Article Block 2 -->
+                <div class="border-b pb-4">
+                  <h2 class="text-xl font-bold leading-snug">
+                    Silicon Valley Startup Revolutionizes Urban Transportation
+                  </h2>
+                  <p class="text-sm text-gray-700 mt-2">
+                    A new autonomous vehicle company claims to have solved the safety challenges that have plagued self-driving technology.
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">6 MIN READ</p>
+                </div>
+
+                <!-- Article Block 3 -->
+                <div class="pb-4">
+                  <h2 class="text-xl font-bold leading-snug">
+                    Archaeological Discovery Rewrites Ancient History
+                  </h2>
+                  <p class="text-xs text-gray-500 mt-1">9 MIN READ</p>
+                </div>
+              </div>
+
+              <!-- Right Column: Image -->
+              <div>
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  alt="Climate Summit"
+                  class="w-full h-[25rem] object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Bottom Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 border-t pt-6">
+              <!-- Article with small image left -->
+              <div class="flex items-start space-x-4 border-r">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-[6.5625rem] h-[6.5625rem] object-cover"
+                  alt="Tech Innovation"
+                />
+                <div>
+                  <h3 class="font-semibold text-md leading-snug">
+                    AI Revolution Transforms Healthcare Diagnostics
+                  </h3>
+                  <p class="text-xs text-gray-500 mt-1">5 MIN READ</p>
+                </div>
+              </div>
+
+              <!-- Article with small image left -->
+              <div class="flex items-start space-x-4">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-[6.5625rem] h-[6.5625rem] object-cover"
+                  alt="Space Exploration"
+                />
+                <div class="flex-1">
+                  <h3 class="font-semibold text-md leading-snug">
+                    Mars Colony Project Reaches Major Milestone
+                  </h3>
+                  <p class="text-xs text-gray-500 mt-1">7 MIN READ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--after 1st Divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6 border-b border-gray-800 pb-10">
+            <!-- LEFT ARTICLES -->
+            <div class="flex flex-col justify-between">
+              <!-- Article 1 -->
+              <div class="pb-6 border-b">
+                <h2 class="text-xl font-bold leading-snug">
+                  Ocean Conservation Efforts Show Promising Results
+                </h2>
+                <p class="text-gray-700 mt-2">
+                  Marine biologists report significant recovery in coral reef systems following international protection measures implemented five years ago.
+                </p>
+                <p class="text-xs text-gray-500 mt-2 font-semibold">
+                  7 MIN READ
+                </p>
+              </div>
+
+              <!-- Article 2 -->
+              <div class="pt-6">
+                <h2 class="text-xl font-bold leading-snug">
+                  Educational Technology Transforms Remote Learning
+                </h2>
+                <p class="text-gray-700 mt-2">
+                  New virtual reality platforms are helping students in rural areas access quality education previously unavailable in their communities.
+                </p>
+                <p class="text-xs text-gray-500 mt-2 font-semibold">
+                  4 MIN READ
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Ocean Conservation"
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+
+          <!--after 2nd Divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6 border-b pb-10">
+            <!-- Left Side -->
+            <div class="space-y-6">
+              <!-- First Article -->
+              <article>
+                <p class="uppercase text-xs font-semibold text-gray-500 mb-2">
+                  Investigation
+                </p>
+                <h2 class="text-xl font-bold leading-snug mb-2">
+                  Corporate Giants Face Scrutiny Over Environmental Practices
+                </h2>
+                <p class="text-gray-600 mb-2">
+                  A comprehensive investigation reveals how major corporations have been circumventing environmental regulations through complex subsidiary structures.
+                </p>
+                <p class="text-xs text-gray-500">12 MIN READ</p>
+              </article>
+
+              <hr />
+
+              <!-- Second Article -->
+              <article>
+                <h2 class="text-xl font-semibold leading-snug mb-2">
+                  Quantum Computing Breakthrough Promises Faster Drug Discovery
+                </h2>
+                <p class="text-xs text-gray-500">6 MIN READ</p>
+              </article>
+            </div>
+
+            <!-- Right Side (Image) -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Corporate Investigation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Bottom Row -->
+          <div class="grid md:grid-cols-2 gap-6 mt-8 border-b border-gray-800 pb-10">
+            <!-- Bottom Left -->
+            <article>
+              <h2 class="text-xl font-semibold leading-snug mb-2 border-r pr-4">
+                Renewable Energy Costs Drop to Record Lows
+              </h2>
+              <p class="text-xs text-gray-500">4 MIN READ</p>
+            </article>
+
+            <!-- Bottom Right -->
+            <article>
+              <h2 class="text-xl font-semibold leading-snug mb-2">
+                Urban Farming Initiative Tackles Food Desert Crisis
+              </h2>
+              <p class="text-xs text-gray-500">5 MIN READ</p>
+            </article>
+          </div>
+
+          <!--after 3rd divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6 border-b border-gray-800 pb-10">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <!-- First Article -->
+              <article>
+                <h2 class="text-2xl font-bold leading-snug mb-2">
+                  Mental Health Crisis Among Youth Reaches Critical Point
+                </h2>
+                <p class="text-gray-600 mb-2">
+                  New research reveals alarming trends in adolescent mental health, prompting calls for comprehensive educational and healthcare reforms.
+                </p>
+              </article>
+
+              <hr />
+
+              <!-- Live Update Article -->
+              <article>
+                <p class="uppercase text-xs font-semibold text-red-600 mb-1">
+                  Live
+                  <span class="text-gray-500 lowercase font-normal">2h ago</span>
+                </p>
+                <h2 class="text-lg font-semibold leading-snug mb-2">
+                  International Trade Summit Addresses Supply Chain Disruptions
+                </h2>
+                <a href="#" class="text-sm text-gray-600 hover:text-gray-900"
+                  >See more updates &gt;</a
+                >
+              </article>
+
+              <hr />
+
+              <!-- Third Article -->
+              <article>
+                <h2 class="text-lg font-semibold leading-snug mb-2">
+                  Wildlife Preservation Program Shows Success in Africa
+                </h2>
+                <p class="text-xs text-gray-500">8 MIN READ</p>
+              </article>
+            </div>
+
+            <!-- Right Content (Image) -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Youth Mental Health"
+                class="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          <!--after 4th Divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6 border-b border-gray-800 pb-10">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <!-- First Article -->
+              <article>
+                <h2 class="text-2xl font-bold leading-snug mb-2">
+                  The Rise of Digital Nomadism Reshapes Work Culture
+                </h2>
+                <p class="text-gray-600 mb-2">
+                  Remote work revolution leads to new lifestyle trends as professionals embrace location independence and flexible career paths.
+                </p>
+                <p class="text-xs text-gray-500">10 MIN READ</p>
+              </article>
+
+              <hr />
+
+              <!-- Second Article -->
+              <article>
+                <h2 class="text-lg font-semibold leading-snug mb-2">
+                  Sustainable Fashion Movement Gains Global Momentum
+                </h2>
+                <p class="text-xs text-gray-500">6 MIN READ</p>
+              </article>
+            </div>
+
+            <!-- Right Content (Mockup) -->
+            <div class="border-8 border-blue-800 p-6 bg-white">
+              <div class="space-y-6">
+                <div class="flex justify-end">
+                  <p class="bg-gray-100 px-3 py-1 rounded-lg text-sm">Work from anywhere?</p>
+                </div>
+                <div class="flex space-x-2">
+                  <span class="text-gray-500 text-sm">📍</span>
+                  <p class="text-gray-800">
+                    The world is your office. Discover how remote work is transforming careers.
+                  </p>
+                </div>
+                <div class="flex justify-end">
+                  <p class="bg-gray-100 px-3 py-1 rounded-lg text-sm">
+                    Amazing opportunity!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--after 5th Divider-->
+          <!-- Section Title -->
+          <h2 class="text-lg font-bold mb-6 mt-4">Weekend Reads</h2>
+
+          <!-- Articles Grid -->
+          <div class="grid grid-cols-[1fr_1fr_1fr] gap-6 border-b pb-8">
+            <!-- Article 1 -->
+            <div class="flex flex-col">
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Mindful Living"
+                class="w-full h-56 object-cover"
+              />
+              <h3 class="font-semibold text-lg mt-3 hover:underline cursor-pointer">
+                The Art of Mindful Living in a Digital Age
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">8 MIN READ</p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="flex flex-col border-l md:pl-6">
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Culinary Heritage"
+                class="w-full h-56 object-cover"
+              />
+              <h3 class="font-semibold text-lg mt-3 hover:underline cursor-pointer">
+                Preserving Culinary Heritage Through Modern Techniques
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">12 MIN READ</p>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="flex flex-col border-l md:pl-6">
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Space Tourism"
+                class="w-full h-56 object-cover"
+              />
+              <h3 class="font-semibold text-lg mt-3 hover:underline cursor-pointer">
+                Space Tourism: The Final Frontier for Adventure Travel
+              </h3>
+              <p class="text-gray-500 text-sm mt-1">15 MIN READ</p>
+            </div>
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-col md:flex-row justify-between items-center text-xl text-black mt-4 space-y-2 md:space-y-0 border-b border-gray-800 pb-6">
+            <h3 class="font-semibold text-lg mt-3 hover:underline cursor-pointer border-r pr-4">
+              Test Your Knowledge: This Week's Science Quiz
+            </h3>
+            <h3 class="font-semibold text-lg mt-3 hover:underline cursor-pointer">
+              Play WordScape, Our Daily Language Challenge
+            </h3>
+          </div>
+
+          <!--after 6th Divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6 border-b border-gray-800 pb-10">
+            <!-- Left Content -->
+            <div>
+              <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-3">
+                Featured Story
+              </p>
+              <h2 class="text-2xl md:text-2xl font-serif font-semibold leading-tight mb-4">
+                The Last Bookbinder: A Craftsman's Fight to Preserve Literary Art
+              </h2>
+              <p class="text-xl text-gray-700 mb-4">
+                In an age of digital books, master bookbinder James Morrison continues the centuries-old tradition, teaching new generations the beauty of bound literature.
+              </p>
+              <p class="text-xs text-gray-500 tracking-wider">14 MIN READ</p>
+            </div>
+
+            <!-- Right Image -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Bookbinder"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!--after 7th Divider-->
+          <div class="grid grid-cols-[2fr_3fr] gap-6 pt-6">
+            <!-- Left Content -->
+            <div>
+              <h2 class="text-2xl md:text-2xl font-serif font-semibold leading-tight mb-4">
+                Clean Energy Startup Valued at $2 Billion After Latest Funding
+              </h2>
+              <p class="text-xl text-gray-700 mb-4">
+                SolarTech Industries has attracted major investors with its revolutionary solar panel technology that promises 40% higher efficiency than current market leaders.
+              </p>
+              <p class="text-xs text-gray-500 tracking-wider">9 MIN READ</p>
+            </div>
+
+            <!-- Right Image Grid -->
+            <div class="grid grid-cols-[2fr_1fr] gap-4 w-full">
+              <!-- Large Left Image -->
+              <div class="col-span-1 row-span-2">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  alt="Solar Technology"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Top Right Small Image -->
+              <div>
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  alt="Clean Energy"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+
+              <!-- Bottom Right Small Image -->
+              <div>
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  alt="Investment"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Caption -->
+            <p class="text-[10px] text-gray-500 mt-1 text-right col-span-full">
+              Associated Press
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Container -->
+        <div>
+          <!-- TOP FEATURE -->
+          <div>
+            <img
+              src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+              alt="Gourmet Recipe"
+              class="w-full h-auto"
+            />
+            <p class="text-xs text-gray-500 mt-1">
+              Food Photography by James Chen. Styling by Maria Rodriguez.
+            </p>
+            <h2 class="text-2xl font-bold mt-3">
+              Mediterranean Fusion: A New Take on Classic Pasta Dishes
+            </h2>
+            <p class="text-gray-700 mt-2">Try this chef-inspired recipe at home.</p>
+            <p class="text-xs font-semibold text-gray-500 mt-1">5 MIN READ</p>
+          </div>
+
+          <!-- GRID ARTICLES -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t pt-6 mt-6 border-b pb-6">
+            <!-- Card 1 -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Smart Home"
+                class="w-full h-auto"
+              />
+              <h3 class="text-lg font-semibold mt-3">
+                Smart Home Technology That Actually Makes Life Easier
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">FROM TECH REVIEW</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Career Change"
+                class="w-full h-auto"
+              />
+              <h3 class="text-lg font-semibold mt-3">
+                Making a Career Change at 40: Success Stories and Practical Tips
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">7 MIN READ</p>
+            </div>
+          </div>
+
+          <!--Opinion-->
+          <div class="container mx-auto px-4 py-8 space-y-8 border-b border-gray-800 pb-10">
+            <!-- Section Title -->
+            <h2 class="text-lg font-bold">Opinion</h2>
+
+            <!-- First Article with Image -->
+            <div>
+              <h3 class="font-semibold text-xl mb-2">
+                Sarah Chen: Why We Need to Rethink Urban Planning
+              </h3>
+              <span class="text-xs uppercase text-gray-500">6 min read</span>
+              <div class="mt-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  alt="Urban Planning"
+                  class="w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- More Opinion Articles -->
+            <div>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Michael Rodriguez</span>
+              <h3 class="font-semibold text-lg mb-1">
+                The Hidden Cost of Social Media on Democracy
+              </h3>
+              <span class="text-xs uppercase text-gray-500">8 min read</span>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <h3 class="font-semibold text-lg mb-1">
+                  Climate Action: Beyond Individual Responsibility
+                </h3>
+                <span class="text-xs uppercase text-gray-500">7 min read</span>
+              </div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Climate"
+                class="w-24 h-20 object-cover"
+              />
+            </div>
+
+            <div>
+              <span class="text-xs font-semibold text-gray-500 uppercase">Dr. Amanda Foster</span>
+              <h3 class="font-semibold text-lg mb-1">
+                Healthcare Innovation: Lessons from the Pandemic
+              </h3>
+              <span class="text-xs uppercase text-gray-500">5 min read</span>
+            </div>
+          </div>
+
+          <!--Most Shared-->
+          <div class="container mx-auto px-4 py-8 space-y-6">
+            <!-- Section Title -->
+            <h2 class="text-lg font-bold">Most Shared</h2>
+
+            <!-- Articles -->
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <h3 class="font-semibold text-lg mb-1">
+                  The Science of Happiness: What Research Really Shows
+                </h3>
+                <span class="text-xs uppercase text-gray-500">12 min read</span>
+              </div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Happiness Research"
+                class="w-24 h-20 object-cover"
+              />
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <h3 class="font-semibold text-lg mb-1">
+                  Why Electric Vehicles Are Finally Ready for Mass Adoption
+                </h3>
+                <span class="text-xs uppercase text-gray-500">9 min read</span>
+              </div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Electric Cars"
+                class="w-24 h-20 object-cover"
+              />
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <span class="text-xs font-semibold uppercase text-gray-500">Analysis</span>
+                <h3 class="font-semibold text-lg mb-1">
+                  The Future of Work: Remote, Hybrid, or Back to Office?
+                </h3>
+                <span class="text-xs uppercase text-gray-500">11 min read</span>
+              </div>
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Future Work"
+                class="w-24 h-20 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--The Athletic-->
+      <div class="max-w-7xl mx-auto px-4 py-8  pb-10">
+        <!-- Section Title -->
+        <h2 class="text-lg font-bold mb-6">
+          The Athletic
+          <span class="italic font-normal text-gray-600">Sports coverage</span>
+        </h2>
+
+        
+
+
+
+          <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 Forcast Clone. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

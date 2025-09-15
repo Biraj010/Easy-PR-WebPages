@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Political News - Articles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-black font-bold text-lg">NewsPrint</h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">World</a>
+              <a href="#" class="hover:text-blue-600">Politics</a>
+              <a href="#" class="hover:text-blue-600">Economy</a>
+              <a href="#" class="hover:text-blue-600">Contact</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">World</a>
+          <a href="#" class="hover:text-blue-600">Politics</a>
+          <a href="#" class="hover:text-blue-600">Economy</a>
+          <a href="#" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto p-8">
+      <!-- Hero with Image -->
+      <div class="bg-gray-100 p-8 rounded-md flex flex-col md:flex-row items-center gap-6">
+        <img
+          src="https://crowdytheme.com/wp/newsprint/political-news/wp-content/uploads/sites/10/2025/01/political-newB.webp"
+          alt="Hero"
+          class="w-full md:w-1/2 h-64 object-cover"
+        />
+        <div>
+          <h1 class="text-3xl font-bold mb-4">The Global Economy in Transition</h1>
+          <p class="text-gray-700 text-sm mb-6">By Jane Doe — September 15, 2025</p>
+          <p class="text-gray-800 leading-relaxed">
+            As nations recover from years of economic uncertainty, global trade
+            and technological shifts are redefining how governments and businesses
+            operate. This article explores the challenges and opportunities
+            emerging in international markets and what they mean for ordinary
+            citizens.
+          </p>
+        </div>
+      </div>
+
+      <!-- Trending Now -->
+      <section class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-bold flex items-center">
+            <span class="mr-2">»</span> Trending Now
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="flex flex-col">
+            <img
+              src="https://crowdytheme.com/wp/newsprint/political-news/wp-content/uploads/sites/10/2025/01/political-newB.webp"
+              alt="Trending News"
+              class="w-full h-32 object-cover mb-2"
+            />
+            <h3 class="font-semibold text-sm mb-2">
+              Climate policy is now central to global security strategies
+            </h3>
+            <p class="text-xs text-gray-600">By John Smith — Sept 10, 2025</p>
+          </article>
+
+          <article class="flex flex-col">
+            <h3 class="font-semibold text-sm mb-2">
+              Technology and democracy: how AI is shaping elections
+            </h3>
+            <p class="text-xs text-gray-600">By Sarah Lee — Sept 8, 2025</p>
+          </article>
+
+          <article class="flex flex-col">
+            <h3 class="font-semibold text-sm mb-2">
+              The housing crisis deepens as urban populations grow
+            </h3>
+            <p class="text-xs text-gray-600">By David Kim — Sept 12, 2025</p>
+          </article>
+
+          <article class="flex flex-col">
+            <h3 class="font-semibold text-sm mb-2">
+              Student debt relief: a turning point for young voters?
+            </h3>
+            <p class="text-xs text-gray-600">By Emily Carter — Sept 14, 2025</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Popular Story -->
+      <section class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-bold flex items-center">
+            <span class="mr-2">»</span> Popular Story
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="bg-gray-50 p-6">
+            <h3 class="font-semibold text-base mb-2">
+              Workers worldwide demand better labor protections
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              From strikes in Europe to protests in Asia, the global workforce
+              is increasingly vocal about income inequality and working
+              conditions. Experts say this is only the beginning of a larger
+              movement toward redefining modern employment.
+            </p>
+          </article>
+
+          <article class="bg-gray-50 p-6">
+            <h3 class="font-semibold text-base mb-2">
+              How local communities are adapting to climate change
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Small towns and coastal cities are developing innovative ways to
+              cope with rising sea levels and extreme weather events. This piece
+              highlights solutions that may become models for the rest of the
+              world.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Podcast Section -->
+      <section class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-bold flex items-center">
+            <span class="mr-2">»</span> Podcast Highlights
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-4 border">
+            <span class="bg-black text-white text-[10px] px-2 py-1">▶ 15:24</span>
+            <h3 class="mt-2 font-semibold text-sm">
+              Can renewable energy replace fossil fuels by 2040?
+            </h3>
+          </div>
+
+          <div class="p-4 border">
+            <span class="bg-black text-white text-[10px] px-2 py-1">▶ 12:10</span>
+            <h3 class="mt-2 font-semibold text-sm">
+              The rise of independent journalism
+            </h3>
+          </div>
+
+          <div class="p-4 border">
+            <span class="bg-black text-white text-[10px] px-2 py-1">▶ 9:30</span>
+            <h3 class="mt-2 font-semibold text-sm">
+              Youth movements shaping politics today
+            </h3>
+          </div>
+
+          <div class="p-4 border">
+            <span class="bg-black text-white text-[10px] px-2 py-1">▶ 8:45</span>
+            <h3 class="mt-2 font-semibold text-sm">
+              What the digital divide means for rural communities
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Articles -->
+      <section class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-bold flex items-center">
+            <span class="mr-2">»</span> All Articles
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          <article>
+            <h3 class="font-semibold text-base mb-1">
+              Why education reform is the biggest issue of the decade
+            </h3>
+            <p class="text-xs text-gray-600 mb-2">By Alex Johnson — Sept 13, 2025</p>
+            <img
+              src="https://crowdytheme.com/wp/newsprint/political-news/wp-content/uploads/sites/10/2025/01/political-newB.webp"
+              alt="Education Reform"
+              class="w-full h-40 object-cover mb-3"
+            />
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Many governments are struggling to modernize their education
+              systems while balancing tradition and innovation. Students and
+              teachers alike are demanding change that better prepares youth for
+              the future.
+            </p>
+          </article>
+
+          <article>
+            <h3 class="font-semibold text-base mb-1">
+              The growing influence of women in global politics
+            </h3>
+            <p class="text-xs text-gray-600 mb-2">By Maria Lopez — Sept 9, 2025</p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Across continents, women leaders are shaping policy, diplomacy,
+              and grassroots activism. Their presence is challenging
+              long-standing power structures and opening new possibilities for
+              governance.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 NewsPrint Clone. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -162,7 +162,7 @@
               class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 border-t pt-6"
             >
               <!-- Article with small image left -->
-              <div class="flex items-start space-x-4 border-r">
+              <div class="flex items-start space-x-4 border-r pr-2">
                 <img
                   src="https://static01.nyt.com/images/2025/09/14/multimedia/14dc-assess-zqpv/14dc-assess-zqpv-threeByTwoMediumAt2X-v2.jpg"
                   class="w-[6.5625rem] h-[6.5625rem] object-cover"
@@ -1004,99 +1004,103 @@
         </div>
       </div>
 
-      <!--Culture and Lifestyle-->
+      <!-- Culture and Lifestyle -->
+<div class="container mx-auto px-4 py-8 border-b border-gray-200">
+  <!-- Section Title -->
+  <h2 class="text-lg font-bold mb-6">Culture and Lifestyle</h2>
 
-      <div class="container mx-auto px-4 py-8 border-b border-gray-800 pb-10">
-        <!-- Section Title -->
-        <h2 class="text-lg font-bold mb-6">Culture and Lifestyle</h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Left Big Article -->
-          <div
-            class="md:col-span-2 flex flex-row md:flex-row items-start gap-6"
-          >
-            <div class="pt-12">
-              <h3 class="text-2xl font-serif font-semibold leading-snug mb-4">
-                For Many Cuban Ballet Dancers, Forging a Path Forward Means
-                Leaving
-              </h3>
-              <p class="text-gray-600 mb-3">
-                As the country’s economy falters, members of the storied Cuban
-                National Ballet have sought and found work in companies abroad.
-              </p>
-              <span class="text-xs uppercase tracking-wider text-gray-500"
-                >5 min read</span
-              >
-            </div>
-            <img
-              src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
-              alt="Ballet dancer"
-              class="w-full md:w-1/2 object-cover"
-            />
-          </div>
-
-          <!-- Right Side Small Articles -->
-          <div class="space-y-6">
-            <!-- Article 1 -->
-            <div class="flex items-start gap-4">
-              <img
-                src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
-                alt="Calvin Klein"
-                class="w-20 h-20 object-cover"
-              />
-              <div>
-                <h4 class="font-semibold mb-1">
-                  Calvin Klein Underwear as You’ve Never Seen It Before
-                </h4>
-                <p class="text-gray-600 text-sm mb-1">
-                  The designer Veronica Leoni takes on Y-fronts.
-                </p>
-                <span class="text-xs text-gray-500 uppercase">3 min read</span>
-              </div>
-            </div>
-            <hr />
-
-            <!-- Article 2 -->
-            <div class="flex items-start gap-4">
-              <img
-                src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
-                alt="Pickup Fashion"
-                class="w-20 h-20 object-cover"
-              />
-              <div>
-                <h4 class="font-semibold mb-1">
-                  They Met at Pickup and Now Have a ‘Baby’ of Their Own
-                </h4>
-                <p class="text-gray-600 text-sm mb-1">
-                  Arlo Mott, a fashion line created for working mothers, is
-                  expanding.
-                </p>
-                <span class="text-xs text-gray-500 uppercase">5 min read</span>
-              </div>
-            </div>
-            <hr />
-
-            <!-- Article 3 -->
-            <div class="flex items-start gap-4">
-              <img
-                src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
-                alt="Ethan Hawke"
-                class="w-20 h-20 object-cover"
-              />
-              <div>
-                <h4 class="font-semibold mb-1">
-                  I Finally Solved My Ethan Hawke Problem
-                </h4>
-                <p class="text-gray-600 text-sm mb-1">
-                  Hawke left our critic cold for several movies. But as he grew
-                  as an actor, he won her over.
-                </p>
-                <span class="text-xs text-gray-500 uppercase">6 min read</span>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="grid md:grid-cols-[2fr_1fr] gap-6">
+    <!-- Left Big Article -->
+    <div class="flex flex-col md:flex-row gap-4 border-r pr-4">
+      <!-- Text -->
+      <div class="flex-1 flex flex-col justify-center">
+        <h3 class="text-xl font-serif font-semibold leading-snug mb-2">
+          For Many Cuban Ballet Dancers, Forging a Path Forward Means Leaving
+        </h3>
+        <p class="text-gray-600 mb-2 text-sm">
+          As the country’s economy falters, members of the storied Cuban
+          National Ballet have sought and found work in companies abroad.
+        </p>
+        <span class="text-xs uppercase tracking-wider text-gray-500">
+          5 min read
+        </span>
       </div>
+      <!-- Image -->
+      <div class="flex-1">
+        <img
+          src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
+          alt="Ballet dancer"
+          class="w-full h-full object-cover rounded"
+        />
+      </div>
+    </div>
+
+    <!-- Right Side Small Articles -->
+    <div class="space-y-4">
+      <!-- Article 1 -->
+      <div class="flex items-start gap-3">
+        
+        <div>
+          <h4 class="font-semibold mb-1 text-sm">
+            Calvin Klein Underwear as You’ve Never Seen It Before
+          </h4>
+          <p class="text-gray-600 text-xs mb-1">
+            The designer Veronica Leoni takes on Y-fronts.
+          </p>
+          <span class="text-[10px] text-gray-500 uppercase">3 min read</span>
+        </div>
+        <img
+          src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
+          alt="Calvin Klein"
+          class="w-16 h-16 object-cover rounded"
+        />
+      </div>
+      <hr class="border-gray-200" />
+
+      <!-- Article 2 -->
+      <div class="flex items-start gap-3">
+        
+        <div>
+          <h4 class="font-semibold mb-1 text-sm">
+            They Met at Pickup and Now Have a ‘Baby’ of Their Own
+          </h4>
+          <p class="text-gray-600 text-xs mb-1">
+            Arlo Mott, a fashion line created for working mothers, is expanding.
+          </p>
+          <span class="text-[10px] text-gray-500 uppercase">5 min read</span>
+        </div>
+        <img
+          src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
+          alt="Pickup Fashion"
+          class="w-16 h-16 object-cover rounded"
+        />
+      </div>
+      <hr class="border-gray-200" />
+
+      <!-- Article 3 -->
+      <div class="flex items-start gap-3">
+        
+        <div>
+          <h4 class="font-semibold mb-1 text-sm">
+            I Finally Solved My Ethan Hawke Problem
+          </h4>
+          <p class="text-gray-600 text-xs mb-1">
+            Hawke left our critic cold for several movies. But as he grew as an
+            actor, he won her over.
+          </p>
+          <span class="text-[10px] text-gray-500 uppercase">6 min read</span>
+        </div>
+        <img
+          src="https://static01.nyt.com/images/2025/09/10/multimedia/00cul-cuban-ballet-01-bgkq/00cul-cuban-ballet-01-bgkq-threeByTwoMediumAt2X.jpg"
+          alt="Ethan Hawke"
+          class="w-16 h-16 object-cover rounded"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
       <!--News-->
 
