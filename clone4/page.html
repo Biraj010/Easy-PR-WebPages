@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Graph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-gray-900 text-3xl font-serif">The Graph</h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">NEWS</a>
+              <a href="#" class="hover:text-blue-600">WORLD</a>
+              <a href="#" class="hover:text-blue-600">OPINION</a>
+              <a href="#" class="hover:text-blue-600">SPORT</a>
+              <a href="#" class="hover:text-blue-600">CULTURE</a>
+              <a href="#" class="hover:text-blue-600">LIFE STYLE</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">NEWS</a>
+          <a href="#" class="hover:text-blue-600">WORLD</a>
+          <a href="#" class="hover:text-blue-600">OPINION</a>
+          <a href="#" class="hover:text-blue-600">SPORT</a>
+          <a href="#" class="hover:text-blue-600">CULTURE</a>
+          <a href="#" class="hover:text-blue-600">LIFE STYLE</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--main Container-->
+    <main class="max-w-7xl mx-auto m-8">
+      <div>
+        <img
+          src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/p1.jpg"
+          alt="features"
+        />
+      </div>
+      <div class="grid grid-cols-[3fr_1fr]">
+        <div>
+          <article class="px-4 md:px-8 max-w-4xl mx-auto py-10 space-y-8">
+            <!-- Opening Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              When Jennifer Chilton and Graeme Thirde were looking at nurseries
+              for their eldest daughter, Imogen, they quickly realised that the
+              traditional approach to early education wasn’t for them. “We
+              didn’t want her to be stuck indoors all the time,” says Chilton,
+              an IT consultant from London.
+            </p>
+
+            <!-- Quote Block -->
+            <div class="border-l-4 border-blue-600 pl-4 italic text-gray-800">
+              “We wanted her to be able to run around outside and climb and
+              develop confidence in her body and the way it interacts with her
+              surroundings.”
+            </div>
+
+            <!-- Subheading -->
+            <h2 class="text-xl font-bold text-gray-900">Come Back To Nature</h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Finding a nursery called Little Forest Folk, which encourages
+              children to learn by immersing themselves in the outdoors, was the
+              first step on a path to the family reconnecting with the natural
+              world on a more meaningful level.
+            </p>
+
+            <p class="text-gray-700 text-base leading-relaxed">
+              Imogen, now seven, and her sister Florence, six, have continued
+              their outdoor education at an independent primary school set in
+              three acres of beautiful National Trust grounds. “We wanted to go
+              back to basics with the way we raise our kids,” says Chilton.
+              “When we were young, we were always outdoors, but most children
+              today no longer have that opportunity.”
+            </p>
+
+            <p class="text-gray-700 text-base leading-relaxed">
+              For all four family members, this desire to live closer to nature
+              is reflected in their choice of footwear. “We all wear
+              Vivobarefoot shoes and absolutely love them,” says Thirde, who
+              spent nine years in the army before retraining as a garden
+              designer. “When you’re wearing them, you’re experiencing a
+              connection with the ground the way we were intended to.”
+            </p>
+
+            <!-- Scenic Image -->
+            <div>
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="Nature Landscape"
+                class="w-full"
+              />
+              <p class="text-xs text-gray-500 mt-2 text-center">
+                “Vivos feel like she’s slipping her foot into a sock,” there’s
+                no seams, no pressure points, and they can wear them all day –
+                she loves them.”
+              </p>
+            </div>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Beyond that, knowing their daughters’ feet aren’t being
+              constrained by their shoes as they run, climb and play amid trees,
+              fields and wildlife at the school they attend fits in with Chilton
+              and Thirde’s philosophy of how they want their daughters to grow
+              up.
+            </p>
+
+            <!-- Subheading -->
+            <h2 class="text-xl font-bold text-gray-900">
+              Find Happiness on Your Own with The Ones You Love
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              “It can be so easy to have the stress-relieving benefits of being
+              in nature, and Vivobarefoot fit perfectly with that,” says
+              Chilton.
+            </p>
+
+            <!-- Quote Block -->
+            <div class="border-l-4 border-blue-600 pl-4 italic text-gray-800">
+              “When they wear their shoes, I know they’re using their feet
+              properly. And they can barely feel the shoes, which helps them
+              really lose themselves in their environment.”
+            </div>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Giles Hutchins, his wife Sara and daughters Lilly-Belle and Hazel
+              are another example of family dedicated to living in harmony with
+              the natural world. For the past two years, they have lived on 60
+              acres of ancient woodland in West Sussex, with chickens and a
+              vegetable garden.
+            </p>
+
+            <p class="text-gray-700 text-base leading-relaxed">
+              The woodland is where Hutchins, an author, strategist and coach,
+              runs his business, The Future Fit Leadership Academy, taking
+              leaders through transformative experiences in nature to help them
+              transform their companies into regenerative, nature-aligned
+              organisations.
+            </p>
+          </article>
+          <!-- Two Images Side by Side -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <img
+              src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+              alt="Mountain boots view"
+              class="w-full h-auto"
+            />
+            <img
+              src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+              alt="Walking in boots"
+              class="w-full h-auto"
+            />
+          </div>
+
+          <!-- Quotation Paragraph -->
+          <p class="text-gray-700 text-base leading-relaxed italic mt-6">
+            “We go off into the woods and I encourage them to notice the details
+            of nature – the trees, the birdsong, the smell,” he says. “By the
+            time we reach the main area, where they sit and talk and listen,
+            they’re in a different space mentally, which they usually find means
+            they have a clearer awareness of their fears, and personal and
+            organisational challenges.”
+          </p>
+
+          <!-- Supporting Paragraph -->
+          <p class="text-gray-700 text-base leading-relaxed mt-4">
+            Before he tried his first pair of Vivobarefoot shoes, Hutchins says
+            he’d never considered the impact of traditional shoes on our feet.
+            But once he did, the revelation was instant. “I realised that we’ve
+            been lessening our connection with nature all this time, as well as
+            deforming our feet and those of our children,” he says.
+          </p>
+
+          <!--You May Also Like-->
+
+          <div class="max-w-6xl mx-auto px-4 pt-6 pb-6">
+            <h3
+              class="text-center text-xs font-semibold text-gray-800 mb-8 uppercase tracking-wide"
+            >
+              YOU MAY ALSO LIKE
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <!-- Item 1 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="spontaneous fun"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  ‘Don’t plan it, just go!’: how to be spontaneous — and grab
+                  some unexpected fun
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="french ski resorts"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  Fresh powder: the best French ski resorts you’ve never heard
+                  of before
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="weekend activities"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  The best way to start the weekend with our top 10 of relaxed
+                  activities
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="fashion jeans"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  Lifestyle in Fashion: true blue – how to fall in love with
+                  jeans once again
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="healthy retreats"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  All well and good: 10 top healthy retreats in the world for
+                  traveling in 2022
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="text-center">
+                <img
+                  src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                  alt="guide to Bologna"
+                  class="w-full h-auto object-cover mb-3"
+                />
+                <p class="text-sm font-serif italic text-gray-800">
+                  A local’s guide to Bologna: from belt-busting pasta to craft
+                  cocktails
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8">
+          <div
+            class="flex items-center justify-between bg-gray-200 px-4 py-2 max-w-xs cursor-pointer select-none"
+          >
+            <span class="text-xs font-semibold tracking-widest text-gray-700"
+              >RECENT POSTS</span
+            >
+          </div>
+
+          <!-- News List Section -->
+          <div class="space-y-5 pt-8">
+            <!-- News Item 1 -->
+            <div class="flex gap-4">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="news1"
+                class="w-24 h-16 object-cover"
+              />
+              <div>
+                <p class="text-sm text-gray-800 font-medium leading-snug">
+                  Better than a warm cup of milk, read for six minutes before
+                  bed for good sleep
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="flex gap-4">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="news2"
+                class="w-24 h-16 object-cover"
+              />
+              <div>
+                <p class="text-sm text-gray-800 font-medium leading-snug">
+                  “I read all 27,000 Marvel comics and had a great time. Here’s
+                  what I learnt”
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="flex gap-4">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="news3"
+                class="w-24 h-16 object-cover"
+              />
+              <div>
+                <p class="text-sm text-gray-800 font-medium leading-snug">
+                  Is Microsoft’s acquisition of Activision Blizzard good for
+                  gaming in future?
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+
+            <!-- News Item 4 -->
+            <div class="flex gap-4">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="news4"
+                class="w-24 h-16 object-cover"
+              />
+              <div>
+                <p class="text-sm text-gray-800 font-medium leading-snug">
+                  Now that science has defanged Covid, it’s time to get on with
+                  our lives
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+
+            <!-- News Item 5 -->
+            <div class="flex gap-4">
+              <img
+                src="https://soledaddemo.pencidesign.net/soledad-the-graph-newspaper/wp-content/uploads/sites/19/2022/01/post1.jpg"
+                alt="news5"
+                class="w-24 h-16 object-cover"
+              />
+              <div>
+                <p class="text-sm text-gray-800 font-medium leading-snug">
+                  Facebook’s second life: the unstoppable rise of the tech
+                  company in Africa
+                </p>
+                <p class="text-xs text-gray-500 mt-1">January 19, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

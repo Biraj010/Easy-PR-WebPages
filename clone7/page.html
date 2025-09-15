@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsPrk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="text-gray-900">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2">
+            <h1 class="text-gray-900 text-3xl font-serif">Newsprk</h1>
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">Post</a>
+              <a href="#" class="hover:text-blue-600">Categores</a>
+              <a href="#" class="hover:text-blue-600">Pages</a>
+              <a href="#" class="hover:text-blue-600">Technology</a>
+              <a href="#" class="hover:text-blue-600">Contact</a>
+              <a href="#" class="hover:text-blue-600">Mega Menu</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">Post</a>
+          <a href="#" class="hover:text-blue-600">Categores</a>
+          <a href="#" class="hover:text-blue-600">Pages</a>
+          <a href="#" class="hover:text-blue-600">Technology</a>
+          <a href="#" class="hover:text-blue-600">Contact</a>
+          <a href="#" class="hover:text-blue-600">Mega Menu</a>
+        </nav>
+      </div>
+    </header>
+    <!--Main Container-->
+
+    <main class="max-w-7xl mx-auto m-8">
+      <div class="grid grid-cols-[3fr_1fr]">
+        <div>
+          <div class="max-w-3xl mx-auto p-6 font-sans text-gray-900">
+            <!-- Category -->
+            <p
+              class="text-blue-600 uppercase text-xs font-semibold tracking-wide mb-2"
+            >
+              Travel
+            </p>
+
+            <!-- Title -->
+            <h1 class="text-3xl font-bold leading-tight mb-4">
+              Emirates Palace Spends A Hefty Sum For Replacing Gold Ceiling Of A
+              Palace.
+            </h1>
+
+            <!-- Meta -->
+            <div class="flex items-center space-x-6 text-gray-500 text-sm mb-6">
+              <div class="flex items-center space-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2v-5H3v5a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>June 8, 2020</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-6l-4 4v-4H7a2 2 0 01-2-2v-2a2 2 0 012-2h2"
+                  />
+                </svg>
+                <span>No Comment</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 10l4.553-2.276A2 2 0 0121 9.618V15a2 2 0 01-2 2H7a2 2 0 01-2-2v-4"
+                  />
+                </svg>
+                <span>3421</span>
+              </div>
+            </div>
+
+            <!-- Image with Play button overlay -->
+            <div class="relative mb-6 rounded overflow-hidden shadow-lg">
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Beach"
+                class="w-full h-64 object-cover"
+              />
+              <button
+                class="absolute inset-0 flex items-center justify-center text-white text-4xl bg-black bg-opacity-40 hover:bg-opacity-60 transition rounded"
+              >
+                ▶
+              </button>
+            </div>
+
+            <!-- Author Section -->
+            <div class="flex items-center space-x-4 mb-8">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Author"
+                class="w-12 h-12 rounded-full"
+              />
+
+              <div class="ml-auto flex space-x-3 text-gray-400">
+                <a href="#" aria-label="Facebook" class="hover:text-blue-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M22.675 0h-21.35C.593 0 0 .594 0 1.326v21.348C0 23.406.594 24 1.326 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.658-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.312h3.588l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.594 1.324-1.326V1.326c0-.732-.594-1.326-1.326-1.326z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="hover:text-blue-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23.954 4.569c-.885.389-1.83.654-2.825.775a4.93 4.93 0 002.163-2.724c-.951.555-2.005.959-3.127 1.184a4.916 4.916 0 00-8.384 4.482c-4.083-.205-7.702-2.158-10.126-5.134a4.822 4.822 0 00-.666 2.475c0 1.708.87 3.215 2.188 4.099a4.904 4.904 0 01-2.228-.616c-.054 2.386 1.669 4.63 4.13 5.116a4.935 4.935 0 01-2.224.084c.626 1.956 2.444 3.379 4.6 3.42a9.867 9.867 0 01-6.102 2.104c-.397 0-.79-.023-1.175-.067a13.945 13.945 0 007.557 2.213c9.054 0 14-7.496 14-13.986 0-.21-.005-.423-.014-.633a9.936 9"
+                    />
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="hover:text-blue-700">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.967 0-1.75-.796-1.75-1.776 0-.979.783-1.776 1.75-1.776s1.75.797 1.75 1.776c0 .98-.783 1.776-1.75 1.776zm13.5 11.268h-3v-5.5c0-1.379-1.118-2.5-2.5-2.5s-2.5 1.121-2.5 2.5v5.5h-3v-10h3v1.45c.63-.943 1.81-1.45 3-1.45 2.206 0 4 1.794 4 4v5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Article Text Sections -->
+            <p class="mb-6 text-gray-700 leading-relaxed">
+              Entitators will be taken from certain New York hospitals and
+              redistributed to the worst-hit parts of the state under an order
+              to be signed by Governor Andrew Cuomo.New York saw its highest
+              single-day increase in deaths, up by 562 to 2,935 – nearly half of
+              all virus-related US deaths recorded yesterday. The White House
+              may advise those in virus hotspots.
+            </p>
+
+            <img
+              src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+              alt="City"
+              class="mb-6 rounded  w-full object-cover h-64"
+            />
+
+            <h2 class="text-xl font-semibold mb-2">
+              What’s the debate over masks?
+            </h2>
+            <p class="mb-6 text-gray-700 leading-relaxed">
+              Both the US Centers for Disease Control (CDC) and the World Health
+              Organization (WHO) reassessing their guidance on face masks, as
+              experts race to find ways to fight the highly contagious virus
+              Covid-19 is carried in airborne droplets from people coughing or
+              sneezing, but there is some dispute over how far people should
+              distance themselves from each other, and whether masks are useful
+              when by the public.
+            </p>
+
+            <!-- Image on top left with text on right -->
+            <div class="flex flex-col md:flex-row md:space-x-6 p-6">
+              <img
+                src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                alt="Person with laptop"
+                class="w-full md:w-48 rounded-lg object-cover"
+              />
+              <p class="mt-4 md:mt-0 text-gray-700 leading-relaxed md:flex-1">
+                Mr. Hogan has also leaned on his wife, Yumi Hogan, a Korean
+                immigrant, who was also at the governor’s convention, which
+                included a dinner at the Korean ambassador’s home. As the first
+                Korean first lady in American history, Ms. Hogan has become
+                something of an icon in South Korea.
+                <br /><br />
+                I just grabbed my wife and said, Look, you speak Korean. You
+                know the president. You know the first lady. You know the
+                ambassador. Let’s talk to them in Korean, and tell them we need
+                their help. Companies in South Korea said would tests.
+              </p>
+            </div>
+
+            <!-- Large image below -->
+            <img
+              src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+              alt="Abstract"
+              class="w-full rounded-lg object-cover"
+              style="height: 20rem"
+            />
+
+            <!-- Paragraph text below -->
+            <p class="text-gray-700 leading-relaxed">
+              In global terms the US has the most Covid-19 cases – more than
+              245,000. And on Thursday the US authorities said more than 10,000
+              had died in the past 24 hours – the highest daily toll so far in
+              the world. And on Thursday the US authorities said more than
+              100,000 died in the past 24 hours – the highest daily toll so far
+              in the world.
+              <br /><br />
+              Hospitals and morgues in New York are struggling to cope with the
+              pandemic, and New York Governor Andrew Cuomo has warned that New
+              York risks running out of ventilators for patients in six days.
+            </p>
+          </div>
+
+          <!--Related Posts-->
+
+          <div class="max-w-7xl mx-auto px-6 py-10 bg-white">
+  <h2 class="text-2xl font-bold mb-6">Related Post</h2>
+  <div class="border-b-2 border-blue-500 w-20 mb-8"></div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Card 1 -->
+    <div class="bg-white p-4">
+      <img
+        src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+        alt="Business Office"
+        class="w-full h-48 object-cover rounded mb-4"
+      />
+      <div class="text-sm mb-2">
+        <span class="text-blue-500 font-semibold uppercase">Business</span>
+        <span class="text-gray-600"> / March 31, 2021</span>
+      </div>
+      <h3 class="font-semibold text-lg mb-2">
+        Winston Churchill And The Union Jack Should Make Us...
+      </h3>
+      <p class="text-gray-700 text-sm">
+        Entilators will be taken from certain New York hospitals and redistributed to the worst-hit parts of the state under an order...
+      </p>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="bg-white p-4">
+      <img
+        src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+        alt="Audience Speaker"
+        class="w-full h-48 object-cover rounded mb-4"
+      />
+      <div class="text-sm mb-2">
+        <span class="text-blue-500 font-semibold uppercase">Business</span>
+        <span class="text-gray-600"> / March 31, 2021</span>
+      </div>
+      <h3 class="font-semibold text-lg mb-2">
+        Teacher Suspended For Showing Prophet Muhammad Cartoon ‘Defends Free...
+      </h3>
+      <p class="text-gray-700 text-sm">
+        Entilators will be taken from certain New York hospitals and redistributed to the worst-hit parts of the state under an order...
+      </p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="bg-white p-4">
+      <img
+        src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+        alt="Office Meeting"
+        class="w-full h-48 object-cover rounded mb-4"
+      />
+      <div class="text-sm mb-2">
+        <span class="text-blue-500 font-semibold uppercase">Business</span>
+        <span class="text-gray-600"> / March 31, 2021</span>
+      </div>
+      <h3 class="font-semibold text-lg mb-2">
+        Boris Johnson Tells Brits Lockdown Easing Will Go Ahead...
+      </h3>
+      <p class="text-gray-700 text-sm">
+        Entilators will be taken from certain New York hospitals and redistributed to the worst-hit parts of the state under an order...
+      </p>
+    </div>
+    
+  </div>
+</div>
+        </div>
+
+        <!--Aside-->
+
+        <div>
+          <div class="p-4 max-w-md mx-auto">
+            <!-- Social Stats -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center text-sm font-semibold"
+            >
+              <div class="bg-indigo-600 text-white p-2 rounded">
+                34,520<br /><span class="text-xs">Fans</span>
+              </div>
+              <div class="bg-blue-600 text-white p-2 rounded">
+                34,520<br /><span class="text-xs">Followers</span>
+              </div>
+              <div class="bg-red-600 text-white p-2 rounded">
+                20,000<br /><span class="text-xs">Subscriber</span>
+              </div>
+              <div class="bg-green-600 text-white p-2 rounded">
+                1023<br /><span class="text-xs">Followers</span>
+              </div>
+              <div class="bg-purple-600 text-white p-2 rounded">
+                785,96<br /><span class="text-xs">Follower</span>
+              </div>
+              <div class="bg-cyan-600 text-white p-2 rounded">
+                54,857<br /><span class="text-xs">Follower</span>
+              </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex gap-2 mt-4">
+              <button class="bg-blue-600 px-3 text-white py-1 rounded text-sm">
+                LATEST POST
+              </button>
+              <button class="bg-gray-700 px-3 text-white py-1 rounded text-sm">
+                POPULAR
+              </button>
+              <button class="bg-gray-700 px-3 text-white py-1 rounded text-sm">
+                TRENDING
+              </button>
+            </div>
+            <!--Most Share-->
+
+            <div class="max-w-md mx-auto text-gray p-4 rounded-lg space-y-5">
+              <!-- Header -->
+              <div
+                class="flex items-center justify-between mb-2 border-b border-gray-500 pb-2"
+              >
+                <h2 class="text-xl font-bold">Most Share</h2>
+              </div>
+
+              <!-- Item -->
+              <div class="space-y-5">
+                <!-- 1 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center font-bold text-sm"
+                      >1</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        ENTERTAINMENT
+                        <span class="text-gray-400">/ March 31, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        Bobby Brown Autopsy Reveals He Died From Alcohol,...
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    class="flex gap-4 text-gray text-xs text-gray-400 mt-2 ml-11"
+                  >
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+
+                <hr class="border-gray-700" />
+
+                <!-- 2 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full bg-gray-600 text-white flex items-center justify-center font-bold text-sm"
+                      >2</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        BUSINESS
+                        <span class="text-gray-400">/ March 31, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        Winston Churchill And The Union Jack Should Make...
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-xs text-gray-400 mt-2 ml-11">
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+
+                <hr class="border-gray-700" />
+
+                <!-- 3 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full text-white bg-gray-600 flex items-center justify-center font-bold text-sm"
+                      >3</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        BUSINESS
+                        <span class="text-gray-400">/ March 31, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        Teacher Suspended For Showing Prophet Muhammad Cartoon
+                        ‘Defends...
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-xs text-gray-400 mt-2 ml-11">
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+
+                <hr class="border-gray-700" />
+
+                <!-- 4 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full text-white bg-gray-600 flex items-center justify-center font-bold text-sm"
+                      >4</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        BUSINESS
+                        <span class="text-gray-400">/ March 31, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        Boris Johnson Tells Brits Lockdown Easing Will Go...
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-xs text-gray-400 mt-2 ml-11">
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+
+                <hr class="border-gray-700" />
+
+                <!-- 5 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full text-white bg-gray-600 flex items-center justify-center font-bold text-sm"
+                      >5</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        TRAVEL
+                        <span class="text-gray-400">/ March 23, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        How The Seychelles Is Racing To Become The...
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-xs text-gray-400 mt-2 ml-11">
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+
+                <hr class="border-gray-700" />
+
+                <!-- 6 -->
+                <div>
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-8 h-8 rounded-full text-white bg-gray-600 flex items-center justify-center font-bold text-sm"
+                      >6</span
+                    >
+                    <div>
+                      <p class="text-xs text-blue-400">
+                        TRAVEL
+                        <span class="text-gray-400">/ March 23, 2021</span>
+                      </p>
+                      <h3 class="text-sm font-semibold">
+                        When Can We Go On Vacation Again? This...
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-xs text-gray-400 mt-2 ml-11">
+                    <span>sports</span>
+                    <span>March 22, 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Posts -->
+            <div class="mt-4 space-y-4">
+              <div class="flex gap-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-24 h-16 object-cover rounded"
+                />
+                <div>
+                  <h2 class="text-sm font-bold">
+                    Winston Churchill And The Union Jack Should Make Us
+                  </h2>
+                  <p class="text-blue-400 text-xs">BUSINESS / March 31, 2021</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-24 h-16 object-cover rounded"
+                />
+                <div>
+                  <h2 class="text-sm font-bold">
+                    Teacher Suspended For Showing Prophet Muhammad
+                  </h2>
+                  <p class="text-blue-400 text-xs">BUSINESS / March 31, 2021</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-24 h-16 object-cover rounded"
+                />
+                <div>
+                  <h2 class="text-sm font-bold">
+                    Boris Johnson Tells Brits Lockdown Easing Will Go
+                  </h2>
+                  <p class="text-blue-400 text-xs">BUSINESS / March 31, 2021</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-24 h-16 object-cover rounded"
+                />
+                <div>
+                  <h2 class="text-sm font-bold">
+                    How The Seychelles Is Racing To Become The World’s Safest
+                  </h2>
+                  <p class="text-blue-400 text-xs">TRAVEL / March 23, 2021</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <img
+                  src="https://wp.quomodosoft.com/newsprk/wp-content/uploads/2021/03/Business11-1200x780.jpg"
+                  class="w-24 h-16 object-cover rounded"
+                />
+                <div>
+                  <h2 class="text-sm font-bold">
+                    When Can We Go On Vacation Again? This Is What Experts
+                  </h2>
+                  <p class="text-blue-400 text-xs">TRAVEL / March 23, 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 Newsprk. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

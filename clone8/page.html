@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foxiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center py-4">
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2 bg-black pl-2 pr-2">
+            <img
+              src="https://foxiz.io/tech/wp-content/uploads/sites/3/2022/01/logo-t.png"
+              alt="logo"
+            />
+          </div>
+
+          <!-- Nav + Hamburger -->
+          <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">Home</a>
+              <a href="#" class="hover:text-blue-600">Technology</a>
+              <a href="#" class="hover:text-blue-600">Gadget</a>
+              <a href="#" class="hover:text-blue-600">Posts</a>
+              <a href="#" class="hover:text-blue-600">Pages</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">Technology</a>
+          <a href="#" class="hover:text-blue-600">Gadget</a>
+          <a href="#" class="hover:text-blue-600">Posts</a>
+          <a href="#" class="hover:text-blue-600">Pages</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6">
+      <div class="flex flex-col px-4 md:px-8 max-w-6xl mx-auto py-8">
+        <!-- Category Badge -->
+        <span
+          class="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded mb-4 w-[5rem]"
+        >
+          GADGET
+        </span>
+
+        <!-- Article Title -->
+        <h1
+          class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug mb-4 "
+        >
+          Best Fujifilm Cameras for Every Photographer
+        </h1>
+
+        <!-- Description -->
+        <p class="text-gray-600 text-base md:text-lg mb-6 max-w-3xl">
+          If you’re just moving up into your first mirrorless camera from a
+          smartphone, you’ll appreciate the X-T200‘s bright, responsive 3.5-inch
+          touchscreen. It allows shooters to quickly and easily access menus,
+          settings, and shooting modes. But, it’s not totally reliant on its
+          screen.
+        </p>
+
+        <!-- Author Info and Social -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+          <!-- Author -->
+          <p class="text-sm font-semibold text-gray-900">
+            <a href="#" class="hover:underline">Connor</a>
+            <span class="text-gray-500 font-normal">– Senior Editor</span>
+          </p>
+          <p class="text-xs text-gray-500">
+            Last updated: February 23, 2022 10:12 am
+          </p>
+        </div>
+        <!-- Social Icons -->
+        <div class="flex items-center gap-3">
+          <button class="text-gray-500 hover:text-black transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18 16.08c-.76 0-1.44.3-1.96.77l-7.1-4.21c.05-.23.08-.47.08-.72s-.03-.49-.08-.72l7.1-4.21a2.99 2.99 0 1 0-.96-1.77L8.04 8.77a3 3 0 1 0 0 6.46l7.04 4.21a3 3 0 1 0 .92-1.36z"
+              />
+            </svg>
+          </button>
+          <button class="text-gray-500 hover:text-blue-600 transition">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="text-gray-500 hover:text-black transition">
+            <i class="fab fa-x-twitter"></i>
+          </button>
+          <button class="text-gray-500 hover:text-green-600 transition">
+            <i class="fas fa-link"></i>
+          </button>
+          <button class="text-gray-500 hover:text-blue-400 transition">
+            <i class="fab fa-telegram-plane"></i>
+          </button>
+          <button class="text-gray-500 hover:text-gray-800 transition">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[3fr_1fr]">
+        <div class="p-4">
+          <div class="px-4 md:px-8 max-w-4xl mx-auto py-10 space-y-8">
+            <!-- Hero Image -->
+            <img
+              src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t40-860x573.jpg"
+              alt="Camera Hero"
+              class="w-full"
+            />
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Good web design has visual weight, is
+              <span class="font-semibold">optimized for various devices</span>,
+              and has content that is prioritized for the medium. The most
+              important elements of a web page should have more visual weight to
+              <span class="italic">“naturally attract”</span> a visitor’s
+              attention.
+            </p>
+
+            <!-- Table of Contents (TOC) -->
+            <div class="bg-white border border-gray-200 p-4">
+              <h3
+                class="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-2 flex items-center gap-2"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"
+                  />
+                </svg>
+                Contents
+              </h3>
+              <ul class="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                <li>A good website should be easy to navigate</li>
+                <li>Creating visual rhythm in your layout</li>
+                <li>Elements that can help website visual composition</li>
+                <li>Delving into UX and UI design</li>
+                <li>Ensure that interactive elements are easy to identify</li>
+                <li>Breaking down the barriers</li>
+              </ul>
+            </div>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 leading-relaxed">
+              Optimization for various types of devices and resolutions plays a
+              fundamental role in modern website design. Web page layouts should
+              be <span class="font-semibold">primarily responsive</span> and not
+              rely on any fixed-size elements. Web designers using
+              <span class="text-blue-600 hover:underline cursor-pointer"
+                >fluid grids</span
+              >
+              and flexible images will guarantee that a web page will render
+              well on a variety of devices, windows, and screen sizes.
+            </p>
+
+            <!-- Quote Section -->
+            <div
+              class="text-center bg-gray-50 px-6 py-8 border-l-4 border-blue-600"
+            >
+              <p class="text-2xl font-semibold text-gray-800 mb-4 italic">
+                “Good design is making something intelligible and memorable.
+                Great design is making something memorable and meaningful.”
+              </p>
+              <p class="text-sm font-medium text-gray-500">– Dieter Rams</p>
+            </div>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Most users search for something interesting (or useful) and
+              clickable as soon as some minimum conditions are met. Users click
+              if the new page somewhat meets users' expectations, the back
+              button is clicked and the search process is continued.
+            </p>
+
+            <!-- Subheading -->
+            <h2 class="text-xl font-bold text-gray-900 mt-6">
+              A good website should be easy to navigate
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Not all websites are made equal. Some websites are simple,
+              logical, and easy to use. Others are messy hodgepodge of pages and
+              links.
+            </p>
+
+            <!-- Supporting Image -->
+            <img
+              src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t40-860x573.jpg"
+              alt="User With Mug"
+              class="w-full"
+            />
+            <!-- Intro Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Without website navigation, your visitors can’t figure out how to
+              find your blog, your email signup page, your product listings,
+              pricing, contact information, or help docs.
+            </p>
+
+            <!-- Two-Column Section -->
+            <div class="flex flex-col lg:flex-row gap-6">
+              <!-- Left Content -->
+              <div class="flex-1 space-y-4">
+                <p class="text-sm font-bold text-gray-900">
+                  Quick and easy access to the content they’re after is more
+                  important for your website users than a... visually–stunning
+                  design.
+                </p>
+
+                <p class="text-gray-700 text-base leading-relaxed">
+                  Website navigation allows visitors to flow from one page to
+                  another without frustration. If you’ve done your job well,
+                  visitors leave your site with the
+                  <span class="text-blue-600 underline cursor-pointer"
+                    >intention to return</span
+                  >
+                  and might even buy something from you or sign up for your
+                  email list.
+                </p>
+
+                <p class="italic text-gray-600 text-sm">
+                  Bad navigation is an especially common problem. We’ve all
+                  struggled to find things on disorganized websites without any
+                  logical structure. It feels hopeless.
+                </p>
+
+                <p class="text-gray-700 text-base leading-relaxed">
+                  Using
+                  <span class="font-semibold">“complex large pictures”</span>.
+                  Because a carousel generally carries a lot of picture
+                  messages, complex large pictures result in low performance and
+                  <span class="italic">“slow loading rate”</span> of the sites,
+                  especially those whose first homepages are occupied by
+                  high-resolution carousels.
+                </p>
+              </div>
+
+              <!-- Right Sidebar -->
+              <aside
+                class="w-full lg:w-64 border border-gray-200 p-4 space-y-4"
+              >
+                <h3 class="text-sm font-semibold text-gray-700">
+                  🗂 More Read /
+                </h3>
+                <ul
+                  class="space-y-3 text-sm text-gray-700 list-disc list-inside"
+                >
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >Start a Digital Marketing Website for your Service</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >SW Tech Shows The Future of Next Gen VR with Prototype
+                      Headset</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >Best Beaches in the UK for the Perfect Sandy Getaway</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >5 Ways to Manage Your Spending on Multiple Credit
+                      Cards</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >Should I Replace My Upright Vacuum with a Cleaning
+                      Robot?</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </div>
+
+            <!-- Subsection Title -->
+            <h2 class="text-xl font-bold text-gray-900">
+              Creating visual rhythms in your layouts
+            </h2>
+
+            <!-- Supporting Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              In design, rhythm is created by simply repeating elements in
+              predictable patterns. This repetition is a natural thing that
+              occurs everywhere in our world. As people, we are driven everyday
+              by predictable, timed events.
+            </p>
+
+            <!-- Supporting Image -->
+            <div>
+              <img
+                src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t40-860x573.jpg"
+                alt="VR user"
+                class="w-full"
+              />
+              <p class="text-xs text-gray-500 mt-2">
+                VR is the use of computer technology to create a simulated
+                environment.
+              </p>
+            </div>
+
+            <!-- Final Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              One of the best ways to use
+              <a href="#" class="text-blue-600 underline"
+                >repetition and rhythm in web design</a
+              >
+              is in the site’s navigation menu. A consistent, easy-to-follow
+              pattern—in color, layout, etc. Gives users an intuitive roadmap to
+              everything you want to share on your site.
+            </p>
+
+            <!-- Section Heading -->
+            <h2 class="text-xl font-bold text-gray-900">
+              Elements that can help website visual composition
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Nobody enjoys looking at an ugly web page. Garish colors,
+              cluttered images and distracting animation can all turn customers
+              “off” and send them shopping
+              <span class="italic">"somewhere else"</span>. Basic composition
+              rules to create more effective:
+            </p>
+
+            <!-- Composition List -->
+            <ul
+              class="list-decimal list-inside text-gray-700 space-y-1 text-base"
+            >
+              <li>
+                Direct the Eye With
+                <span class="text-blue-600 underline">Leading Lines</span>
+              </li>
+              <li>Balance Out Your Elements</li>
+              <li>Use Elements That Complement Each Other</li>
+              <li>
+                Be clear about your
+                <span class="font-semibold">"focal points"</span> and where you
+                place them
+              </li>
+            </ul>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              The size and position of elements in a composition will determine
+              its balance. An unbalanced design generates tension, which may be
+              the goal in many design projects, but for web apps that demand
+              repeated comfortable use, tension is not a desirable trait.
+            </p>
+
+            <!-- Subsection: UX and UI -->
+            <h2 class="text-xl font-bold text-gray-900">
+              Diving into UX and UI design
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              UX and UI: Two terms that are often used interchangeably, but
+              actually mean very different things. So what
+              <span class="italic">exactly</span> is the difference?
+            </p>
+
+            <p class="text-gray-700 text-base leading-relaxed">
+              UX design refers to the term
+              <span class="italic">“user experience design”</span>, while UI
+              stands for <span class="italic">“user interface design”</span>.
+              Both elements are crucial to a product and work closely together.
+              But despite their relationship,
+              <a href="#" class="text-blue-600 underline"
+                >the roles themselves</a
+              >
+              are quite different.
+            </p>
+
+            <!-- Quote Section -->
+            <div class="border-l-4 border-blue-600 pl-4">
+              <p class="italic text-lg font-semibold text-gray-900 mb-2">
+                Styles come and go. <br />
+                Good design is a language, not a style.
+              </p>
+              <p class="text-sm text-blue-600 font-medium">
+                — Massimo Vignelli
+              </p>
+            </div>
+
+            <!-- Subsection: Interactive Elements -->
+            <h2 class="text-xl font-bold text-gray-900">
+              Ensure that interactive elements are easy to identify
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Good design guides the user by communicating purpose and priority.
+              For that reason, every part of the design should be based on an
+              <span class="font-semibold">“informed decision”</span> rather than
+              an arbitrary result of personal taste or the current trend.
+            </p>
+
+            <!-- Image -->
+            <div>
+              <img
+                src="https://foxiz.io/tech/wp-content/uploads/sites/3/2021/12/t40-860x573.jpg"
+                alt="Security UI Interaction"
+                class="w-full"
+              />
+              <p class="text-xs text-gray-500 mt-2">
+                Network firewalls and security technologies
+              </p>
+            </div>
+
+            <!-- Final Paragraph -->
+            <p class="text-gray-700 text-base leading-relaxed">
+              Provide distinct styles for interactive elements, such as
+              <span class="italic">links and buttons</span>, to make them easy
+              to identify. For example,
+              <span class="font-medium">“change the appearance of links”</span>
+              on mouse hover, “keyboard focus”, and “touch-screen activation”.
+            </p>
+          </div>
+        </div>
+
+        <!--Aside bar-->
+
+        <div class="p-4">
+          <div class="md:px-8 max-w-md mx-auto space-y-6">
+            <!-- Header -->
+            <h2 class="text-sm font-semibold text-gray-800 border-b pb-2">
+              <span class="text-blue-600">/</span> Latest News
+            </h2>
+
+            <!-- News Item 1 -->
+            <div class="flex gap-3 items-start">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-gray-900 leading-snug">
+                  Are Smartwatches the Future of Wearable Devices?
+                </p>
+                <p class="text-xs text-pink-600 font-semibold mt-1">
+                  Tech News
+                </p>
+              </div>
+              <img
+                src="https://via.placeholder.com/60x60"
+                alt="news-1"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="flex gap-3 items-start">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-gray-900 leading-snug">
+                  Canon EOS 5D Mark IV Full Frame Digital SLR Camera
+                </p>
+                <div
+                  class="flex items-center space-x-1 mt-1 text-yellow-400 text-xs"
+                >
+                  ⭐⭐⭐⭐⭐
+                </div>
+              </div>
+              <img
+                src="https://via.placeholder.com/60x60"
+                alt="news-2"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+
+            <!-- News Item 3 -->
+            <div class="flex gap-3 items-start">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-gray-900 leading-snug">
+                  Seeking Suggestions Regarding Headsets for Conference
+                  Interpreters
+                </p>
+                <p class="text-xs text-blue-600 font-semibold mt-1">Gadget</p>
+              </div>
+              <img
+                src="https://via.placeholder.com/60x60"
+                alt="news-3"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+
+            <!-- News Item 4 -->
+            <div class="flex gap-3 items-start">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-gray-900 leading-snug">
+                  Top 10 Largest Hot High-Quality Earphone Handsfree
+                </p>
+                <p class="text-xs text-pink-600 font-semibold mt-1">
+                  Tech News
+                </p>
+              </div>
+              <img
+                src="https://via.placeholder.com/60x60"
+                alt="news-4"
+                class="w-16 h-16 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 Forcast Clone. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
