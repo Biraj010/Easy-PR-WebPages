@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Political News - Articles</title>
+    <title>Political News</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Extend Tailwind to include Aleo -->
     <script>
       tailwind.config = {
         theme: {
@@ -26,32 +27,42 @@
     </script>
   </head>
 
-  <body class="bg-white text-gray-900 font-aleo">
+  <body class="bg-white-100 text-gray-900 font-aleo">
     <!-- Header/Navbar -->
-    <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <header class="bg-white sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center py-4">
-          <!-- Logo -->
-          <div class="flex items-center space-x-2">
-            <h1 class="text-black font-bold text-lg">NewsPrint</h1>
+          <!-- Logo  -->
+          <div class="flex items-center space-x-2 bg-white pl-2 pr-2">
+            <h1 class="text-black font-bold">NewsPrint</h1>
           </div>
 
           <!-- Nav + Hamburger -->
           <div class="flex items-center ml-auto space-x-6">
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex space-x-6 font-medium">
-              <a href="#" class="hover:text-blue-600">Home</a>
-              <a href="#" class="hover:text-blue-600">World</a>
-              <a href="#" class="hover:text-blue-600">Politics</a>
-              <a href="#" class="hover:text-blue-600">Economy</a>
-              <a href="#" class="hover:text-blue-600">Contact</a>
+              <a href="#" class="hover:text-blue-600">DEMO</a>
+              <a href="#" class="hover:text-blue-600">ABOUT US</a>
+              <a href="#" class="hover:text-blue-600">CATEGORY</a>
+              <a href="#" class="hover:text-blue-600">PAGES</a>
+              <a href="#" class="hover:text-blue-600">CONTACT US</a>
             </nav>
 
             <!-- Hamburger -->
             <button id="menu-btn" class="md:hidden focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -61,11 +72,11 @@
       <!-- Mobile Menu -->
       <div id="menu" class="hidden md:hidden bg-white shadow-lg">
         <nav class="flex flex-col space-y-4 px-6 py-4">
-          <a href="#" class="hover:text-blue-600">Home</a>
-          <a href="#" class="hover:text-blue-600">World</a>
-          <a href="#" class="hover:text-blue-600">Politics</a>
-          <a href="#" class="hover:text-blue-600">Economy</a>
-          <a href="#" class="hover:text-blue-600">Contact</a>
+          <a href="#" class="hover:text-blue-600">DEMO</a>
+          <a href="#" class="hover:text-blue-600">ABOUT US</a>
+          <a href="#" class="hover:text-blue-600">CATEGORY</a>
+          <a href="#" class="hover:text-blue-600">PAGES</a>
+          <a href="#" class="hover:text-blue-600">CONTACT US</a>
         </nav>
       </div>
     </header>
