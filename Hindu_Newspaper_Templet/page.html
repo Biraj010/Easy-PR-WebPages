@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hindu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Logo (Centered) -->
+        <div class="flex justify-center py-4">
+          <img
+            src="https://www.thehindu.com/theme/images/th-online/thehindu-logo.svg"
+            alt="Forecast Logo"
+            class="h-12"
+          />
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="border-t border-gray-200">
+          <div class="flex items-center justify-center py-3">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">India</a>
+              <a href="#" class="hover:text-blue-600">World</a>
+              <a href="#" class="hover:text-blue-600">Movies</a>
+              <a href="#" class="hover:text-blue-600">Sport</a>
+              <a href="#" class="hover:text-blue-600">Data</a>
+              <a href="#" class="hover:text-blue-600">Health</a>
+              <a href="#" class="hover:text-blue-600">Opinion</a>
+              <a href="#" class="hover:text-blue-600">Science</a>
+              <a href="#" class="hover:text-blue-600">Business</a>
+              <a href="#" class="hover:text-blue-600">Premium</a>
+            </nav>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none ml-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+          <nav class="flex flex-col space-y-4 px-6 py-4 text-center">
+            <a href="#" class="hover:text-blue-600">India</a>
+            <a href="#" class="hover:text-blue-600">World</a>
+            <a href="#" class="hover:text-blue-600">Movies</a>
+            <a href="#" class="hover:text-blue-600">Sport</a>
+            <a href="#" class="hover:text-blue-600">Data</a>
+            <a href="#" class="hover:text-blue-600">Health</a>
+            <a href="#" class="hover:text-blue-600">Opinion</a>
+            <a href="#" class="hover:text-blue-600">Science</a>
+            <a href="#" class="hover:text-blue-600">Business</a>
+            <a href="#" class="hover:text-blue-600">Premium</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--Main Section-->
+    <main class="max-w-9xl m-2 p-4">
+      <div class="grid grid-cols-1 md:grid-cols-[4fr_1fr]">
+        <div class="p-4">
+          <!-- Article Block -->
+          <div class="col-span-12 lg:col-span-8 flex flex-col space-y-4">
+            <!-- Headline -->
+            <h1 class="text-2xl md:text-3xl font-bold leading-snug">
+              U.N. investigators say Israel committing ‘genocide’ in Gaza;
+              Israel rejects ‘distorted and false report’
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-gray-700 text-xl md:text-lg">
+              The U.N. has not yet used the term genocide but is under mounting
+              pressure to do so
+            </p>
+
+            <!-- Meta -->
+            <div
+              class="flex flex-wrap items-center gap-2 text-xs text-gray-500"
+            >
+              <span class="text-red-600 font-semibold">Updated -</span>
+              <span>September 16, 2025 01:45 pm IST - GENEVA</span>
+              <span>•</span>
+              <span class="font-semibold">REUTERS</span>
+            </div>
+
+            <!-- Action Row -->
+            <div class="flex items-center justify-between border-b pb-2">
+              <button
+                class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-red-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 20.25c4.556 0 8.25-3.694 8.25-8.25S16.556 3.75 12 3.75 3.75 7.444 3.75 12s3.694 8.25 8.25 8.25zM9.75 9.75h.008v.008H9.75V9.75zm4.5 0h.008v.008h-.008V9.75zM8.25 15c.659-1.318 2.007-2.25 3.75-2.25s3.091.932 3.75 2.25"
+                  />
+                </svg>
+                READ LATER
+              </button>
+            </div>
+
+            <!-- Article Image -->
+            <div class="flex flex-col">
+              <img
+                src="https://th-i.thgim.com/public/incoming/rt0ega/article70055570.ece/alternates/LANDSCAPE_320/AFP_72EX2NR.jpg"
+                alt="Gaza Conflict"
+                class="w-full object-cover rounded"
+              />
+              <p class="text-xs text-gray-500 mt-2">
+                The U.N. commission concluded that statements by Benjamin
+                Netanyahu and other officials are “direct evidence of genocidal
+                intent.” | File. | Photo Credit: AP
+              </p>
+            </div>
+
+            <!-- Article Body -->
+            <p class="text-base leading-relaxed text-gray-800">
+              A United Nations Commission of Inquiry concluded on Tuesday
+              (September 16, 2025) that
+              <span class="text-red-600 font-semibold"
+                >Israel has committed genocide</span
+              >
+              in Gaza and that top Israeli officials including Prime Minister
+              Benjamin Netanyahu had incited these acts.
+            </p>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="w-full bg-white p-4">
+            <!-- Top News Section -->
+            <h2 class="text-2xl font-bold text-red-700">Top News</h2>
+            <p class="text-sm mt-2">Stock markets rebound in initial trade</p>
+
+            <!-- Top Image -->
+            <div class="mt-2">
+              <img
+                src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/af614bf418b0ae4db009c5a346f328684be6ed4a.jpg"
+                alt="Top News"
+                class="w-full h-40 object-cover"
+              />
+            </div>
+
+            <!-- Dots -->
+            <div class="flex justify-center space-x-2 mt-3">
+              <span class="w-2 h-2 bg-black rounded-full"></span>
+              <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+              <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+              <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+            </div>
+
+            <!-- Go to Home -->
+            <div class="mt-4 border-t border-gray-300 pt-2">
+              <a
+                href="#"
+                class="font-bold uppercase text-xs tracking-wide flex items-center space-x-2"
+              >
+                <span>Go To Home</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            <!-- Most Popular Section -->
+            <div class="mt-6">
+              <div class="flex items-center justify-center space-x-2">
+                <span class="flex-1 border-t border-gray-300"></span>
+                <h3 class="text-lg font-bold text-red-700">Most Popular</h3>
+                <span class="flex-1 border-t border-gray-300"></span>
+              </div>
+
+              <!-- Article 1 -->
+              <div class="flex items-start space-x-3 mt-4 border-b pb-4">
+                <img
+                  src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/af614bf418b0ae4db009c5a346f328684be6ed4a.jpg"
+                  alt="news"
+                  class="w-24 h-16 object-cover"
+                />
+                <a
+                  href="#"
+                  class="font-semibold text-sm leading-snug hover:underline"
+                >
+                  Apollo Tyres new jersey sponsor of Indian cricket team
+                </a>
+              </div>
+
+              <!-- Article 2 -->
+              <div class="flex items-start space-x-3 mt-4 border-b pb-4">
+                <img
+                  src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/af614bf418b0ae4db009c5a346f328684be6ed4a.jpg"
+                  alt="news"
+                  class="w-24 h-16 object-cover"
+                />
+                <a
+                  href="#"
+                  class="font-semibold text-sm leading-snug hover:underline"
+                >
+                  Stop paying more for being a woman: avoid Pink Tax
+                </a>
+              </div>
+
+              <!-- Article 3 -->
+              <div class="flex items-start space-x-3 mt-4">
+                <img
+                  src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/af614bf418b0ae4db009c5a346f328684be6ed4a.jpg"
+                  alt="news"
+                  class="w-24 h-16 object-cover"
+                />
+                <a
+                  href="#"
+                  class="font-semibold text-sm leading-snug hover:underline"
+                >
+                  Tamil Nadu CM Stalin opposes Centre’s notification on
+                  exemption of atomic…
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Image Section-->
+
+      <!-- Taboola Ads Section -->
+      <div
+        class="col-span-12 lg:col-span-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4 pb-4"
+      >
+        <!-- Card 1 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 1"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">
+            War Thunder - Register now for free and play...
+          </h3>
+          <p class="text-xs text-gray-500">War Thunder | Sponsor</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 2"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">
+            This AI Tutor Lets You Learn Languages Your...
+          </h3>
+          <p class="text-xs text-gray-500">Talkpal AI | Sponsor</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 3"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">
+            Learn 57+ Languages Easily with AI
+          </h3>
+          <p class="text-xs text-gray-500">Talkpal AI | Sponsor</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 4"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">Crossout 2.0 Supercharged</h3>
+          <p class="text-xs text-gray-500">Crossout | Sponsor</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 5"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">Shooter Action MMO</h3>
+          <p class="text-xs text-gray-500">Shooter Action | Sponsor</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex flex-col">
+          <img
+            src="https://images.taboola.com/taboola/image/fetch/f_jpg%2Cq_auto%2Ch_467%2Cw_840%2Cc_fill%2Cg_faces:auto%2Ce_sharpen/https%3A//cdn.taboola.com/libtrc/static/thumbnails/e9a2a3262aa6192ba65b7c78df76eb44.jpeg"
+            alt="Ad 6"
+            class="w-full h-[20rem] object-cover"
+          />
+          <h3 class="text-sm font-semibold mt-2">
+            Villas Prices in Dubai Might Be More...
+          </h3>
+          <p class="text-xs text-gray-500">Villas in Dubai | Sponsor</p>
+        </div>
+      </div>
+
+      <!--In Case You Missed it-->
+
+      <div class="w-full bg-white pt-4 border-t">
+        <!-- Section Title -->
+        <h2
+          class="text-center text-lg sm:text-xl md:text-2xl font-bold text-red-700 pt-2"
+        >
+          In Case You Missed It
+        </h2>
+
+        <!-- Wrapper -->
+        <div class="flex flex-wrap justify-start mt-4">
+          <!-- Card 1 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              Top News of the Day: Govt preparing to launch mission to counter
+              'demography-altering conspiracy'; says…
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem]object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              How universities bypass UGC pay rules to exploit contractual
+              faculty
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              Asia Cup 2025: When and where to watch India vs Pakistan clash
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              Eight Meghalaya Ministers resign ahead of Cabinet reshuffle
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              India brags about having 1.4 billion people but won't buy one
+              bushel of U.S. corn: Luttick
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              Suspected gunman Robinson wrote note threatening Kiki, tied to
+              scene by DNA, says FBI…
+            </p>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              Nepal's interim Cabinet expanded with inclusion of Rameshore
+              Khanal, Kulman Ghising and Om Prakash…
+            </p>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="w-1/2 sm:w-1/4 p-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/c6366a304a5042f3ef9156f67cd270a9318d1f84.jpg"
+              alt="news"
+              class="w-full h-[20rem] sm:h-[20rem] md:h-[20rem] object-cover"
+            />
+            <p class="text-base sm:text-xl mt-1">
+              ICC rejects Pakistan Cricket Board’s demand to remove match
+              referee Andy Pycroft from Asia Cup
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hindu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["Aleo", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Logo (Centered) -->
+        <div class="flex justify-center py-4">
+          <img
+            src="https://www.thehindu.com/theme/images/th-online/thehindu-logo.svg"
+            alt="Forecast Logo"
+            class="h-12"
+          />
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="border-t border-gray-200">
+          <div class="flex items-center justify-center py-3">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">India</a>
+              <a href="#" class="hover:text-blue-600">World</a>
+              <a href="#" class="hover:text-blue-600">Movies</a>
+              <a href="#" class="hover:text-blue-600">Sport</a>
+              <a href="#" class="hover:text-blue-600">Data</a>
+              <a href="#" class="hover:text-blue-600">Health</a>
+              <a href="#" class="hover:text-blue-600">Opinion</a>
+              <a href="#" class="hover:text-blue-600">Science</a>
+              <a href="#" class="hover:text-blue-600">Business</a>
+              <a href="#" class="hover:text-blue-600">Premium</a>
+            </nav>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none ml-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+          <nav class="flex flex-col space-y-4 px-6 py-4 text-center">
+            <a href="#" class="hover:text-blue-600">India</a>
+            <a href="#" class="hover:text-blue-600">World</a>
+            <a href="#" class="hover:text-blue-600">Movies</a>
+            <a href="#" class="hover:text-blue-600">Sport</a>
+            <a href="#" class="hover:text-blue-600">Data</a>
+            <a href="#" class="hover:text-blue-600">Health</a>
+            <a href="#" class="hover:text-blue-600">Opinion</a>
+            <a href="#" class="hover:text-blue-600">Science</a>
+            <a href="#" class="hover:text-blue-600">Business</a>
+            <a href="#" class="hover:text-blue-600">Premium</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--Main Section-->
+    <main class="max-w-9xl m-2 p-4">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_3fr_1fr]">
+        <!-- Left Column -->
+        <div>
+          <div class="max-w-md mx-auto p-4">
+            <!-- Premium Header -->
+            <h2 class="text-xl font-bold text-pink-800 mb-4">Premium</h2>
+
+            <!-- Article List -->
+            <div class="space-y-4">
+              <!-- Article Item -->
+              <div>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  The great Indian spin trick
+                </h3>
+                <p class="text-xs font-semibold text-pink-800 uppercase">
+                  R. Kaushik
+                </p>
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <div>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  What is ‘involution’ that is plaguing the Chinese EV sector? |
+                  Explained
+                </h3>
+                <p class="text-xs font-semibold text-pink-800 uppercase">
+                  Kunal Shankar
+                </p>
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <div class="flex items-start gap-3">
+                <div>
+                  <h3
+                    class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    Conduct of social media companies during political unrest
+                  </h3>
+                  <p class="text-xs font-semibold text-pink-800 uppercase">
+                    Vasudevan Mukunth
+                  </p>
+                </div>
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="author"
+                  class="w-10 h-10 rounded-full"
+                />
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <div class="flex items-start gap-3">
+                <div>
+                  <h3
+                    class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    India is keen to preserve its relations with the U.S. but
+                    not at any cost: Tirumurti
+                  </h3>
+                  <p class="text-xs font-semibold text-pink-800 uppercase">
+                    Stanly Johny
+                  </p>
+                </div>
+                <img
+                  src="https://via.placeholder.com/40"
+                  alt="author"
+                  class="w-10 h-10 rounded-full"
+                />
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <div>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  Tamil Nadu leads in road accidents yet again, highlighting
+                  need for urgent policy reform
+                </h3>
+                <p class="text-xs font-semibold text-pink-800 uppercase">
+                  Nina Subramani
+                </p>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-4 border-gray-300" />
+
+            <!-- Kerala Section -->
+            <div class="space-y-3">
+              <div>
+                <p class="text-xs font-bold text-red-700 uppercase">Kerala</p>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  Boy sexually assaulted by 14 men in Kerala for 2 years, nine
+                  arrested
+                </h3>
+              </div>
+              <hr class="border-gray-200" />
+
+              <div>
+                <p class="text-xs font-bold text-red-700 uppercase">World</p>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  Killer wrote note threatening Charlie Kirk, tied to scene by
+                  DNA: FBI director
+                </h3>
+              </div>
+              <hr class="border-gray-200" />
+
+              <div>
+                <p class="text-xs font-bold text-red-700 uppercase">Economy</p>
+                <h3
+                  class="text-lg font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  ITR filing deadline extended till today
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="border-l border-r">
+          <div class="max-w-4xl mx-auto p-2 space-y-4">
+            <!-- Top Headline -->
+            <div>
+              <p class="text-xs font-bold text-red-700 uppercase">Live</p>
+              <h1
+                class="text-2xl md:text-3xl font-bold leading-snug hover:underline cursor-pointer"
+              >
+                Rains LIVE: Heavy rains cause floods in Dehradun’s
+                Sahastradhara; two missing
+              </h1>
+              <p class="text-base md:text-xl text-gray-600 mt-1">
+                Officials said damage has been reported from Sahastradhara and
+                Mal Devta in Dehradun, and also from Mussoorie
+              </p>
+              <p class="text-xs font-semibold text-gray-500 mt-1 uppercase">
+                The Hindu Bureau
+              </p>
+            </div>
+
+            <!-- Main Image -->
+            <div class="border-b pb-4">
+              <img
+                src="https://th-i.thgim.com/public/incoming/3s5bjo/article70055506.ece/alternates/LANDSCAPE_435/New_York_Times-Public_Editor_61784.jpg-3d635.jpg"
+                alt="floods"
+                class="w-full h-64 sm:h-80 md:h-[30rem] object-cover"
+              />
+            </div>
+
+            <!-- Bottom grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="md:border-r pr-0 md:pr-4">
+                <!-- Article 1 -->
+                <div>
+                  <h3
+                    class="text-lg font-semibold leading-snug hover:underline cursor-pointer"
+                  >
+                    Modi government determined to wipe out drug menace from India, says Amit Shah
+                  </h3>
+                  <img
+                    src="https://th-i.thgim.com/public/incoming/3s5bjo/article70055506.ece/alternates/LANDSCAPE_435/New_York_Times-Public_Editor_61784.jpg-3d635.jpg"
+                    alt="news"
+                    class="w-full mt-2 object-cover"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 md:pl-6 justify-around">
+                <!-- Article 2 -->
+                <div>
+                  <h3
+                    class="text-lg font-semibold leading-snug hover:underline cursor-pointer"
+                  >
+                    Democrats say Trump tariffs push India toward Russia, weaken
+                    U.S.
+                  </h3>
+                  <p
+                    class="text-xs font-semibold text-gray-500 uppercase mt-2 md:mt-4"
+                  >
+                    Lalit K. Jha
+                  </p>
+                </div>
+
+                <hr class="border-gray-200" />
+
+                <!-- Article 3 -->
+                <div>
+                  <h3
+                    class="text-lg font-semibold leading-snug hover:underline cursor-pointer"
+                  >
+                    ‘India is coming to the table’: White House Trade Advisor
+                    Peter Navarro
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <div class="max-w-md mx-auto p-4 space-y-4">
+            <!-- Section Title -->
+            <h2 class="text-xl font-bold text-red-700 mb-4">Latest News</h2>
+
+            <!-- News Timeline -->
+            <div class="space-y-4">
+              <div class="flex items-start gap-2">
+                <div>
+                  <p class="text-xs text-gray-500">
+                    6 mins ago • <span class="font-semibold">World</span>
+                  </p>
+                  <h3
+                    class="text-base font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    Russian attack on Ukraine’s Zaporizhzhia kills one, injures
+                    13
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2">
+    
+                <div>
+                  <p class="text-xs text-gray-500">
+                    13 mins ago • <span class="font-semibold">India</span>
+                  </p>
+                  <h3
+                    class="text-base font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    If only all cases are settled so expeditiously: Jairam
+                    Ramesh’s dig after Supreme Court closes case against Vantara
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2">
+                
+                <div>
+                  <p class="text-xs text-gray-500">
+                    13 mins ago •
+                    <span class="font-semibold">Other Sports</span>
+                  </p>
+                  <h3
+                    class="text-base font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    I have become a better player and person in what’s been a
+                    tough year: Vaishali
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2">
+                
+                <div>
+                  <p class="text-xs text-gray-500">
+                    20 mins ago • <span class="font-semibold">Technology</span>
+                  </p>
+                  <h3
+                    class="text-base font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    Google sets out $6.8 billion UK investment ahead of Trump’s
+                    state visit
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2">
+                
+                <div>
+                  <p class="text-xs text-gray-500">
+                    25 mins ago • <span class="font-semibold">Technology</span>
+                  </p>
+                  <h3
+                    class="text-base font-medium leading-snug hover:underline cursor-pointer"
+                  >
+                    OpenAI hires former xAI CFO Mike Liberatore as business
+                    finance officer
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="text-xs font-bold uppercase text-black cursor-pointer hover:underline"
+            >
+              Read More Stories
+            </p>
+
+            <hr class="border-gray-200" />
+
+            <!-- Sponsored Section -->
+            <div class="space-y-6">
+              <div>
+                <span
+                  class="bg-gray-700 text-white text-xs font-bold px-2 py-0.5 uppercase"
+                  >Sponsored</span
+                >
+                <h3
+                  class="mt-2 text-base font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  A First-of-its-Kind Initiative, National AI Olympiad sets the
+                  benchmark for India’s AI Readiness
+                </h3>
+              </div>
+
+              <div>
+                <span
+                  class="bg-gray-700 text-white text-xs font-bold px-2 py-0.5 uppercase"
+                  >Sponsored</span
+                >
+                <h3
+                  class="mt-2 text-base font-medium leading-snug hover:underline cursor-pointer"
+                >
+                  Smart Appliances Enhancing Life After Retirement
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Editorials -->
+      <div class="max-w-9xl mx-auto border-t border-b border-gray-200 mt-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200"
+        >
+          <!-- Left Column -->
+          <div
+            class="flex flex-col items-center justify-center p-4 text-center"
+          >
+            <p class="text-xs text-gray-600">Tuesday, September 16</p>
+            <img
+              src="https://www.thehindu.com/theme/images/th-online/logo.png"
+              alt="The Hindu"
+              class="w-24 mx-auto my-2"
+            />
+            <p class="text-xs font-semibold text-gray-600 uppercase">
+              Read Our Editorials In
+            </p>
+            <button
+              class="mt-1 px-3 py-0.5 border border-gray-400 rounded-full text-xs"
+            >
+              हिंदी
+            </button>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="p-4">
+            <h3 class="text-lg font-bold hover:underline cursor-pointer">
+              Divided state: On the U.S., a fractured polity
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              The U.S. needs a new enlightened leadership in the two major
+              parties
+            </p>
+          </div>
+
+          <!-- Right Column -->
+          <div class="p-4">
+            <h3 class="text-lg font-bold hover:underline cursor-pointer">
+              Field and fraternity: On the India-Pakistan Asia Cup match
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Sport is political, but it must not be the stage for a theatre of
+              conflict
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Top Pick's-->
+
+      <div class="max-w-9xl mx-auto p-4">
+        <!-- Section Title -->
+        <h2 class="text-xl font-bold text-red-700 mb-4">Top Picks</h2>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
+          <!-- Card 1 -->
+          <div class="relative h-[30rem]">
+            <img
+              src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+              alt="news"
+              class="w-full h-[30rem] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-3"
+            >
+              <p class="text-xs font-bold text-white uppercase">Kerala</p>
+              <h3 class="text-base font-medium text-white">
+                Sabarimala turns into a political battleground yet again
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative h-[30rem]">
+            <img
+              src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+              alt="news"
+              class="w-full h-[30rem] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-3"
+            >
+              <p class="text-xs font-bold text-white uppercase">Karnataka</p>
+              <h3 class="text-base font-medium text-white">
+                In a first, rescued sloth bear from Ballari district gets
+                prosthetic leg
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative h-[30rem]">
+            <img
+              src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+              alt="news"
+              class="w-full h-[30rem] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-3"
+            >
+              <p class="text-xs font-bold text-white uppercase">Karnataka</p>
+              <h3 class="text-base font-medium text-white">
+                Devadasi survey begins amid confusion over documents to be
+                provided
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 4 (Sponsored) -->
+          <div class="relative h-[30rem]">
+            <img
+              src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+              alt="sponsored"
+              class="w-full h-[30rem] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-3"
+            >
+              <span
+                class="bg-black text-white text-xs font-bold px-2 py-0.5 uppercase inline-block w-fit mb-1"
+                >Sponsored</span
+              >
+              <h3 class="text-base font-medium text-white">
+                Personal loan: Your guide to Quick and Affordable Borrowing
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 5 (Red Background Highlight) -->
+          <div
+            class="h-[30rem] bg-red-800 text-white flex flex-col justify-end p-4 h-72"
+          >
+            <p class="text-xs font-bold uppercase">Technology</p>
+            <h3 class="text-xl font-semibold leading-snug">
+              Nothing raises $200 million funding, to launch AI-native devices
+              next year
+            </h3>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="relative h-[30rem]">
+            <img
+              src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+              alt="news"
+              class="w-full h-[30rem] object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-3"
+            >
+              <p class="text-xs font-bold text-white uppercase">Maharashtra</p>
+              <h3 class="text-base font-medium text-white">
+                Ola, Uber, Rapido get provisional licences for bike taxi
+                services in Mumbai
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Hindu Opinion Section-->
+
+      <div class="max-w-9xl mx-auto p-6">
+        <!-- Section Header -->
+        <div
+          class="flex items-center justify-center border-b border-gray-200 py-2 mb-6"
+        >
+          <h2 class="text-2xl font-bold text-red-700">The Hindu Opinion</h2>
+          <span
+            class="ml-4 text-yellow-600 font-bold text-sm flex items-center"
+          >
+            <span
+              class="bg-yellow-400 text-black font-bold px-2 py-0.5 rounded-full mr-1"
+              >TH</span
+            >
+            PREMIUM
+          </span>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <!-- Card 1 (Large Image with Author) -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/cbxnu0/article70050288.ece/alternates/LANDSCAPE_320/10745_14_3_2025_22_33_59_3_IMG_20250314_WA0106.JPG"
+              alt="opinion"
+              class="w-full h-48 object-cover mb-3"
+            />
+            <h3 class="text-lg font-semibold leading-snug">
+              Unlocking innovation with India’s procurement reforms
+            </h3>
+            <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+              Arindam Goswami
+            </p>
+          </div>
+
+          <!-- Card 2 (Two stacked articles with divider) -->
+          <div class="flex flex-col justify-start">
+            <div class="border-b border-gray-200 pb-4 mb-4">
+              <h3 class="text-lg font-semibold leading-snug">
+                Strengthening Kerala’s secular legacy
+              </h3>
+              <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+                M.A. Baby
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold leading-snug">
+                Court’s nod to mental health as right
+              </h3>
+              <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+                Shabin O.S., Nabeela Siddiqui
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Image + text below) -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/cbxnu0/article70050288.ece/alternates/LANDSCAPE_320/10745_14_3_2025_22_33_59_3_IMG_20250314_WA0106.JPG"
+              alt="opinion"
+              class="w-full h-48 object-cover mb-3"
+            />
+            <h3 class="text-lg font-semibold leading-snug">
+              Time to reorganise Jana Sena Party’s structure
+            </h3>
+            <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+              Sumit Bhattacharjee
+            </p>
+          </div>
+
+          <!-- Card 4 (Two stacked articles with divider) -->
+          <div class="flex flex-col justify-start">
+            <div class="border-b border-gray-200 pb-4 mb-4">
+              <h3 class="text-lg font-semibold leading-snug">
+                India’s economic ambitions need better gender data
+              </h3>
+              <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+                Pooja Sharma Goyal, Vivek Kumar
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold leading-snug">
+                Bringing global education home
+              </h3>
+              <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+                Mamidala Jagadesh Kumar
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--The Hindu Explains-->
+
+      <div class="max-w-9xl mx-auto p-6">
+        <!-- Section Header -->
+        <div
+          class="flex items-center justify-center border-b border-gray-200 py-2 mb-6"
+        >
+          <h2 class="text-2xl font-bold text-red-700">The Hindu Explains</h2>
+          <span
+            class="ml-4 text-yellow-600 font-bold text-sm flex items-center"
+          >
+            <span
+              class="bg-yellow-400 text-black font-bold px-2 py-0.5 rounded-full mr-1"
+              >TH</span
+            >
+            PREMIUM
+          </span>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <!-- Card 1 (Image + text below) -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/cbxnu0/article70050288.ece/alternates/LANDSCAPE_320/10745_14_3_2025_22_33_59_3_IMG_20250314_WA0106.JPG"
+              alt="explains"
+              class="w-full h-48 object-cover mb-3"
+            />
+            <h3 class="text-lg font-semibold leading-snug">
+              What is ‘involution’ that is plaguing the Chinese EV sector? |
+              Explained
+            </h3>
+            <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+              Kunal Shankar
+            </p>
+          </div>
+
+          <!-- Card 2 (Two stacked with divider) -->
+          <div class="flex flex-col justify-start">
+            <div class="border-b border-gray-200 pb-4 mb-4">
+              <h3 class="text-lg font-semibold leading-snug">
+                How serious is the global plastic pollution crisis? | Explained
+              </h3>
+              <p class="text-xs text-blue-900 uppercase mt-1 font-bold">
+                Prakash Nelliya
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold leading-snug">
+                What do Supreme Court guidelines say on DNA?
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 3 (Image + text below) -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/cbxnu0/article70050288.ece/alternates/LANDSCAPE_320/10745_14_3_2025_22_33_59_3_IMG_20250314_WA0106.JPG"
+              alt="explains"
+              class="w-full h-48 object-cover mb-3"
+            />
+            <h3 class="text-lg font-semibold leading-snug">
+              How has Gen Z uprising forced changes in Nepal? | Explainer
+            </h3>
+          </div>
+
+          <!-- Card 4 (Image + text below) -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/cbxnu0/article70050288.ece/alternates/LANDSCAPE_320/10745_14_3_2025_22_33_59_3_IMG_20250314_WA0106.JPG"
+              alt="explains"
+              class="w-full h-48 object-cover mb-3"
+            />
+            <h3 class="text-lg font-semibold leading-snug">
+              What has WHO highlighted on mental health? | Explainer
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!--Shorts Section-->
+
+      <div class="max-w-9xl mx-auto p-6">
+        <!-- Section Header -->
+        <div
+          class="flex items-center justify-center border-b border-gray-200 py-2 mb-6"
+        >
+          <span
+            class="bg-black text-white font-bold rounded-full w-8 h-8 flex items-center justify-center mr-2"
+            >TH</span
+          >
+          <h2 class="text-2xl font-bold text-red-700">Shorts</h2>
+        </div>
+
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+        >
+          <!-- Card 1 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/eocl5f/article70053422.ece/alternates/PORTRAIT_230/2025-09-15T142011Z_1860622673_RC2CSGAJQNIO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+              alt="shorts"
+              class="w-full h-72 object-cover rounded mb-3"
+            />
+            <h3 class="text-base font-medium leading-snug">
+              Watch: Israeli strike destroys Muhanna Tower in Gaza
+            </h3>
+          </div>
+
+          <!-- Card 2 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/eocl5f/article70053422.ece/alternates/PORTRAIT_230/2025-09-15T142011Z_1860622673_RC2CSGAJQNIO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+              alt="shorts"
+              class="w-full h-72 object-cover rounded mb-3"
+            />
+            <h3 class="text-base font-medium leading-snug">
+              Watch: We don’t want regulations that can wipe out innovations: FM
+              Nirmala Sitharaman
+            </h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/eocl5f/article70053422.ece/alternates/PORTRAIT_230/2025-09-15T142011Z_1860622673_RC2CSGAJQNIO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+              alt="shorts"
+              class="w-full h-72 object-cover rounded mb-3"
+            />
+            <h3 class="text-base font-medium leading-snug">
+              Watch: Reject ‘double standards’ and punish Israel, says Qatar PM
+            </h3>
+          </div>
+
+          <!-- Card 4 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/eocl5f/article70053422.ece/alternates/PORTRAIT_230/2025-09-15T142011Z_1860622673_RC2CSGAJQNIO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+              alt="shorts"
+              class="w-full h-72 object-cover rounded mb-3"
+            />
+            <h3 class="text-base font-medium leading-snug">
+              77th Emmy Awards: Who are the key winners?
+            </h3>
+          </div>
+
+          <!-- Card 5 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/incoming/eocl5f/article70053422.ece/alternates/PORTRAIT_230/2025-09-15T142011Z_1860622673_RC2CSGAJQNIO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+              alt="shorts"
+              class="w-full h-72 object-cover rounded mb-3"
+            />
+            <h3 class="text-base font-medium leading-snug">
+              Watch: “Have you done it?” Vijay questions DMK on unfulfilled poll
+              promises.
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!--Food Section-->
+
+      <div class="max-w-9xl mx-auto p-6">
+        <!-- Section Header -->
+        <div
+          class="flex items-center justify-center border-b border-gray-200 py-2 mb-6"
+        >
+          <span
+            class="bg-black text-white font-bold rounded-full w-8 h-8 flex items-center justify-center mr-2"
+            >TH</span
+          >
+          <h2 class="text-2xl font-bold text-red-700">Food</h2>
+        </div>
+
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Card 1 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/life-and-style/fashion/h9vswv/article70052072.ece/alternates/LANDSCAPE_320/photo-collage.png.png"
+              alt="Food article"
+              class="w-full h-56 object-cover mb-3"
+            />
+            <p class="text-red-700 font-bold text-xs uppercase mb-1">
+              Features
+            </p>
+            <h3 class="text-lg font-semibold leading-snug">
+              Karan Gokani on keep recipes real and accessible in his latest
+              cookbook, ‘Indian 101’
+            </h3>
+            <p class="text-xs text-gray-700 mt-2 font-semibold">
+              Nidhi Adlakha
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/life-and-style/fashion/h9vswv/article70052072.ece/alternates/LANDSCAPE_320/photo-collage.png.png"
+              alt="Food article"
+              class="w-full h-56 object-cover mb-3"
+            />
+            <p class="text-red-700 font-bold text-xs uppercase mb-1">Food</p>
+            <h3 class="text-lg font-semibold leading-snug">
+              Black bun burgers and more at an ongoing burger festival in
+              Coimbatore
+            </h3>
+            <p class="text-xs text-gray-700 mt-2 font-semibold">K Jeshi</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/life-and-style/fashion/h9vswv/article70052072.ece/alternates/LANDSCAPE_320/photo-collage.png.png"
+              alt="Food article"
+              class="w-full h-56 object-cover mb-3"
+            />
+            <p class="text-red-700 font-bold text-xs uppercase mb-1">
+              Features
+            </p>
+            <h3 class="text-lg font-semibold leading-snug">
+              New menus and restaurants to try out in Bengaluru this week
+            </h3>
+            <p class="text-xs text-gray-700 mt-2 font-semibold">
+              Nidhi Adlakha
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div>
+            <img
+              src="https://th-i.thgim.com/public/life-and-style/fashion/h9vswv/article70052072.ece/alternates/LANDSCAPE_320/photo-collage.png.png"
+              alt="Food article"
+              class="w-full h-56 object-cover mb-3"
+            />
+            <p class="text-red-700 font-bold text-xs uppercase mb-1">
+              Features
+            </p>
+            <h3 class="text-lg font-semibold leading-snug">
+              At Aatrupaduthal in Kumbakonam, travel through Sangam-era
+              Tamilakam with dinner
+            </h3>
+            <p class="text-xs text-gray-700 mt-2 font-semibold">Sneha Thomas</p>
+          </div>
+        </div>
+      </div>
+
+      <!--News Today-->
+      <div class="w-full border-t border-gray-200 py-4">
+        <div class="max-w-9xl mx-auto px-4">
+          <!-- Inner Wrapper -->
+          <div class="flex flex-col items-center">
+            <!-- Heading -->
+            <h2
+              class="text-2xl font-bold text-red-700 mb-2 flex items-center justify-center"
+            >
+              <span class="px-4">Top News Today</span>
+            </h2>
+            
+          </div>
+        </div>
+
+        <!--Grid for news Items-->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_3fr_1fr] border-b pb-4">
+          <!-- Left Column -->
+          <div class="p-4 border-b md:border-b-0 md:border-r">
+            <div class="flex flex-col w-full h-full overflow-y-auto">
+              <!-- Card 1 -->
+              <div class="border-b border-gray-200">
+                <img
+                  src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+                  alt="news1"
+                  class="w-full h-48 md:h-60 object-cover"
+                />
+                <div class="p-3">
+                  <span class="text-red-600 font-bold text-sm">INDIA</span>
+                  <h3 class="font-bold text-base leading-snug">
+                    BMW crash: Delhi court remands accused to two-day judicial
+                    custody for mowing down Finance Ministry official
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">ALISHA DUTTA</p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="border-b border-gray-200">
+                <img
+                  src="https://th-i.thgim.com/public/incoming/lalsg2/article70055537.ece/alternates/PORTRAIT_320/_JAI5530.JPG"
+                  alt="news2"
+                  class="w-full h-48 md:h-60 object-cover"
+                />
+                <div class="p-3">
+                  <span class="text-red-600 font-bold text-sm">ECONOMY</span>
+                  <h3 class="font-bold text-base leading-snug">
+                    ITR filing deadline extended by a day to September 16
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">PTI</p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div>
+                <div class="p-3">
+                  <span class="text-red-600 font-bold text-sm">INDIA</span>
+                  <h3 class="font-bold text-base leading-snug">
+                    Analysis: Supreme Court finds 2025 Waqf law paved with good
+                    intentions but pock-marked with arbitrariness
+                  </h3>
+                  <p class="text-gray-600 text-sm mt-1">KRISHNADAS RAJAGOPAL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="p-4">
+            <div class="w-full h-full flex flex-col overflow-hidden">
+              <!-- Main Top News -->
+              <div>
+                <img
+                  src="https://th-i.thgim.com/public/incoming/8ritqb/article70055906.ece/alternates/LANDSCAPE_660/Emirates_Asia_Cup_Cricket_25729.jpg"
+                  alt="ICC rejects PCB demand"
+                  class="w-full h-64 md:h-[35rem] object-cover"
+                />
+                <div class="p-4">
+                  <span class="text-red-600 font-bold text-sm">CRICKET</span>
+                  <h2 class="text-2xl md:text-3xl font-bold leading-snug mt-1">
+                    ICC rejects Pakistan Cricket Board’s demand to remove match
+                    referee Andy Pycroft from Asia Cup
+                  </h2>
+                  <p class="text-gray-600 text-base mt-1">
+                    The 69-year-old Zimbabwean is due to officiate Pakistan’s
+                    final group stage game against the UAE on September 17
+                  </p>
+                  <p class="text-gray-500 text-xs mt-2">PTI</p>
+                </div>
+              </div>
+
+              <!-- Sub News Section -->
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 border-t border-gray-200"
+              >
+                <!-- Sub news 1 -->
+                <div
+                  class="p-4 border-b sm:border-b-0 sm:border-r border-gray-200"
+                >
+                  <span class="text-red-600 font-bold text-sm">● LIVE</span>
+                  <h3 class="text-lg md:text-xl font-bold leading-snug mt-1">
+                    Rains LIVE: PM Modi, Home Minister Shah speak to CM Dhami,
+                    assure all assistance
+                  </h3>
+                  <p class="text-gray-500 text-base mt-2">THE HINDU BUREAU</p>
+                </div>
+
+                <!-- Sub news 2 -->
+                <div class="p-4">
+                  <span class="text-green-600 font-bold text-sm">INDIA</span>
+                  <h3 class="text-lg md:text-xl font-bold leading-snug mt-1">
+                    ‘India is coming to the table’: White House Trade Advisor
+                    Peter Navarro
+                  </h3>
+                  <p class="text-gray-500 text-base mt-2">ANI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="p-4 border-t md:border-t-0 md:border-l">
+            <div class="w-full h-full flex flex-col overflow-hidden">
+              <!-- Advertisement Section -->
+              <div>
+                <img
+                  src="https://th-i.thgim.com/public/incoming/8ritqb/article70055906.ece/alternates/LANDSCAPE_660/Emirates_Asia_Cup_Cricket_25729.jpg"
+                  alt="Advertisement"
+                  class="w-full h-40 object-cover"
+                />
+                <div class="p-2">
+                  <h3 class="text-sm font-semibold">
+                    Play War Thunder now for free
+                  </h3>
+                  <p class="text-gray-500 text-xs">War Thunder</p>
+                  <button
+                    class="mt-2 px-3 py-1 border border-gray-400 text-xs rounded"
+                  >
+                    Play Now
+                  </button>
+                </div>
+              </div>
+
+              <!-- News Items -->
+              <div class="flex-1 flex flex-col divide-y divide-gray-200">
+                <!-- News 1 -->
+                <div class="p-4">
+                  <span class="text-red-600 font-bold text-sm">WORLD</span>
+                  <h3 class="text-base font-bold leading-snug mt-1">
+                    U.N. inquiry finds top Israeli officials incited genocide in
+                    Gaza
+                  </h3>
+                  <p class="text-gray-500 text-xs mt-2">REUTERS</p>
+                </div>
+
+                <!-- News 2 -->
+                <div class="p-4">
+                  <span class="text-pink-600 font-bold text-sm"
+                    >TECHNOLOGY</span
+                  >
+                  <h3 class="text-base font-bold leading-snug mt-1">
+                    UK, U.S. to sign $10 billion of economic deals on Trump
+                    visit
+                  </h3>
+                  <p class="text-gray-500 text-xs mt-2">AFP</p>
+                </div>
+
+                <!-- News 3 -->
+                <div class="p-4">
+                  <span class="text-red-600 font-bold text-sm">WORLD</span>
+                  <h3 class="text-base font-bold leading-snug mt-1">
+                    Indian man’s gruesome murder was ‘preventable’, Biden
+                    administration released accused into country: Agencies
+                  </h3>
+                  <p class="text-gray-500 text-xs mt-2">PTI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--State Update Section-->
+      <div class="max-w-9xl mx-auto p-6 border-b">
+        <!-- Heading -->
+        <h2 class="text-center text-red-700 text-2xl font-bold mb-4">
+          States Updates
+        </h2>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Left Large Card -->
+          <div
+            class="flex flex-col space-y-2 border-b sm:border-b-0 sm:border-r sm:pr-4 pb-4 sm:pb-0"
+          >
+            <img
+              src="https://th-i.thgim.com/public/incoming/mjmvqd/article70055699.ece/alternates/LANDSCAPE_320/9868_14_7_2025_11_39_2_5_PRESS_10.JPG"
+              alt="EPS AIADMK News"
+              class="w-full h-40 object-cover rounded"
+            />
+            <h3 class="text-lg font-bold leading-snug">
+              Edappadi Palaniswami talks tough on readmission of AIADMK’s former
+              leaders
+            </h3>
+            <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+          </div>
+
+          <!-- Middle Top -->
+          <div
+            class="flex flex-col space-y-2 border-b sm:border-b-0 sm:border-r sm:pr-4 pb-4 sm:pb-0"
+          >
+            <div class="border-b pb-4">
+              <h3 class="text-lg font-bold leading-snug">
+                Tamil Nadu sees gradual rise in skin and bone donations
+              </h3>
+              <p class="text-xs text-red-700 font-bold">SERENA JOSEPHINE M.</p>
+            </div>
+            <h3 class="text-lg font-bold leading-snug mt-4">
+              EC recognised Anbumani as PMK chief, says supporter; Salem West
+              MLA hits back
+            </h3>
+            <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+          </div>
+
+          <!-- Middle with Image -->
+          <div
+            class="flex flex-col space-y-2 border-b sm:border-b-0 sm:border-r sm:pr-4 pb-4 sm:pb-0"
+          >
+            <img
+              src="https://th-i.thgim.com/public/incoming/mjmvqd/article70055699.ece/alternates/LANDSCAPE_320/9868_14_7_2025_11_39_2_5_PRESS_10.JPG"
+              alt="Hornbill Conservation"
+              class="w-full h-40 object-cover rounded"
+            />
+            <h3 class="text-lg font-bold leading-snug">
+              Attakatti chosen for Tamil Nadu’s hornbill conservation centre
+            </h3>
+            <p class="text-xs text-red-700 font-bold">WILSON THOMAS</p>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col space-y-6">
+            <div class="border-b pb-4">
+              <h3 class="text-lg font-bold leading-snug">
+                UPSC to shortlist candidates for Tamil Nadu DGP post September
+                26
+              </h3>
+              <p class="text-xs text-red-700 font-bold">S. VIJAY KUMAR</p>
+            </div>
+            <div>
+              <span class="bg-yellow-400 text-black text-xs font-bold px-2 py-1"
+                >★ PREMIUM</span
+              >
+              <h3 class="text-lg font-bold leading-snug mt-2">
+                MoRTH report: Tamil Nadu leads in road accidents yet again,
+                highlighting need for urgent policy reform
+              </h3>
+              <p class="text-xs text-red-700 font-bold">NINA SUBRAMANI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cities Update -->
+      <div class="max-w-9xl mx-auto p-6 border-b">
+        <!-- Heading -->
+        <h2 class="text-center text-red-700 text-2xl font-bold mb-4">
+          Cities Updates
+        </h2>
+
+        <!-- Nav -->
+        <div
+          class="flex flex-wrap justify-center gap-2 sm:gap-4 text-sm font-semibold mb-6"
+        >
+          <a href="#" class="text-red-700">BENGALURU</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">CHENNAI</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">DELHI</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">HYDERABAD</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">VISAKHAPATNAM</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">KOCHI</a>
+          <span>/</span>
+          <a href="#" class="hover:text-red-700">ALL CITIES →</a>
+        </div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Left Large Card -->
+          <div
+            class="flex flex-col space-y-2 border-b sm:border-b-0 lg:border-r lg:pr-4 pb-4 lg:pb-0"
+          >
+            <img
+              src="https://th-i.thgim.com/public/incoming/rt0ega/article70055570.ece/alternates/LANDSCAPE_320/AFP_72EX2NR.jpg"
+              alt="Bengaluru Real Estate News"
+              class="w-full h-40 object-cover rounded"
+            />
+            <h3 class="text-lg font-bold leading-snug">
+              Realtor booked for encroaching Rayasandra lake to create and sell
+              sites to homebuyers
+            </h3>
+            <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+          </div>
+
+          <!-- Middle Left (Text Only) -->
+          <div
+            class="flex flex-col space-y-4 border-b sm:border-b-0 lg:border-r pb-4 lg:pb-0"
+          >
+            <div class="border-b pb-4">
+              <h3 class="text-lg font-bold leading-snug">
+                Woman sexually harassed twice while helping injured stray dog
+              </h3>
+              <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold leading-snug">
+                Boy riding new cycle gifted by grandfather crushed to death
+                under truck
+              </h3>
+              <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+            </div>
+          </div>
+
+          <!-- Middle Right with Image -->
+          <div
+            class="flex flex-col space-y-2 border-b sm:border-b-0 lg:border-r lg:pr-4 pb-4 lg:pb-0"
+          >
+            <img
+              src="https://th-i.thgim.com/public/incoming/rt0ega/article70055570.ece/alternates/LANDSCAPE_320/AFP_72EX2NR.jpg"
+              alt="Drone Pilot Training"
+              class="w-full h-40 object-cover rounded"
+            />
+            <h3 class="text-lg font-bold leading-snug">
+              DGCA-certified drone pilot training in Bengaluru
+            </h3>
+            <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex flex-col space-y-6">
+            <div class="border-b pb-4">
+              <h3 class="text-lg font-bold leading-snug">
+                Police raid Pebble bar, 8 booked under NDPS act
+              </h3>
+              <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold leading-snug">
+                East corporation clears Chikkabellandur lake encroachment in
+                Bengaluru
+              </h3>
+              <p class="text-xs text-red-700 font-bold">THE HINDU BUREAU</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Case You Missed It -->
+      <div class="max-w-9xl mx-auto p-6 border-b">
+        <!-- Heading -->
+        <h2 class="text-center text-red-700 text-2xl font-bold mb-6">
+          In Case You Missed It
+        </h2>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 1"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              Samsung starts rolling One UI 8 official version to Galaxy devices
+            </h3>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 2"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              Sabarimala turns into a political battleground yet again
+            </h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 3"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              Avinashi Road flyover in Coimbatore city to be inaugurated in
+              October
+            </h3>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 4"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              Navjot Singh death: Case of culpable homicide lodged in accident
+              that killed finance ministry official
+            </h3>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 5"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              External distractions, own failings worry Pakistan in crucial Asia
+              Cup match against UAE
+            </h3>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 6"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              India is keen to preserve its relations with the U.S. but not at
+              any cost: Tirumurti
+            </h3>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 7"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              After 40-year court battle with State, SC restores Constituent
+              Assembly member’s historic estates t...
+            </h3>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="flex flex-col space-y-2">
+            <img
+              src="https://content-thumbnail.cxpublic.com/content/dominantthumbnail/e4fa7150284a6e6e7639c55e7509707d1d036b4b.jpg"
+              alt="News 8"
+              class="w-full h-32 object-cover rounded"
+            />
+            <h3 class="text-md font-bold leading-snug">
+              Analysis: Supreme Court finds 2025 Waqf law paved with good
+              intentions but pock-marked with...
+            </h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Graph. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
