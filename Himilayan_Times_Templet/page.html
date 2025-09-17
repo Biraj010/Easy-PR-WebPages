@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hindu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["IBM Plex Serif", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Logo (Centered) -->
+        <div class="flex justify-center py-4">
+          <img
+            src="https://thehimalayantimes.com/theme_himalayantimes/images/logo.png"
+            alt="LOGO"
+            class="h-[5rem] w-[25rem]"
+          />
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="border-t border-gray-200">
+          <div class="flex items-center justify-center py-3">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">HOME</a>
+              <a href="#" class="hover:text-blue-600">KATHMANDU</a>
+              <a href="#" class="hover:text-blue-600">Nepal</a>
+              <a href="#" class="hover:text-blue-600">COVID-19</a>
+              <a href="#" class="hover:text-blue-600">COVID CONNECT</a>
+              <a href="#" class="hover:text-blue-600">WORLD</a>
+              <a href="#" class="hover:text-blue-600">OPINION</a>
+              <a href="#" class="hover:text-blue-600">BUSINESS</a>
+              <a href="#" class="hover:text-blue-600">SPORTS</a>
+              <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+            </nav>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none ml-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+          <nav class="flex flex-col space-y-4 px-6 py-4 text-center">
+            <a href="#" class="hover:text-blue-600">HOME</a>
+            <a href="#" class="hover:text-blue-600">KATHMANDU</a>
+            <a href="#" class="hover:text-blue-600">Nepal</a>
+            <a href="#" class="hover:text-blue-600">COVID-19</a>
+            <a href="#" class="hover:text-blue-600">COVID CONNECT</a>
+            <a href="#" class="hover:text-blue-600">WORLD</a>
+            <a href="#" class="hover:text-blue-600">OPINION</a>
+            <a href="#" class="hover:text-blue-600">BUSINESS</a>
+            <a href="#" class="hover:text-blue-600">SPORTS</a>
+            <a href="#" class="hover:text-blue-600">ENTERTAINMENT</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto p-4">
+      <!-- Article Title -->
+      <h1 class="text-2xl md:text-3xl font-bold leading-snug mb-2">
+        Bishwakarma Puja, Vastu Day being observed across the country
+      </h1>
+
+      <!-- Author + Date -->
+      <div class="text-base text-gray-500 mb-4">
+        Published: 10:02 am Sep 17, 2025
+      </div>
+
+      <!-- Featured Image -->
+      <div class="mb-3">
+        <img
+          src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42745.jpg&w=800&q=100&f=jpg"
+          alt="Bishwakarma Puja Celebration"
+          class="w-full h-auto object-cover"
+        />
+        <p class="text-base text-gray-600 mt-2">
+          People are seen engaging at worship materials shop for Bishwakarma
+          Puja in Manamaiju, Kathmandu.
+        </p>
+      </div>
+
+      <!-- Article Content -->
+      <article class="prose max-w-none">
+        <p class="font-bold uppercase text-xl text-red-600 mb-2">
+          KATHMANDU, SEPTEMBER 17
+        </p>
+
+        <p>
+          Metalworkers and artisans across the country are celebrating
+          Bishwakarma Puja and Vastu Day today by worshipping tools and
+          machinery and honoring Lord Bishwakarma, regarded as the divine
+          architect.
+        </p>
+
+        <p>
+          Traditionally marked on Kanya Sankranti, the festival includes rituals
+          in workshops and factories, where temporary clay or sand idols of
+          Bishwakarma are made and later immersed in rivers.
+        </p>
+
+        <p>
+          Devotees believe that worshipping their equipment ensures durability
+          and success in their craft.
+        </p>
+
+        <p>
+          Scholars say the tradition commemorates Bishwakarma’s legendary
+          construction of the mythical city of Dwarka for Lord Krishna and his
+          authorship of the ancient Vastu Shastra texts.
+        </p>
+      </article>
+
+      <!--Trending Section-->
+
+      <!-- Trending Section -->
+      <section class="max-w-5xl mx-auto p-4 mt-10">
+        <!-- Section Header -->
+        <div class="flex items-center border-b pb-2 mb-6">
+          <h2 class="text-2xl font-semibold">Trending</h2>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Article 1 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42754.jpeg&w=30&q=100&f=jpg"
+              alt="Trending 1"
+              class="w-full h-40 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Dongfeng Motor expands into Egypt with nine new models
+            </h3>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42754.jpeg&w=30&q=100&f=jpg"
+              alt="Trending 2"
+              class="w-full h-40 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Robert Redford, Oscar-winning director, actor and indie patriarch,
+              dies at 89
+            </h3>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42754.jpeg&w=30&q=100&f=jpg"
+              alt="Trending 3"
+              class="w-full h-40 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Passenger rush surges at New Bus Park ahead of Dashain
+            </h3>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42754.jpeg&w=30&q=100&f=jpg"
+              alt="Trending 4"
+              class="w-full h-40 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Gold price drops Rs 1,000 per tola after record high
+            </h3>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42754.jpeg&w=30&q=100&f=jpg"
+              alt="Trending 5"
+              class="w-full h-40 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Nepal Media Society condemns violence against journalists, demands
+              probe
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Stories Section -->
+      <section class="max-w-6xl mx-auto p-4 mt-10">
+        <!-- Section Header -->
+        <div class="flex items-center border-b pb-2 mb-6">
+          <h2 class="text-2xl font-semibold">More Stories</h2>
+        </div>
+
+        <!-- Articles Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Article 1 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 1"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Grade 12 supplementary exams rescheduled for Sept 23–24
+            </h3>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 2"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Bodies of six Gen Z Protest victims flown home for final rites
+            </h3>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 3"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Passenger dies after rockfall hits bus along the
+              Narayangadh–Muglin road
+            </h3>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 4"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Narayangadh–Muglin road reopens after multiple landslides
+            </h3>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 5"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Heavy rain likely in parts of the country today and tonight
+            </h3>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 6"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Israeli NGO ‘Heroes for Life’ embarks on Nepal volunteer mission
+            </h3>
+          </div>
+
+          <!-- Article 7 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 7"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Life returns to normalcy with window of possibility
+            </h3>
+          </div>
+
+          <!-- Article 8 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 8"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              It’s the second year of the new look Champions League. Here’s
+              what’s different
+            </h3>
+          </div>
+
+          <!-- Article 9 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+              alt="Story 9"
+              class="w-full h-36 object-cover mb-2"
+            />
+            <h3 class="text-sm font-medium leading-snug">
+              Heavy rainfall likely in some parts of the provinces today
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Random News Article Section -->
+      <section class="max-w-6xl mx-auto p-4 mt-10">
+        <!-- Section Header -->
+        <div class="flex items-center border-b pb-2 mb-4">
+          <span class="text-black text-lg font-semibold mr-2">●</span>
+          <h2 class="text-2xl font-semibold">FEATURED STORY</h2>
+        </div>
+
+        <!-- Article Block -->
+        <article class="flex flex-col gap-4">
+          <img
+            src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=600&q=100&f=jpg"
+            alt="Youth Climate Action"
+            class="w-full h-[14rem] object-cover rounded-md"
+          />
+
+          <h3 class="text-2xl font-semibold leading-snug">
+            Youth Lead Climate Action Campaign Ahead of International Summit
+          </h3>
+
+          <p class="text-base leading-relaxed text-gray-700">
+            As the world prepares for the upcoming Climate Resilience Summit
+            2025, young activists from across Nepal have launched a grassroots
+            campaign to raise awareness about climate justice, environmental
+            policy, and the urgent need for action. The campaign, titled
+            <span class="italic">"Our Future, Our Fight"</span>, features local
+            clean-up drives, school workshops, and digital storytelling.
+          </p>
+
+          <p class="text-base leading-relaxed text-gray-700">
+            “We’re not just talking about the future — we’re living the
+            consequences now,” said Aayush Shrestha, a 19-year-old organizer
+            from Chitwan. The movement has gained momentum online, with over
+            100,000 engagements in just one week.
+          </p>
+        </article>
+        
+        <div class="mt-12">
+          <div class="flex items-center border-b pb-2 mb-6">
+            <h2 class="text-2xl font-semibold">Latest Articles</h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <!-- Card -->
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Govt to introduce electric buses in Kathmandu Valley by 2026
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Himalayan glaciers retreat faster, scientists warn urgent action
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Dashain airfare skyrockets as demand surges for festive travel
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Nepali climbers summit Mt. Manaslu early in autumn season
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Cricket: Nepal to host tri-series with UAE and Oman in November
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Govt unveils plan to boost tourism with cultural heritage routes
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                New hydropower projects to add 1,200MW to national grid
+              </h3>
+            </div>
+
+            <div>
+              <img
+                src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg"
+                alt="Story"
+                class="w-full h-36 object-cover mb-2"
+              />
+              <h3 class="text-sm font-medium">
+                Local farmers adopt organic practices to improve exports
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- Long Article Section -->
+<section class="mt-12 max-w-4xl mx-auto">
+  <div class="flex items-center border-b pb-2 mb-6">
+    <h2 class="text-2xl font-semibold">Feature Articles</h2>
+  </div>
+
+  <!-- Article 1 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Electric Bus" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Nepal to Roll Out Electric Buses in Kathmandu</h3>
+    <p class="mb-2">The government announced a new initiative to replace old diesel-run buses with modern electric buses across the Kathmandu Valley. Officials stated that this move is part of the broader goal to reduce air pollution and carbon emissions by 30% in the next five years.</p>
+    <p>According to the Ministry of Transport, the first fleet of 200 electric buses will be imported by mid-2026, with subsidies for local operators. Experts believe this initiative could significantly improve the Valley's deteriorating air quality.</p>
+  </article>
+
+  <!-- Article 2 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Glaciers" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Himalayan Glaciers Retreating at Alarming Rate</h3>
+    <p class="mb-2">Recent studies warn that glaciers in the Himalayan region are melting faster than previously estimated. Researchers attribute this to rising global temperatures and unsustainable development in fragile mountain ecosystems.</p>
+    <p>The report highlights that if current trends continue, Nepal may face severe water shortages, threatening agriculture and hydropower production. Climate activists are urging policymakers to adopt stronger measures.</p>
+  </article>
+
+  <!-- Article 3 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Dashain Travel" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Dashain Travel Costs Surge Amid High Demand</h3>
+    <p class="mb-2">Ticket prices for domestic flights and long-route buses have increased sharply ahead of the Dashain festival. Travelers have reported fares being almost double compared to regular days.</p>
+    <p>Authorities have instructed transport companies not to overcharge, but monitoring remains weak. Many citizens are concerned that the rising cost of travel will prevent families from celebrating together.</p>
+  </article>
+
+  <!-- Article 4 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Tourism Revival" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Tourism Revival in Pokhara as Foreign Visitors Return</h3>
+    <p class="mb-2">Hotels and restaurants in Pokhara are witnessing a steady increase in bookings, signaling a revival in Nepal’s tourism industry. Adventure sports such as paragliding and trekking are gaining popularity among international travelers.</p>
+    <p>The Nepal Tourism Board has launched promotional campaigns in Europe and Asia to attract more tourists ahead of the peak season. Local entrepreneurs are optimistic that tourism revenue will surpass pre-pandemic levels within two years.</p>
+  </article>
+
+  <!-- Article 5 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Hydropower" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">New Hydropower Projects to Add 1,500MW by 2027</h3>
+    <p class="mb-2">Nepal Electricity Authority announced the completion of multiple hydropower projects, which are expected to add significant capacity to the national grid. The projects will help reduce dependence on electricity imports from India.</p>
+    <p>Officials also emphasized that surplus energy could be exported to neighboring countries, turning Nepal into a regional energy hub in the near future.</p>
+  </article>
+
+  <!-- Article 6 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Education" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Education Sector Embraces Digital Classrooms</h3>
+    <p class="mb-2">Private and government schools are gradually shifting towards digital education platforms. With increased internet penetration, many students in rural areas can now access online learning materials.</p>
+    <p>Experts suggest that blended learning—combining traditional methods with digital tools—could transform the education system, making it more inclusive and effective.</p>
+  </article>
+
+  <!-- Article 7 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Health" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Healthcare System Under Pressure Amid Dengue Outbreak</h3>
+    <p class="mb-2">Hospitals in major cities are struggling to cope with a rising number of dengue patients. The Ministry of Health has issued warnings about mosquito breeding sites and urged citizens to remain cautious.</p>
+    <p>Medical experts are calling for urgent action to improve public health infrastructure, as seasonal outbreaks continue to challenge the healthcare system every year.</p>
+  </article>
+
+  <!-- Article 8 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Agriculture" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Farmers Shift to Organic Agriculture in Terai</h3>
+    <p class="mb-2">Farmers across the Terai region are switching to organic farming practices as demand for chemical-free food products grows in domestic and international markets.</p>
+    <p>The government is offering incentives, including subsidies on organic fertilizers, to encourage more farmers to adopt sustainable methods.</p>
+  </article>
+
+  <!-- Article 9 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Sports" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Nepal National Football Team Prepares for World Cup Qualifiers</h3>
+    <p class="mb-2">The national football team has begun intensive training ahead of the FIFA World Cup qualifiers. Coaches are optimistic about the team’s performance, citing improvements in both physical fitness and tactical strategy.</p>
+    <p>Supporters across the country are rallying behind the team, with several fan clubs organizing events to boost morale.</p>
+  </article>
+
+  <!-- Article 10 -->
+  <article class="mb-10">
+    <img 
+      src="https://cdn4.premiumread.com/?url=https://thehimalayantimes.com/thehimalayantimes/uploads/images/2025/09/17/42747.jfif&w=30&q=100&f=jpg" 
+      alt="Culture" 
+      class="w-full h-64 object-cover rounded mb-4"
+    />
+    <h3 class="text-xl font-semibold mb-2">Traditional Festivals Revive Cultural Heritage</h3>
+    <p class="mb-2">Communities across Nepal are actively preserving their cultural identity by celebrating traditional festivals with renewed enthusiasm. Rituals, dances, and local cuisines are attracting tourists as well.</p>
+    <p>Cultural experts emphasize that festivals play a vital role in strengthening social bonds and ensuring the continuity of Nepal’s diverse heritage.</p>
+  </article>
+</section>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 The Himalayan Times. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
