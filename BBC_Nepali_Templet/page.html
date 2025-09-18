@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBC News Nepali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Extend Tailwind to include Aleo -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aleo: ["IBM Plex Serif", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white-100 text-gray-900 font-aleo">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Logo (Centered) -->
+        <div class="bg-red-600 text-white flex justify-center py-4">
+          <div class="flex items-center space-x-2 px-6 py-3 font-bold text-lg">
+            <!-- BBC Logo Boxes -->
+            <div class="flex space-x-1">
+              <div
+                class="bg-white text-red-900 px-2 py-1 text-xl font-extrabold"
+              >
+                B
+              </div>
+              <div
+                class="bg-white text-red-900 px-2 py-1 text-xl font-extrabold"
+              >
+                B
+              </div>
+              <div
+                class="bg-white text-red-900 px-2 py-1 text-xl font-extrabold"
+              >
+                C
+              </div>
+            </div>
+
+            <!-- NEWS Text -->
+            <span class="text-2xl font-extrabold">NEWS</span>
+
+            <!-- Nepali Text -->
+            <span class="text-2xl font-normal">नेपाली</span>
+          </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="bg-red-600 text-white border-t border-gray-200">
+          <div class="flex items-center justify-center py-3">
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+              <a href="#" class="hover:text-blue-600">News</a>
+              <a href="#" class="hover:text-blue-600">Nepal</a>
+              <a href="#" class="hover:text-blue-600">World</a>
+              <a href="#" class="hover:text-blue-600">Health</a>
+              <a href="#" class="hover:text-blue-600">Science and Technology</a>
+              <a href="#" class="hover:text-blue-600">Radio</a>
+            </nav>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none ml-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="bg-red-600 text-white hidden md:hidden bg-white shadow-lg"
+        >
+          <nav class="flex flex-col space-y-4 px-6 py-4 text-center">
+            <a href="#" class="hover:text-blue-600">News</a>
+            <a href="#" class="hover:text-blue-600">Nepal</a>
+            <a href="#" class="hover:text-blue-600">World</a>
+            <a href="#" class="hover:text-blue-600">Health</a>
+            <a href="#" class="hover:text-blue-600">Science and Technology</a>
+            <a href="#" class="hover:text-blue-600">Radio</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-8xl m-2 p-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto p-4">
+        <!-- Left Container (2fr) -->
+        <div class="md:col-span-2 p-4">
+          <div class="max-w-full mx-auto p-4">
+            <!-- Title -->
+            <h1 class="text-2xl font-bold leading-snug mb-2">
+              Leadership change: Maoists say 'no', assessment of 'firmness' in
+              favor of Deuba-Oli
+            </h1>
+
+            <!-- Link -->
+            <a href="#" class="text-sm text-blue-600 hover:underline">
+              View the readable version that consumes less data
+            </a>
+
+            <!-- Main Image -->
+            <div class="my-4">
+              <img
+                src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                alt="News"
+                class="w-full object-cover"
+              />
+              <p class="text-xs text-gray-600 mt-1">GETTY IMAGES/BBC</p>
+              <p class="text-xs text-gray-500">| File photo</p>
+            </div>
+
+            <!-- Author Info -->
+            <div class="mb-4">
+              <p class="font-semibold">Sharad KC</p>
+              <p class="text-sm text-gray-600">BBC News Nepali</p>
+              <p class="text-xs text-gray-500">5 hours ago</p>
+            </div>
+
+            <!-- Main Paragraph -->
+            <p class="mb-3">
+              <span class="font-bold"
+                >Following the killing of 'Gen G' protesters</span
+              >, the idea that the heads of the three main parties should retire
+              has been consistently expressed on social media, especially by
+              party leaders.
+            </p>
+            <p class="mb-3">
+              As political uncertainty increases, that voice has also become
+              louder.
+            </p>
+            <p class="mb-3">
+              In this context, there is a certain assessment that the chances of
+              the Nepali Congress, CPN-UML, and CPN-Maoist Center moving forward
+              under the old leadership are diminishing.
+            </p>
+
+            <!-- Related News -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 border-t pt-4"
+            >
+              <div class="flex gap-2">
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp "
+                  alt="Related"
+                  class="w-20 h-16 object-cover"
+                />
+                <div>
+                  <h3 class="font-semibold text-sm leading-snug">
+                    Who are 'Gen G' and 'Nepo Babies', how did Nepal become so
+                    turbulent in two days?
+                  </h3>
+                  <p class="text-xs text-gray-500">September 11, 2025</p>
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp "
+                  alt="Related"
+                  class="w-20 h-16 object-cover"
+                />
+                <div>
+                  <h3 class="font-semibold text-sm leading-snug">
+                    International community 'surprised' by the pace of Nepal's
+                    political turmoil
+                  </h3>
+                  <p class="text-xs text-gray-500">September 14, 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ending note -->
+            <p class="mt-4">
+              There have been reports that the leaders of the three parties have
+              taken the initiative separately and jointly.
+            </p>
+          </div>
+          <!--Another Section-->
+
+        <div class="max-w-full mx-auto space-y-6 pt-10">
+          <!-- Article Heading -->
+          <h1 class="text-2xl font-bold leading-snug">
+            'I didn't know I was living my best years'
+          </h1>
+
+          <!-- Intro paragraph -->
+          <p class="text-base">
+            "I spent years trying to make myself better and I forgot that I was
+            actually okay," says Zeina, a 37-year-old fitness trainer from
+            Jordan.
+          </p>
+          <p class="text-base">
+            She said that she used to pay a lot of attention to her appearance
+            and weight in her 20s and always felt incomplete. But now, looking
+            at her old photos, she realizes that she was too hard on herself
+            back then.
+          </p>
+
+          <!-- Related Links -->
+          <ul class="list-disc pl-6 text-blue-700 space-y-1">
+            <li>
+              <a href="#" class="hover:underline"
+                >Mental health problems 'widespread' among teens and young men,
+                hesitancy to seek help deepens crisis</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline"
+                >The negative impact of loneliness on human health</a
+              >
+            </li>
+          </ul>
+
+          <!-- Story content -->
+          <p class="text-base">
+            Raed, who works as a computer engineer, says that after losing his
+            job, he got a chance to understand life differently.
+          </p>
+          <p class="text-base">
+            "I always complained about the pressure at work and wished I could
+            change my job. But now that I’ve lost my job, I remember every
+            detail of those days, from the morning traffic jams," he told the
+            BBC.
+          </p>
+
+          <p class="text-base">
+            The monthly salary gave him mental and financial stability and also
+            helped him provide a better life for his family.
+          </p>
+          <p class="font-semibold">
+            "I couldn’t help but feel like I was living the best years of my
+            life."
+          </p>
+
+          <!-- Image -->
+          <div>
+            <img
+              src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+              alt="news"
+              class="w-full h-[25rem] object-cover"
+            />
+            <p class="text-xs text-gray-500 mt-1">
+              Getty Images - Our busy day-to-day schedules make it difficult for
+              us to stop and live in the present moment.
+            </p>
+          </div>
+
+          <!-- Continuation -->
+          <p class="text-base">
+            Ahmed is a father of two. He wanted his children to grow up quickly
+            and have time for himself. But when the child reached adolescence,
+            his understanding completely changed.
+          </p>
+          <p class="text-base">
+            "Their noise was annoying me as they kept shouting and asking
+            questions," he said.
+          </p>
+          <p class="font-semibold">
+            "Now I remember those days, their voices and their spontaneous
+            words. Too late I realized that their noise was the most beautiful
+            thing in my life."
+          </p>
+
+          <!-- More Related Content Section -->
+          <div class="space-y-6">
+            <div>
+              <img
+                src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                alt="related"
+                class="w-full h-[25rem] object-cover"
+              />
+              <h2 class="text-lg font-bold mt-2">
+                'The value of time': Why we only understand its worth when it's
+                gone
+              </h2>
+              <p class="text-sm text-gray-500">September 18, 2025</p>
+              <p class="mt-1">
+                Experts explain why our constant rush to achieve more leaves us
+                blind to the small moments that shape our happiness.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                alt="related"
+                class="w-full h-[25rem] object-cover"
+              />
+              <h2 class="text-lg font-bold mt-2">
+                The science of nostalgia: Why looking back can bring us peace
+              </h2>
+              <p class="text-sm text-gray-500">September 12, 2025</p>
+              <p class="mt-1">
+                Psychologists suggest that remembering the past fondly is a
+                natural mechanism to deal with uncertainty about the future.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                alt="related"
+                class="w-full h-[25rem] object-cover"
+              />
+              <h2 class="text-lg font-bold mt-2">
+                'Silent joys': The importance of appreciating everyday life
+              </h2>
+              <p class="text-sm text-gray-500">September 10, 2025</p>
+              <p class="mt-1">
+                From sipping morning coffee to laughing with family, small
+                routines often carry the deepest meaning, experts say.
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Right Container (1fr) -->
+        <div class="p-4">
+          <div class="w-full max-w-full mx-auto p-4 space-y-6">
+            <!-- Top small news list -->
+            <div class="space-y-3">
+              <div>
+                <h3
+                  class="text-sm font-semibold leading-snug hover:underline cursor-pointer"
+                >
+                  Leadership change: Maoists say 'no', assessment of 'firmness'
+                  in favor of Deuba-Oli
+                </h3>
+                <p class="text-xs text-gray-500">4 hours ago</p>
+              </div>
+              <div>
+                <h3
+                  class="text-sm font-semibold leading-snug hover:underline cursor-pointer"
+                >
+                  Thousands of Palestinians flee Gaza City after Israeli forces
+                  launch major ground operation
+                </h3>
+                <p class="text-xs text-gray-500">46 minutes ago</p>
+              </div>
+              <div>
+                <h3
+                  class="text-sm font-semibold leading-snug hover:underline cursor-pointer"
+                >
+                  Trump calls UK visit: 'One of life’s highest honors'
+                </h3>
+                <p class="text-xs text-gray-500">1 hour ago</p>
+              </div>
+            </div>
+
+            <!-- Section heading -->
+            <h2 class="text-lg font-bold">And this too</h2>
+
+            <!-- News cards with images -->
+            <div class="space-y-4">
+              <div>
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                  alt="News"
+                  class="w-full h-32 object-cover"
+                />
+                <h3 class="text-sm font-semibold mt-2 leading-snug">
+                  When a bear entered the temple in search of food
+                </h3>
+                <p class="text-xs text-gray-500">September 17, 2025</p>
+              </div>
+
+              <div>
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                  alt="News"
+                  class="w-full h-32 object-cover"
+                />
+                <h3 class="text-sm font-semibold mt-2 leading-snug">
+                  With the change of power in Singha Durbar, the old leadership
+                  of political parties has changed.
+                </h3>
+                <p class="text-xs text-gray-500">September 16, 2025</p>
+              </div>
+
+              <div>
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                  alt="News"
+                  class="w-full h-32 object-cover"
+                />
+                <h3 class="text-sm font-semibold mt-2 leading-snug">
+                  'Higher levels may be involved' in investigation into
+                  'repression' during protest
+                </h3>
+                <p class="text-xs text-gray-500">September 16, 2025</p>
+              </div>
+
+              <div>
+                <img
+                  src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/855c/live/1dbb88a0-88ab-11f0-aa06-3df3b9ae7236.jpg.webp"
+                  alt="News"
+                  class="w-full h-32 object-cover"
+                />
+                <h3 class="text-sm font-semibold mt-2 leading-snug">
+                  What is 'mindfulness' and how can it improve our mental
+                  health?
+                </h3>
+                <p class="text-xs text-gray-500">September 15, 2025</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-600 text-white py-6 mt-10">
+      <div class="max-w-7xl mx-auto text-center">
+        <p>&copy; 2025 BBC Nepal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JS for Hamburger -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
